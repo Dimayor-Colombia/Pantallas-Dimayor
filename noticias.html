@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="color-scheme" content="light only">
+<title>DIMAYOR · Noticias</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  /* =========================================================
+     DISEÑO FIJO PARA PANTALLA 1920 x 1080 (Full HD)
+     Mismo estilo del board de Partidos de la Semana
+     ========================================================= */
+  :root{
+    color-scheme: light only;
+    --navy-900:#03122b;
+    --blue-dark:#004c99;
+    --sky:#d1d5db;
+    --gold:#f3cc23;
+    --ink:#0f172a;
+    --muted:#64748b;
+    --live:#e11d48;
+    --live-soft:#ffe4ea;
+    --done:#475569;
+    --done-soft:#eef1f5;
+    --slide-seconds:15s;
+  }
+  *{ box-sizing:border-box; }
+  html,body{
+    width:100%; height:100%; margin:0; padding:0; overflow:hidden;
+    font-family:'DM Sans', sans-serif; color:#fff;
+    background:
+      radial-gradient(900px 500px at 8% -10%, rgba(255,255,255,.06), transparent 65%),
+      linear-gradient(180deg, #0d0f14, #050608);
+  }
+  #stage{
+    position:absolute; left:50%; top:50%; width:1920px; height:1080px;
+    transform-origin:center center;
+    transform:translate(-50%, -50%) scale(var(--k, 1));
+  }
+  .board{ width:100%; height:100%; display:flex; flex-direction:column; }
+
+  /* ---------- Encabezado ---------- */
+  header{
+    height:96px; flex:0 0 96px;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0 40px; border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .brand{ display:flex; align-items:center; gap:22px; }
+  .brand img{ height:46px; }
+  .brand .sep{ width:2px; height:44px; background:rgba(255,255,255,.18); border-radius:2px; }
+  .brand .t1{ font-size:30px; font-weight:800; letter-spacing:.01em; line-height:1.05; }
+  .brand .t2{ font-size:15px; color:rgba(255,255,255,.6); margin-top:4px; letter-spacing:.04em; text-transform:uppercase; }
+  .headRight{ display:flex; align-items:center; gap:28px; }
+  .newPill{
+    display:none; align-items:center; gap:10px;
+    background:var(--live); color:#fff; font-weight:800; font-size:17px; letter-spacing:.06em;
+    padding:9px 18px; border-radius:30px; text-transform:uppercase; animation:pillPulse 2s infinite;
+  }
+  .newPill.show{ display:flex; }
+  .newPill .dot{ width:10px; height:10px; border-radius:50%; background:#fff; animation:blink 1s infinite; }
+  .clock{ text-align:right; }
+  .clock .time{ font-family:'DM Mono', monospace; font-size:38px; font-weight:500; line-height:1; }
+  .clock .date{ font-size:15px; color:rgba(255,255,255,.65); margin-top:6px; }
+
+  /* ---------- Cuerpo ---------- */
+  main{
+    height:940px; flex:0 0 940px;
+    display:grid; grid-template-columns:1260px 1fr; gap:20px; padding:24px;
+  }
+  .panel{
+    height:892px; display:flex; flex-direction:column; overflow:hidden;
+    background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.09); border-radius:20px;
+  }
+
+  /* ---------- Noticia principal ---------- */
+  .hero{ position:relative; background:rgba(255,255,255,.07); border:2px solid rgba(255,255,255,.35); box-shadow:0 0 36px rgba(255,255,255,.08); }
+  .heroIn{ height:100%; display:flex; flex-direction:column; transition:opacity .6s ease, transform .6s cubic-bezier(.16,1,.3,1); }
+  .heroIn.out{ opacity:0; transform:translateY(24px); }
+  .media{ position:relative; width:100%; height:706px; flex:0 0 706px; background:#1a1d24; overflow:hidden; }
+  .media > img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .placeholder{ width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#4b5260,#2c313a); }
+  .placeholder img{ height:140px; opacity:.85; }
+
+  .chips{ position:absolute; top:22px; left:22px; display:flex; gap:10px; align-items:center; }
+  .chip{
+    display:inline-flex; align-items:center; gap:9px; height:40px; padding:0 16px 0 8px;
+    background:#fff; color:var(--ink); border-radius:24px; font-size:15px; font-weight:800;
+    letter-spacing:.05em; text-transform:uppercase; box-shadow:0 6px 18px rgba(0,0,0,.35);
+    border:3px solid var(--comp-color);
+  }
+  .chip img{ width:26px; height:26px; object-fit:contain; border-radius:50%; background:#fff; padding:2px; box-shadow:0 0 0 1px rgba(15,23,42,.14); }
+  .chip.new{ background:var(--live); color:#fff; border-color:var(--live); padding:0 16px; animation:pillPulse 2s infinite; }
+  .chip.new .dot{ width:9px; height:9px; border-radius:50%; background:#fff; animation:blink 1s infinite; }
+
+  .excerpt{
+    position:absolute; left:0; right:0; bottom:0; padding:110px 240px 26px 28px;
+    font-size:24px; line-height:1.35; color:rgba(255,255,255,.92);
+    background:linear-gradient(to top, rgba(5,6,8,.92), rgba(5,6,8,0));
+  }
+  .excerpt span{ display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+  .qr{
+    position:absolute; right:22px; bottom:22px; background:#fff; color:var(--ink);
+    padding:10px 10px 7px; border-radius:14px; text-align:center; font-size:12px; font-weight:800;
+    letter-spacing:.06em; text-transform:uppercase; box-shadow:0 6px 18px rgba(0,0,0,.35);
+  }
+  .qr canvas, .qr img{ display:block; width:140px; height:140px; }
+  .qr div:last-child{ margin-top:6px; }
+
+  .heroText{ flex:1; padding:18px 28px 0; display:flex; flex-direction:column; gap:8px; }
+  .heroMeta{ display:flex; align-items:center; gap:12px; font-size:15px; color:rgba(255,255,255,.65); }
+  .heroMeta .when{ font-family:'DM Mono', monospace; font-size:18px; color:#fff; }
+  .heroMeta .bar{ width:4px; height:18px; border-radius:2px; background:var(--comp-color); }
+  .heroTitle{
+    font-size:42px; font-weight:800; line-height:1.12; letter-spacing:-.01em;
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  .heroBar{ position:absolute; left:0; right:0; bottom:0; height:4px; background:rgba(255,255,255,.06); }
+  .heroBar i{ display:block; height:100%; width:0; background:var(--sky); animation:fill var(--slide-seconds) linear forwards; }
+
+  /* ---------- Columna "A continuación" ---------- */
+  .listHead{
+    height:84px; flex:0 0 84px; display:flex; align-items:center; gap:16px; padding:0 20px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .listIcon{ width:56px; height:56px; flex:0 0 56px; border-radius:14px; background:rgba(255,255,255,.1);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; line-height:1; }
+  .listIcon b{ font-family:'DM Mono', monospace; font-size:26px; font-weight:500; }
+  .listIcon small{ font-size:11px; text-transform:uppercase; letter-spacing:.08em; margin-top:3px; opacity:.75; }
+  .listName{ font-size:22px; font-weight:800; text-transform:uppercase; letter-spacing:.05em; }
+  .listCount{ font-size:14px; color:rgba(255,255,255,.6); margin-top:4px; }
+  .listBody{ flex:1 1 auto; display:flex; flex-direction:column; gap:12px; padding:12px; }
+
+  .card{
+    height:140px; flex:0 0 140px; position:relative; overflow:hidden;
+    display:flex; flex-direction:column; gap:8px;
+    background:var(--card-bg, #fff); color:var(--ink);
+    border-radius:14px; padding:10px 14px; border:4px solid var(--comp-color);
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
+    animation:slideIn .45s cubic-bezier(.16,1,.3,1) both;
+  }
+  .card:nth-child(2){ animation-delay:.06s; } .card:nth-child(3){ animation-delay:.12s; }
+  .card:nth-child(4){ animation-delay:.18s; } .card:nth-child(5){ animation-delay:.24s; }
+  .card .top{ display:flex; align-items:center; justify-content:space-between; gap:10px; height:22px; flex:0 0 22px; }
+  .comp{ display:flex; align-items:center; gap:7px; min-width:0; font-size:12px; font-weight:700;
+    text-transform:uppercase; letter-spacing:.05em; color:rgba(15,23,42,.72); }
+  .comp img{ width:20px; height:20px; object-fit:contain; flex:0 0 20px; padding:2px; border-radius:50%; background:#fff;
+    box-shadow:0 0 0 1px rgba(15,23,42,.14), 0 1px 2px rgba(15,23,42,.15); }
+  .comp span{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .badge{ flex:0 0 auto; display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:800;
+    letter-spacing:.07em; text-transform:uppercase; padding:4px 10px; border-radius:20px; white-space:nowrap; }
+  .badge.live{ background:var(--live-soft); color:var(--live); }
+  .badge.live .dot{ width:8px; height:8px; border-radius:50%; background:var(--live); animation:blink 1s infinite; }
+  .card .row{ display:flex; gap:12px; min-height:0; flex:1; }
+  .card .thumb{ width:132px; height:74px; flex:0 0 132px; border-radius:8px; object-fit:cover; background:#cbd5e1;
+    box-shadow:0 0 0 1px rgba(15,23,42,.12); }
+  .card .tt{ font-size:18px; font-weight:800; line-height:1.2;
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .card .when{ position:absolute; right:14px; bottom:8px; font-family:'DM Mono', monospace; font-size:12px; color:rgba(15,23,42,.6); }
+
+  .listFoot{ height:36px; flex:0 0 36px; display:flex; align-items:center; justify-content:center; gap:14px; padding:0 20px; position:relative; }
+  .dots{ display:flex; gap:8px; }
+  .dots i{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.25); transition:all .4s ease; }
+  .dots i.on{ width:26px; border-radius:5px; background:var(--sky); }
+  .pageTxt{ font-size:13px; color:rgba(255,255,255,.6); font-family:'DM Mono', monospace; }
+
+  .empty{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;
+    color:rgba(255,255,255,.45); font-size:22px; font-weight:500; }
+  .empty .ico{ font-size:48px; opacity:.6; }
+
+  /* ---------- Pie general ---------- */
+  footer{
+    height:44px; flex:0 0 44px; display:flex; align-items:center; justify-content:space-between; gap:24px;
+    padding:0 40px; font-size:14px; color:rgba(255,255,255,.6); border-top:1px solid rgba(255,255,255,.08);
+  }
+  .legend{ display:flex; gap:24px; flex:1; justify-content:center; }
+  .legend span{ display:inline-flex; align-items:center; gap:8px; white-space:nowrap; }
+  .legend i{ width:12px; height:12px; border-radius:3px; }
+  .online{ display:flex; align-items:center; gap:8px; color:#34d399; font-weight:600; }
+  .online i{ width:9px; height:9px; border-radius:50%; background:#34d399; box-shadow:0 0 8px #34d399; animation:blink 1.6s infinite; }
+  .online.off{ color:#fbbf24; } .online.off i{ background:#fbbf24; box-shadow:0 0 8px #fbbf24; }
+
+  @keyframes blink{ 0%,100%{opacity:1;} 50%{opacity:.3;} }
+  @keyframes fill{ from{width:0;} to{width:100%;} }
+  @keyframes slideIn{ from{opacity:0; transform:translateX(-14px);} to{opacity:1; transform:none;} }
+  @keyframes pillPulse{ 0%{box-shadow:0 0 0 0 rgba(225,29,72,.55);} 70%{box-shadow:0 0 0 14px rgba(225,29,72,0);} 100%{box-shadow:0 0 0 0 rgba(225,29,72,0);} }
+</style>
+</head>
+<body>
+<div id="stage">
+<div class="board">
+  <header>
+    <div class="brand">
+      <img src="https://lh3.googleusercontent.com/d/1l4mdgdoIJxuPBRY8VDhhC-AJQW6vgdWr" alt="DIMAYOR">
+      <div class="sep"></div>
+      <div>
+        <div class="t1">Noticias DIMAYOR</div>
+        <div class="t2">Últimas publicaciones · dimayor.com.co</div>
+      </div>
+    </div>
+    <div class="headRight">
+      <div class="newPill" id="newPill"><span class="dot"></span><span id="newCount">0 nuevas</span></div>
+      <div class="clock">
+        <div class="time" id="clockTime">--:--</div>
+        <div class="date" id="clockDate">--</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel hero" id="hero">
+      <div class="empty"><span class="ico">📰</span>Cargando noticias…</div>
+    </section>
+    <section class="panel">
+      <div class="listHead">
+        <div class="listIcon"><b id="listNum">--</b><small>notas</small></div>
+        <div>
+          <div class="listName">A continuación</div>
+          <div class="listCount" id="listCount">—</div>
+        </div>
+      </div>
+      <div class="listBody" id="list"></div>
+      <div class="listFoot" id="listFoot"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span id="statusLine">Iniciando…</span>
+    <div class="legend" id="legend"></div>
+    <span class="online" id="online"><i></i>En línea</span>
+  </footer>
+</div>
+</div>
+
+<script>
+/* =========================================================
+   CONFIGURACIÓN
+   ========================================================= */
+const CONFIG = {
+  API: "https://dimayor.com.co/wp-json/wp/v2/posts",
+  CANTIDAD: 20,                    // máximo de noticias que rotan (solo de hoy y ayer; sin galerías)
+  DIAS: 2,                         // 2 = hoy y ayer
+  SLIDE_SECONDS: 8,               // segundos de cada noticia en grande
+  REFRESH_MS: 5 * 60 * 1e3,        // cada cuánto busca noticias nuevas
+  HORAS_NUEVA: 3,                  // marca "Nueva" si tiene menos de X horas
+  EXCLUIR_PROGRAMACION: false,     // true = ocultar posts de "Programación"
+  RELOAD_AT_MIDNIGHT: true,        // recarga completa al cambiar el día
+  CARD_TINT: 0.22,                 // mismo tinte de las tarjetas del board de partidos
+  LOGO_DIMAYOR: "https://lh3.googleusercontent.com/d/1l4mdgdoIJxuPBRY8VDhhC-AJQW6vgdWr"
+};
+
+/* Competencias: mismos colores y logos del board de partidos.
+   "match" es un texto que aparece en el slug de la categoría de WordPress (el orden importa). */
+const COMPETENCIAS = [
+  { match: "femenina",     label: "Liga Femenina BetPlay Dimayor", color: "#b51a65", logo: "https://lh3.googleusercontent.com/d/1GRGoELSTVM2sDydzsswzi6XvjCDxK84y" },
+  { match: "superliga",    label: "Superliga BetPlay Dimayor",     color: "#062a63", logo: "https://lh3.googleusercontent.com/d/1UJxk_10wBGXLNs5_gaVFI6xmUkT47uYq" },
+  { match: "libertadores", label: "CONMEBOL Libertadores",         color: "#c9a227", logo: "https://lh3.googleusercontent.com/d/1iRkeR307HOxDvVcV8u_IKMkZ3_b0GAye" },
+  { match: "sudamericana", label: "CONMEBOL Sudamericana",         color: "#c23b3b", logo: "https://lh3.googleusercontent.com/d/1rJQeeoIs9SMrNyuLhVvJCFOtgR9Hq5FE" },
+  { match: "mundial",      label: "Copa Mundial de la FIFA 2026",  color: "#2fb8a6", logo: "https://lh3.googleusercontent.com/d/1Td-x8UWchJUcFPqIPhxfYJlWzpvF6t9u" },
+  { match: "copa",         label: "Copa BetPlay Dimayor",          color: "#3bad4c", logo: "https://lh3.googleusercontent.com/d/1TELaujxqcd_Q_I3HwUxriPuUuwOx2Wrl" },
+  { match: "torneo",       label: "Torneo BetPlay Dimayor",        color: "#6fb2e3", logo: "https://lh3.googleusercontent.com/d/1t64NZwLCkCo4ofMZVYzhfcV8pSsVwCfv" },
+  { match: "liga",         label: "Liga BetPlay Dimayor",          color: "#f3cc23", logo: "https://lh3.googleusercontent.com/d/1tVCRbR0BNTcSqzoDd0jgs_9dvrvYK2pX" }
+];
+const GENERAL = { label: "DIMAYOR", color: "#64748b", logo: "https://lh3.googleusercontent.com/d/1nAOaOA7FCdprzPq6LBwuqTEHVEAQpRzU" };
+
+/* ---------- Fechas (hora Colombia) ---------- */
+const WD_NAMES = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+const MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+const MESES_LARGO = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+const BOGOTA_OFFSET_MS = -5 * 60 * 60 * 1e3;
+function bogota(d) { return new Date(new Date(d).getTime() + BOGOTA_OFFSET_MS); }
+function pad2(n) { return (n < 10 ? "0" : "") + n; }
+function dateKeyBogota(d) { const b = bogota(d); return b.getUTCFullYear() + "-" + pad2(b.getUTCMonth() + 1) + "-" + pad2(b.getUTCDate()); }
+function todayKey() { return dateKeyBogota(new Date()); }
+function fmtTime(d) {
+  const b = bogota(d), h = b.getUTCHours(), h12 = h % 12 === 0 ? 12 : h % 12;
+  return h12 + ":" + pad2(b.getUTCMinutes()) + " " + (h < 12 ? "AM" : "PM");
+}
+function whenText(d) {
+  const k = dateKeyBogota(d), today = todayKey(), yest = dateKeyBogota(Date.now() - 864e5);
+  if (k === today) return "Hoy · " + fmtTime(d);
+  if (k === yest) return "Ayer · " + fmtTime(d);
+  return Number(k.slice(8, 10)) + " " + MESES[Number(k.slice(5, 7)) - 1] + " · " + fmtTime(d);
+}
+
+/* ---------- Utilidades ---------- */
+const parser = new DOMParser();
+function esc(s) { return String(s != null ? s : "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]); }
+function plain(html) { return (parser.parseFromString(html || "", "text/html").body.textContent || "").replace(/\s+/g, " ").trim(); }
+function hexToRgb(hex) {
+  const h = String(hex || "#888888").replace("#", "");
+  const n = parseInt(h.length === 3 ? h.split("").map((c) => c + c).join("") : h, 16);
+  return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+}
+function mixColor(hex, withHex, amount) {
+  const a = hexToRgb(hex), b = hexToRgb(withHex);
+  const c = a.map((v, i) => Math.round(v * amount + b[i] * (1 - amount)));
+  return `rgb(${c[0]},${c[1]},${c[2]})`;
+}
+
+/* ---------- Datos de WordPress ---------- */
+function categorySlugs(p) { return (p.class_list || []).filter((c) => c.startsWith("category-")).map((c) => c.slice(9)); }
+function competencia(slugs) {
+  for (const c of COMPETENCIAS) if (slugs.some((s) => s.includes(c.match))) return c;
+  return GENERAL;
+}
+function contentImages(p) {
+  const doc = parser.parseFromString((p.content && p.content.rendered) || "", "text/html");
+  return [...doc.querySelectorAll("img")].map((i) => i.getAttribute("src")).filter(Boolean);
+}
+function featuredImage(p) {
+  const head = p.aioseo_head_json || {};
+  const graph = (head.schema && head.schema["@graph"]) || [];
+  for (const n of graph) if (n["@type"] === "BlogPosting" && n.image && n.image.url) return n.image.url;
+  if (head["og:image"]) return head["og:image"];
+  return contentImages(p)[0] || "";
+}
+function normalize(p) {
+  const slugs = categorySlugs(p);
+  const galeria = slugs.some((s) => s.includes("galeria"));
+  const date = new Date(p.date_gmt ? p.date_gmt + "Z" : p.date);
+  return {
+    id: p.id,
+    title: plain(p.title && p.title.rendered),
+    excerpt: plain(p.excerpt && p.excerpt.rendered).replace(/\s*\[(…|\.\.\.)\]\s*$/, "…"),
+    link: p.link,
+    date,
+    isNew: Date.now() - date.getTime() < CONFIG.HORAS_NUEVA * 36e5,
+    comp: competencia(slugs),
+    galeria,
+    programacion: slugs.some((s) => s.includes("programacion")),
+    image: featuredImage(p)
+  };
+}
+async function fetchNews() {
+  const fields = "id,date,date_gmt,link,title,excerpt,content,class_list,aioseo_head_json";
+  // Solo publicaciones desde las 00:00 (hora Colombia) de ayer; se piden de sobra porque las galerías se descartan
+  const days = [];
+  for (let i = 0; i < CONFIG.DIAS; i++) days.push(dateKeyBogota(Date.now() - i * 864e5));
+  const after = encodeURIComponent(days[days.length - 1] + "T00:00:00-05:00");
+  const res = await fetch(`${CONFIG.API}?per_page=100&after=${after}&_fields=${fields}&_=${Date.now()}`, { cache: "no-store" });
+  if (!res.ok) throw new Error("HTTP " + res.status);
+  let list = (await res.json()).map(normalize)
+    .filter((n) => !n.galeria && days.indexOf(dateKeyBogota(n.date)) !== -1);
+  if (CONFIG.EXCLUIR_PROGRAMACION) list = list.filter((n) => !n.programacion);
+  return list.slice(0, CONFIG.CANTIDAD);
+}
+
+/* ---------- Estado ---------- */
+// Modo combinado (dentro de pantalla.html): no rota sola; cuando pantalla.html le dice "start",
+// muestra TODAS las noticias una vez desde la primera y avisa "newsDone" al terminar.
+const COMBINADO = /[?&]combinado=1/.test(location.search);
+let NEWS = [];
+let current = 0;
+let slideTimer = null;
+
+async function loadNews() {
+  const status = document.getElementById("statusLine");
+  const online = document.getElementById("online");
+  try {
+    const list = await fetchNews();
+    online.classList.remove("off"); online.lastChild.textContent = "En línea";
+    if (!list.length) { showEmpty(); return; }
+    const currentId = NEWS[current] && NEWS[current].id;
+    NEWS = list;
+    const pos = NEWS.findIndex((n) => n.id === currentId);
+    current = pos >= 0 ? pos : 0;
+    NEWS.forEach((n) => { if (n.image) new Image().src = n.image; });
+    status.textContent = `Actualizado ${fmtTime(new Date())} · ${NEWS.length} noticias de hoy y ayer`;
+    if (!slideTimer && !COMBINADO) startRotation();
+    if (!document.querySelector("#hero .heroIn")) renderHero(); else renderList();
+    renderHeader(); renderLegend();
+  } catch (err) {
+    console.error("Error cargando noticias:", err);
+    status.textContent = "No se pudo conectar con dimayor.com.co — reintentando…";
+    online.classList.add("off"); online.lastChild.textContent = "Sin conexión";
+    if (!NEWS.length) setTimeout(loadNews, 30e3);
+  }
+}
+
+/* Sin noticias de hoy ni ayer: se deja el mismo diseño con un aviso */
+function showEmpty() {
+  NEWS = []; current = 0;
+  document.getElementById("hero").innerHTML = `<div class="empty"><span class="ico">📰</span>Sin noticias publicadas hoy ni ayer</div>`;
+  document.getElementById("list").innerHTML = "";
+  document.getElementById("listFoot").innerHTML = "";
+  document.getElementById("listNum").textContent = "0";
+  document.getElementById("listCount").textContent = "Sin noticias recientes";
+  document.getElementById("statusLine").textContent = `Actualizado ${fmtTime(new Date())} · 0 noticias de hoy y ayer`;
+  renderHeader(); renderLegend();
+}
+
+/* ---------- Pantalla ---------- */
+function mediaHTML(n) {
+  if (n.image) return `<img src="${esc(n.image)}" alt="" onerror="this.outerHTML='<div class=&quot;placeholder&quot;><img src=&quot;${CONFIG.LOGO_DIMAYOR}&quot;></div>'">`;
+  return `<div class="placeholder"><img src="${CONFIG.LOGO_DIMAYOR}" alt=""></div>`;
+}
+function renderHero() {
+  const n = NEWS[current];
+  const hero = document.getElementById("hero");
+  if (!n) return;
+  const old = hero.querySelector(".heroIn");
+  if (old) old.classList.add("out");
+  setTimeout(() => {
+    hero.style.setProperty("--comp-color", n.comp.color);
+    hero.innerHTML = `
+      <div class="heroIn out">
+        <div class="media">
+          ${mediaHTML(n)}
+          <div class="chips">
+            <span class="chip"><img src="${n.comp.logo}" alt="" onerror="this.style.display='none'">${esc(n.comp.label)}</span>
+            ${n.isNew ? `<span class="chip new"><span class="dot"></span>Nueva</span>` : ""}
+          </div>
+          ${n.excerpt ? `<div class="excerpt"><span>${esc(n.excerpt)}</span></div>` : ""}
+          <div class="qr"><div id="qrBox"></div><div>Lee la nota</div></div>
+        </div>
+        <div class="heroText">
+          <div class="heroMeta"><span class="bar"></span><span class="when">${esc(whenText(n.date))}</span><span>· dimayor.com.co</span></div>
+          <div class="heroTitle">${esc(n.title)}</div>
+        </div>
+      </div>
+      <div class="heroBar"><i></i></div>`;
+    if (window.QRCode) new QRCode(document.getElementById("qrBox"), { text: n.link, width: 140, height: 140, correctLevel: QRCode.CorrectLevel.M });
+    else hero.querySelector(".qr").remove();
+    requestAnimationFrame(() => requestAnimationFrame(() => hero.querySelector(".heroIn").classList.remove("out")));
+    renderList();
+  }, old ? 600 : 0);
+}
+function renderList() {
+  const total = NEWS.length, max = Math.min(5, total - 1);
+  let html = "";
+  for (let k = 1; k <= max; k++) {
+    const n = NEWS[(current + k) % total];
+    const style = `--comp-color:${n.comp.color};--card-bg:${mixColor(n.comp.color, "#ffffff", CONFIG.CARD_TINT)}`;
+    const badge = n.isNew ? `<span class="badge live"><span class="dot"></span>Nueva</span>` : "";
+    const thumb = n.image ? `<img class="thumb" src="${esc(n.image)}" alt="" onerror="this.style.visibility='hidden'">` : `<div class="thumb"></div>`;
+    html += `<div class="card" style="${style}">
+      <div class="top"><div class="comp"><img src="${n.comp.logo}" alt="" onerror="this.style.display='none'"><span>${esc(n.comp.label)}</span></div>${badge}</div>
+      <div class="row">${thumb}<div class="tt">${esc(n.title)}</div></div>
+      <span class="when">${esc(whenText(n.date))}</span>
+    </div>`;
+  }
+  document.getElementById("list").innerHTML = html || `<div class="empty"><span class="ico">📰</span>Sin más noticias</div>`;
+  document.getElementById("listNum").textContent = total;
+  document.getElementById("listCount").textContent = `Noticia ${current + 1} de ${total} en pantalla`;
+  document.getElementById("listFoot").innerHTML = total > 1
+    ? `<div class="dots">${NEWS.map((_, i) => `<i class="${i === current ? "on" : ""}"></i>`).join("")}</div><span class="pageTxt">${current + 1} / ${total}</span>`
+    : "";
+}
+function renderHeader() {
+  const nuevas = NEWS.filter((n) => n.isNew).length;
+  document.getElementById("newPill").classList.toggle("show", nuevas > 0);
+  document.getElementById("newCount").textContent = `${nuevas} nueva${nuevas === 1 ? "" : "s"}`;
+}
+function renderLegend() {
+  const used = [];
+  NEWS.forEach((n) => { if (used.indexOf(n.comp) === -1) used.push(n.comp); });
+  document.getElementById("legend").innerHTML = used.map((c) => `<span><i style="background:${c.color}"></i>${esc(c.label)}</span>`).join("");
+}
+function startRotation() {
+  slideTimer = setInterval(() => {
+    if (!NEWS.length) return;
+    current = (current + 1) % NEWS.length;
+    renderHero();
+  }, CONFIG.SLIDE_SECONDS * 1e3);
+}
+
+/* ---------- Ciclo para el modo combinado ---------- */
+let cycleTimer = null;
+function cycleDone() {
+  if (cycleTimer) { clearInterval(cycleTimer); cycleTimer = null; }
+  if (window.parent !== window) window.parent.postMessage({ evt: "newsDone", total: NEWS.length }, "*");
+}
+function startCycle() {
+  clearInterval(cycleTimer);
+  if (!NEWS.length) { cycleDone(); return; }
+  const total = NEWS.length;
+  let shown = 1;
+  current = 0;
+  renderHero();
+  cycleTimer = setInterval(() => {
+    // la última noticia también se queda su tiempo completo (se suma la animación de entrada)
+    if (shown >= total || !NEWS.length) { clearInterval(cycleTimer); cycleTimer = null; setTimeout(cycleDone, 700); return; }
+    current = (current + 1) % NEWS.length;
+    shown++;
+    renderHero();
+  }, CONFIG.SLIDE_SECONDS * 1e3);
+}
+if (COMBINADO) {
+  window.addEventListener("message", (e) => {
+    if (e.data && e.data.cmd === "start") startCycle();
+  });
+}
+
+/* ---------- Reloj ---------- */
+let currentDay = todayKey();
+function renderClock() {
+  const now = new Date(), key = todayKey();
+  document.getElementById("clockTime").textContent = fmtTime(now);
+  document.getElementById("clockDate").textContent = `${WD_NAMES[(bogota(now).getUTCDay() + 6) % 7]}, ${Number(key.slice(8, 10))} de ${MESES_LARGO[Number(key.slice(5, 7)) - 1]}`;
+  if (key !== currentDay) { currentDay = key; if (CONFIG.RELOAD_AT_MIDNIGHT) location.reload(); }
+}
+
+/* Escala el diseño de 1920x1080 al tamaño real de la pantalla */
+function fitStage() {
+  const k = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+  document.getElementById("stage").style.setProperty("--k", String(k));
+}
+window.addEventListener("resize", fitStage);
+window.addEventListener("orientationchange", fitStage);
+fitStage();
+document.documentElement.style.setProperty("--slide-seconds", CONFIG.SLIDE_SECONDS + "s");
+renderClock();
+setInterval(renderClock, 20e3);
+loadNews();
+setInterval(loadNews, CONFIG.REFRESH_MS);
+</script>
+</body>
+</html>
