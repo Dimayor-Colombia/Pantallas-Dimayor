@@ -34,11 +34,6 @@ const CONFIG = {
 
 const cal = document.getElementById("cal");
 const news = document.getElementById("news");
-// ?debug=1 en el link se pasa también al calendario y a las noticias
-if (/[?&]debug=1/.test(location.search)) {
-  cal.src = "calendario.html?combinado=1&debug=1";
-  news.src = "noticias.html?combinado=1&debug=1";
-}
 let timer = null, view = "";
 
 function send(frame, msg) {
