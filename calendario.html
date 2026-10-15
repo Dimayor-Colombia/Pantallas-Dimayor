@@ -217,7 +217,8 @@
 
   /* ---------- Diseño "versus": escudos grandes a los lados ---------- */
   .match.versus{ padding:8px 10px 7px 10px; }
-  .match.versus .venueRow{ height:14px; }
+  .match.versus .venueRow{ height:14px; justify-content:center; }
+  .match.versus .venue{ text-align:center; max-width:100%; }
   .vs{ display:flex; align-items:flex-start; justify-content:space-between; gap:4px; height:80px; }
   .vteam{ flex:1 1 0; min-width:0; display:flex; flex-direction:column; align-items:center; gap:3px; }
   .vs .crest{ width:46px; height:46px; flex:0 0 46px; font-size:15px; }
@@ -226,8 +227,16 @@
   .vs .crest.flag{ width:42px; height:42px; flex:0 0 42px; margin:2px 0; border-radius:50%;
     box-shadow:0 0 0 2px #fff, 0 0 0 3px rgba(15,23,42,.18), 0 2px 5px rgba(15,23,42,.25); }
   .vname{ max-width:100%; font-size:14px; font-weight:800; line-height:1.08; text-align:center;
-    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; overflow-wrap:anywhere; }
-  .vmid{ flex:0 0 auto; align-self:flex-start; height:46px; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; overflow-wrap:normal; word-break:normal; hyphens:none; }
+  .vname.md{ font-size:13px; }
+  .vname.sm{ font-size:12px; letter-spacing:-.01em; }
+  /* Centro de la tarjeta: hora (o marcador) arriba y la fecha/fase debajo */
+  .vmid{ flex:0 0 104px; width:104px; align-self:flex-start; display:flex; flex-direction:column; align-items:center; padding-top:11px; gap:5px; }
+  .vmid .minute{ font-size:12px; line-height:1; }
+  .vround{ font-size:11.5px; max-width:100%; font-weight:700; line-height:1.12; text-align:center;
+    color:#475569; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .match.vivo .vround{ -webkit-line-clamp:2; }   /* en vivo también va el minuto, queda menos espacio */
+  .match.versus.on-dark .vround{ color:rgba(255,255,255,.82); }
   .vmid .kickoff{ font-size:22px; display:flex; align-items:baseline; gap:3px; }
   .vmid .kickoff small{ font-family:'DM Sans', sans-serif; font-size:12px; font-weight:800; letter-spacing:.04em; }
   .vscore{ display:flex; align-items:baseline; gap:6px; font-family:'DM Mono', monospace; }
@@ -387,6 +396,12 @@ const CONFIG = {
     "Escudo Orsomarso SC.png", "Escudo Patriotas FC.png", "Escudo Real Cartagena.png", "Escudo Real Santander SA.png",
     "Escudo Tigres FC.png", "Escudo Unión Magdalena.png", "LOGO IVC (1).png", "Real Cundinamarca.png"
   ],
+  // --- Escudos de respaldo desde ESPN: se usan SOLO si el equipo no está en la carpeta "escudos" ---
+  // El archivo escudos-espn.json lo genera y actualiza solo, cada día, la tarea de GitHub
+  // ".github/workflows/escudos-espn.yml" (ahí está la lista de ligas que se descargan).
+  ESPN_LOGOS: true,
+  ESPN_LOGOS_FILE: "escudos-espn.json",
+  ESPN_LOGOS_REFRESH_MS: 6 * 60 * 60 * 1e3,
   // --- Banderas para selecciones (repositorio público flag-icons, servido por jsDelivr) ---
   FLAGS_BASE: "https://cdn.jsdelivr.net/npm/flag-icons@7.5.0/flags/1x1/",
   // Nombres extra de países que no salen solos (nombre como en el calendario: código de la bandera)
@@ -421,9 +436,9 @@ const CALENDARS = [
   { id: "c_f4e132b3db024af62da58634ae149e2baabbe282f113c0f7d9ddea1ffe67d42f@group.calendar.google.com", label: "Copa BetPlay Dimayor", color: "#3bad4c", logo: "https://lh3.googleusercontent.com/d/1TELaujxqcd_Q_I3HwUxriPuUuwOx2Wrl", espnSlug: "col.copa", sportsDbId: null, highlightlyId: 205875, kickoffLeagueId: 241, allSportsLeagueId: 475 },
   { id: "c_d95f7411f89d37a29d9135d9b963cb157e2c0e8ca5971cfe34320415fa6d9254@group.calendar.google.com", label: "Superliga BetPlay Dimayor", color: "#062a63", logo: "https://lh3.googleusercontent.com/d/1UJxk_10wBGXLNs5_gaVFI6xmUkT47uYq", espnSlug: "col.superliga", sportsDbId: null, highlightlyId: 607547, kickoffLeagueId: 713, allSportsLeagueId: 527 },
   { id: "c_4317288379f78b336a1509f4f6f678aad84d2b08c72797d268346ea2122beb79@group.calendar.google.com", label: "Liga Femenina BetPlay Dimayor", color: "#b51a65", logo: "https://lh3.googleusercontent.com/d/1GRGoELSTVM2sDydzsswzi6XvjCDxK84y", espnSlug: null, sportsDbId: null, highlightlyId: 606696, kickoffLeagueId: 712, allSportsLeagueId: 466 },
-  { id: "c_c51065fa3d2f6c30997d0480ee6168233541fa6d80f79e989c70649a83655fad@group.calendar.google.com", label: "Otras competiciones", color: "#64748b", logo: "https://lh3.googleusercontent.com/d/1nAOaOA7FCdprzPq6LBwuqTEHVEAQpRzU", espnSlug: null, sportsDbId: null, highlightlyId: null, kickoffLeagueId: null, allSportsLeagueId: null },
-  { id: "c_b9881758c97c62967ca1e1638d560af12815ed0262b6bf7d7afc2d910b7cf03a@group.calendar.google.com", label: "CONMEBOL Libertadores", color: "#c9a227", logo: "https://lh3.googleusercontent.com/d/1iRkeR307HOxDvVcV8u_IKMkZ3_b0GAye", espnSlug: "conmebol.libertadores", sportsDbId: null, highlightlyId: null, kickoffLeagueId: null, allSportsLeagueId: null },
-  { id: "c_353a23183eccc44a15047f4aa971ca96526a53f16170a1b69e0357d2c324c10c@group.calendar.google.com", label: "CONMEBOL Sudamericana", color: "#c23b3b", logo: "https://lh3.googleusercontent.com/d/1rJQeeoIs9SMrNyuLhVvJCFOtgR9Hq5FE", espnSlug: "conmebol.sudamericana", sportsDbId: null, highlightlyId: null, kickoffLeagueId: null, allSportsLeagueId: null },
+  { id: "c_c51065fa3d2f6c30997d0480ee6168233541fa6d80f79e989c70649a83655fad@group.calendar.google.com", label: "Otras competiciones", color: "#111827", logo: "https://lh3.googleusercontent.com/d/1nAOaOA7FCdprzPq6LBwuqTEHVEAQpRzU", espnSlug: null, sportsDbId: null, highlightlyId: null, kickoffLeagueId: null, allSportsLeagueId: null },
+  { id: "c_b9881758c97c62967ca1e1638d560af12815ed0262b6bf7d7afc2d910b7cf03a@group.calendar.google.com", label: "CONMEBOL Libertadores", color: "#111827", logo: "https://lh3.googleusercontent.com/d/1iRkeR307HOxDvVcV8u_IKMkZ3_b0GAye", espnSlug: "conmebol.libertadores", sportsDbId: null, highlightlyId: null, kickoffLeagueId: null, allSportsLeagueId: null },
+  { id: "c_353a23183eccc44a15047f4aa971ca96526a53f16170a1b69e0357d2c324c10c@group.calendar.google.com", label: "CONMEBOL Sudamericana", color: "#111827", logo: "https://lh3.googleusercontent.com/d/1rJQeeoIs9SMrNyuLhVvJCFOtgR9Hq5FE", espnSlug: "conmebol.sudamericana", sportsDbId: null, highlightlyId: null, kickoffLeagueId: null, allSportsLeagueId: null },
   { id: "4de747g9v5rqo0ohmj87j4sf1fg9m2c8@import.calendar.google.com", label: "Copa Mundial de la FIFA 2026", color: "#2fb8a6", logo: "https://lh3.googleusercontent.com/d/1Td-x8UWchJUcFPqIPhxfYJlWzpvF6t9u", espnSlug: null, sportsDbId: null, highlightlyId: null, kickoffLeagueId: null, allSportsLeagueId: null }
 ];
 const WD_MAP = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
@@ -878,7 +893,8 @@ async function fetchLogos() {
   LOGO_CACHE.clear();
   lastTableHTML = "";
   renderTable();
-  setLogoStatus(LOGOS.list.length ? `Escudos: ${LOGOS.list.length}` : "Escudos: la carpeta está vacía", !!LOGOS.list.length);
+  const espnTeams = typeof ESPN_LOGOS !== "undefined" ? new Set(ESPN_LOGOS.list.map((l) => l.key)).size : 0;
+  setLogoStatus((LOGOS.list.length ? `Escudos: ${LOGOS.list.length}` : "Escudos: la carpeta está vacía") + (espnTeams ? ` + ${espnTeams} ESPN` : ""), !!LOGOS.list.length);
   LOGOS.loading = false;
 }
 // Compara dos palabras tolerando un error de digitación (letra de más/menos, cambiada o dos letras invertidas)
@@ -943,30 +959,74 @@ function findLogo(teamName) {
     const target = normalizeName(aliases[aliasKey]);
     result = LOGOS.list.find((l) => l.base === target) || null;
   }
-  // 2) comparación por palabras: gana el escudo con más palabras en común;
-  //    en empate, el que tenga menos palabras sobrantes
   // 2) selección nacional -> bandera (solo si el nombre es exactamente un país)
   if (!result) result = findFlag(teamName);
+  // 3) comparación por palabras, primero en la carpeta "escudos" y después en ESPN.
+  //    ESPN solo gana si coincide mejor (ej. "Nacional" de Uruguay frente a "Atlético Nacional").
   if (!result) {
     const words = logoWords(teamName);
-    const hasSpecific = words.some((w) => !LOGO_GENERIC.has(w));
-    let best = null, bestScore = 0, bestRatio = 0, tie = false;
-    LOGOS.list.forEach((l) => {
-      const common = l.words.filter((w) => words.some((x) => sameWord(x, w)));
-      if (!common.length) return;
-      if (hasSpecific && !common.some((w) => !LOGO_GENERIC.has(w))) return;
-      const ratio = common.length / l.words.length;
-      if (common.length > bestScore || (common.length === bestScore && ratio > bestRatio)) {
-        best = l; bestScore = common.length; bestRatio = ratio; tie = false;
-      } else if (common.length === bestScore && ratio === bestRatio && best && l.base !== best.base) {
-        tie = true;
-      }
-    });
-    // Si dos escudos empatan (ej. "Internacional" sirve para Bogotá y Palmira), mejor no adivinar
-    result = tie ? null : best;
+    const local = bestLogoMatch(LOGOS.list, words);
+    const espn = bestLogoMatch(ESPN_LOGOS.list, words);
+    if (espn.best && (!local.best || espn.score > local.score || (espn.score === local.score && espn.ratio > local.ratio))) {
+      result = espn.best;
+    } else {
+      result = local.best;
+    }
   }
   LOGO_CACHE.set(teamName, result);
   return result;
+}
+// Gana el escudo con más palabras en común; en empate, el que tenga menos palabras sobrantes.
+// Si dos escudos distintos empatan (ej. "Internacional" sirve para Bogotá y Palmira), mejor no adivinar.
+function bestLogoMatch(list, words) {
+  const hasSpecific = words.some((w) => !LOGO_GENERIC.has(w));
+  let best = null, score = 0, ratio = 0, tie = false;
+  list.forEach((l) => {
+    const common = l.words.filter((w) => words.some((x) => sameWord(x, w)));
+    if (!common.length) return;
+    if (hasSpecific && !common.some((w) => !LOGO_GENERIC.has(w))) return;
+    const r = common.length / l.words.length;
+    if (common.length > score || (common.length === score && r > ratio)) {
+      best = l; score = common.length; ratio = r; tie = false;
+    } else if (common.length === score && r === ratio && best && (l.key || l.base) !== (best.key || best.base)) {
+      tie = true;
+    }
+  });
+  return tie ? { best: null, score, ratio } : { best, score, ratio };
+}
+/* ---------- Escudos de respaldo desde ESPN (equipos que no están en la carpeta) ---------- */
+const ESPN_LOGOS = { list: [], loading: false };
+async function fetchEspnLogos() {
+  if (!CONFIG.ESPN_LOGOS || ESPN_LOGOS.loading) return;
+  ESPN_LOGOS.loading = true;
+  // Primero el archivo publicado junto al board; si no está (ej. probando en el PC), el del repositorio
+  const file = CONFIG.ESPN_LOGOS_FILE;
+  const urls = [file + "?v=" + Math.floor(Date.now() / 36e5), `https://raw.githubusercontent.com/${CONFIG.GITHUB_REPO}/HEAD/${file}`];
+  let data = null;
+  for (const u of urls) {
+    try { data = await getJSON(u); break; } catch (err) { console.warn("No se pudo leer", u, err); }
+  }
+  const seen = new Set(), list = [];
+  ((data && data.equipos) || []).forEach((t) => {
+    if (!t.logo) return;
+    // el equipo se guarda con todos sus nombres: completo, corto y ciudad/nombre alterno
+    (t.nombres || []).forEach((n) => {
+      const k = t.id + "|" + normalizeName(n);
+      if (!n || seen.has(k)) return;
+      seen.add(k);
+      list.push({ key: "espn" + t.id, base: normalizeName(n), words: logoWords(n), url: t.logo, alts: [] });
+    });
+  });
+  if (!list.length) console.warn("Escudos ESPN: el archivo " + file + " no existe todavía o está vacío");
+  if (list.length) {
+    ESPN_LOGOS.list = list;
+    LOGO_CACHE.clear();
+    lastTableHTML = "";
+    renderTable();
+    const teams = new Set(list.map((l) => l.key)).size;
+    setLogoStatus(`Escudos: ${LOGOS.list.length} + ${teams} ESPN`, true);
+  }
+  ESPN_LOGOS.loading = false;
 }
 function parseTitle(title) {
   let t = String(title || "").trim(), round = "";
@@ -1027,6 +1087,29 @@ function cardColors(cal, finished) {
   const tint = finished ? CONFIG.CARD_TINT * 0.6 : CONFIG.CARD_TINT;
   return { cls: "tint", style: `--comp-color:${color};--card-bg:${mixColor(color, "#ffffff", tint)}` };
 }
+// Quita de la fecha/fase el nombre de la competencia (ya aparece arriba en la tarjeta):
+// "CONMEBOL Libertadores - Octavos de final" -> "Octavos de final"
+function cleanRound(round, label) {
+  let r = String(round || "").trim();
+  if (!r) return "";
+  // de la forma más larga a la más corta: "Copa BetPlay Dimayor", "Copa BetPlay";
+  // también sin "CONMEBOL": "Sudamericana", "Libertadores"
+  const names = [label, String(label).replace(/\s+Dimayor$/i, ""), String(label).replace(/^CONMEBOL\s+/i, "")];
+  names.forEach((n) => {
+    if (!n) return;
+    const re = new RegExp(n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "ig");
+    r = r.replace(re, "");
+  });
+  r = r.replace(/^[\s\-–—:|·,]+|[\s\-–—:|·,]+$/g, "").replace(/\s*[-–—]\s*[-–—]\s*/g, " - ").trim();
+  // quita el año/semestre que quede al inicio: "2026-II - Cuadrangulares" -> "Cuadrangulares"
+  r = r.replace(/^(19|20)\d{2}(\s*[-–]\s*(I{1,2}|1|2))?(?=[\s\-–—:|·,]|$)/i, "").replace(/^[\s\-–—:|·,]+/, "").trim();
+  return r || String(round).trim();
+}
+// Nombres con palabras muy largas ("Independiente", "Cundinamarca") usan letra un poco más pequeña
+function nameSize(name) {
+  const longest = String(name).split(/\s+/).reduce((m, w) => Math.max(m, w.length), 0);
+  return longest >= 12 ? "sm" : longest >= 10 ? "md" : "";
+}
 function cardHTML(ev) {
   const st = matchStatus(ev);
   const info = getMatchInfo(ev);
@@ -1065,11 +1148,12 @@ function cardHTML(ev) {
     center = `<span class="kickoff"${color}>${ev.allDay ? "Por definir" : `${t[0]}<small>${t[1]}</small>`}</span>`;
   }
   const versus = CONFIG.CARD_LAYOUT === "versus" && teams;
+  const roundText = cleanRound(parsed.round, ev.cal.label);
   const teamBlock = versus
     ? `<div class="vs">
-        <div class="vteam">${crestHTML(teams[0])}<span class="vname">${esc(teams[0])}</span></div>
-        <div class="vmid">${center}</div>
-        <div class="vteam">${crestHTML(teams[1])}<span class="vname">${esc(teams[1])}</span></div>
+        <div class="vteam">${crestHTML(teams[0])}<span class="vname ${nameSize(teams[0])}">${esc(teams[0])}</span></div>
+        <div class="vmid">${center}${minute}${roundText ? `<span class="vround">${esc(roundText)}</span>` : ""}</div>
+        <div class="vteam">${crestHTML(teams[1])}<span class="vname ${nameSize(teams[1])}">${esc(teams[1])}</span></div>
       </div>`
     : teams
     ? `<div class="teams"><div class="teamList">
@@ -1077,7 +1161,7 @@ function cardHTML(ev) {
         <div class="team">${crestHTML(teams[1])}<span class="tname">${esc(teams[1])}</span></div>
       </div>${side}</div>`
     : `<div class="teams"><div class="teamList"><div class="title">${esc(parsed.rest || ev.title)}</div></div>${side}</div>`;
-  const right = minute || (parsed.round ? `<span class="round">${esc(parsed.round)}</span>` : "");
+  const right = versus ? "" : (minute || (parsed.round ? `<span class="round">${esc(parsed.round)}</span>` : ""));
   const cc = cardColors(ev.cal, state === "finalizado");
   return `<div class="match ${versus ? "versus" : ""} ${cc.cls} ${state === "en_vivo" ? "vivo" : ""} ${state === "finalizado" ? "finalizado" : ""}" style="${cc.style}">
     <div class="top">
@@ -1266,6 +1350,8 @@ renderClock();
 loadEvents();
 fetchLogos();
 setInterval(fetchLogos, CONFIG.LOGOS_REFRESH_MS);
+fetchEspnLogos();
+setInterval(fetchEspnLogos, CONFIG.ESPN_LOGOS_REFRESH_MS);
 setInterval(tick, CONFIG.TICK_MS);
 setInterval(loadEvents, CONFIG.REFRESH_EVENTS_MS);
 
