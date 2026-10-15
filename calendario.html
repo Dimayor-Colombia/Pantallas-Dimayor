@@ -401,6 +401,8 @@ const CONFIG = {
   // ".github/workflows/escudos-espn.yml" (ahí está la lista de ligas que se descargan).
   ESPN_LOGOS: true,
   ESPN_LOGOS_FILE: "escudos-espn.json",
+  // Calendarios donde se usan (nombre igual al "label" del calendario). En los de DIMAYOR NUNCA se usan.
+  ESPN_LOGOS_CALENDARS: ["CONMEBOL Libertadores", "CONMEBOL Sudamericana"],
   ESPN_LOGOS_REFRESH_MS: 6 * 60 * 60 * 1e3,
   // --- Banderas para selecciones (repositorio público flag-icons, servido por jsDelivr) ---
   FLAGS_BASE: "https://cdn.jsdelivr.net/npm/flag-icons@7.5.0/flags/1x1/",
@@ -948,9 +950,10 @@ function findFlag(teamName) {
   return { url: CONFIG.FLAGS_BASE + code + ".svg", alts: [], flag: true };
 }
 const LOGO_CACHE = new Map();
-function findLogo(teamName) {
+function findLogo(teamName, useEspn) {
   if (!teamName) return null;
-  if (LOGO_CACHE.has(teamName)) return LOGO_CACHE.get(teamName);
+  const cacheKey = (useEspn ? "E|" : "L|") + teamName;
+  if (LOGO_CACHE.has(cacheKey)) return LOGO_CACHE.get(cacheKey);
   let result = null;
   // 1) alias forzado en la configuración
   const aliases = CONFIG.TEAM_LOGO_ALIASES || {};
@@ -966,7 +969,8 @@ function findLogo(teamName) {
   if (!result) {
     const words = logoWords(teamName);
     const local = bestLogoMatch(LOGOS.list, words);
-    const espn = bestLogoMatch(ESPN_LOGOS.list, words, teamName);
+    // ESPN solo en Libertadores/Sudamericana; los equipos colombianos siempre llevan el escudo de la carpeta
+    const espn = useEspn ? bestLogoMatch(ESPN_LOGOS.list, words, teamName) : { best: null };
     if (espn.best && (!local.best || espn.score > local.score || (espn.score === local.score && espn.ratio > local.ratio))) {
       // Si el club de ESPN es el mismo que uno de la carpeta (ej. "Pasto" = "Deportivo Pasto"), se usa el de la carpeta
       const same = bestLogoMatch(LOGOS.list, espn.best.fullWords || []);
@@ -976,7 +980,7 @@ function findLogo(teamName) {
       result = local.best;
     }
   }
-  LOGO_CACHE.set(teamName, result);
+  LOGO_CACHE.set(cacheKey, result);
   return result;
 }
 // Gana el escudo con más palabras en común; en empate, el que tenga menos palabras sobrantes.
@@ -1064,8 +1068,9 @@ function crestFail(img) {
   img.parentNode.classList.remove("has-img");
   img.parentNode.removeChild(img);
 }
-function crestHTML(name) {
-  const logo = findLogo(name);
+function crestHTML(name, cal) {
+  const useEspn = !!cal && (CONFIG.ESPN_LOGOS_CALENDARS || []).indexOf(cal.label) !== -1;
+  const logo = findLogo(name, useEspn);
   const img = logo ? `<img src="${logo.url}" data-alts="${logo.alts.join("|")}" alt="" onerror="crestFail(this)">` : "";
   return `<span class="crest ${logo ? "has-img" : ""} ${logo && logo.flag ? "flag" : ""}"><span class="ini">${esc(initials(name))}</span>${img}</span>`;
 }
@@ -1162,14 +1167,14 @@ function cardHTML(ev) {
   const roundText = cleanRound(parsed.round, ev.cal.label);
   const teamBlock = versus
     ? `<div class="vs">
-        <div class="vteam">${crestHTML(teams[0])}<span class="vname ${nameSize(teams[0])}">${esc(teams[0])}</span></div>
+        <div class="vteam">${crestHTML(teams[0], ev.cal)}<span class="vname ${nameSize(teams[0])}">${esc(teams[0])}</span></div>
         <div class="vmid">${center}${minute}${roundText ? `<span class="vround">${esc(roundText)}</span>` : ""}</div>
-        <div class="vteam">${crestHTML(teams[1])}<span class="vname ${nameSize(teams[1])}">${esc(teams[1])}</span></div>
+        <div class="vteam">${crestHTML(teams[1], ev.cal)}<span class="vname ${nameSize(teams[1])}">${esc(teams[1])}</span></div>
       </div>`
     : teams
     ? `<div class="teams"><div class="teamList">
-        <div class="team">${crestHTML(teams[0])}<span class="tname">${esc(teams[0])}</span></div>
-        <div class="team">${crestHTML(teams[1])}<span class="tname">${esc(teams[1])}</span></div>
+        <div class="team">${crestHTML(teams[0], ev.cal)}<span class="tname">${esc(teams[0])}</span></div>
+        <div class="team">${crestHTML(teams[1], ev.cal)}<span class="tname">${esc(teams[1])}</span></div>
       </div>${side}</div>`
     : `<div class="teams"><div class="teamList"><div class="title">${esc(parsed.rest || ev.title)}</div></div>${side}</div>`;
   const right = versus ? "" : (minute || (parsed.round ? `<span class="round">${esc(parsed.round)}</span>` : ""));
