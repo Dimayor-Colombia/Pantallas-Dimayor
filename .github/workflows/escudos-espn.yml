@@ -1,0 +1,64 @@
+# Descarga una vez al día los escudos de los equipos desde ESPN y los guarda en escudos-espn.json
+# (el navegador no puede consultar ESPN directamente; GitHub sí).
+name: Escudos ESPN
+
+on:
+  schedule:
+    - cron: "17 10 * * *"     # todos los días a las 5:17 a. m. hora Colombia
+  workflow_dispatch:          # botón "Run workflow" para ejecutarlo a mano
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Descargar escudos de ESPN
+        run: |
+          cat > /tmp/espn.mjs <<'JS'
+          import { writeFileSync } from "node:fs";
+          // Ligas a descargar (agregar aquí si hace falta otra)
+          const LIGAS = [
+            "conmebol.libertadores", "conmebol.sudamericana", "conmebol.recopa",
+            "col.1", "col.2", "col.copa",
+            "arg.1", "bra.1", "uru.1", "par.1", "chi.1", "per.1", "ecu.1", "bol.1", "ven.1",
+            "mex.1", "usa.1", "esp.1", "eng.1", "ita.1", "ger.1", "fra.1", "por.1"
+          ];
+          const equipos = new Map();
+          for (const liga of LIGAS) {
+            try {
+              const r = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${liga}/teams`);
+              if (!r.ok) throw new Error("HTTP " + r.status);
+              const data = await r.json();
+              const lista = data?.sports?.[0]?.leagues?.[0]?.teams || [];
+              let n = 0;
+              for (const { team: t = {} } of lista) {
+                const logo = t.logos?.[0]?.href;
+                if (!logo || /^tbd\b/i.test(t.displayName || "")) continue;
+                const nombres = [...new Set([t.displayName, t.shortDisplayName, t.location].filter(Boolean))];
+                const prev = equipos.get(t.id);
+                equipos.set(t.id, { id: t.id, nombres: prev ? [...new Set([...prev.nombres, ...nombres])] : nombres, logo });
+                n++;
+              }
+              console.log(`${liga}: ${n} equipos`);
+            } catch (e) {
+              console.log(`${liga}: ERROR ${e.message}`);
+            }
+          }
+          if (equipos.size < 50) { console.log("Muy pocos equipos, no se actualiza el archivo"); process.exit(0); }
+          const lista = [...equipos.values()].sort((a, b) => a.nombres[0].localeCompare(b.nombres[0]));
+          writeFileSync("escudos-espn.json", JSON.stringify({ equipos: lista }, null, 0) + "\n");
+          console.log(`Total: ${lista.length} equipos`);
+          JS
+          node /tmp/espn.mjs
+
+      - name: Guardar en el repositorio (solo si cambió)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add escudos-espn.json
+          git diff --cached --quiet || git commit -m "Actualizar escudos ESPN"
+          git push
