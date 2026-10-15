@@ -966,9 +966,12 @@ function findLogo(teamName) {
   if (!result) {
     const words = logoWords(teamName);
     const local = bestLogoMatch(LOGOS.list, words);
-    const espn = bestLogoMatch(ESPN_LOGOS.list, words);
+    const espn = bestLogoMatch(ESPN_LOGOS.list, words, teamName);
     if (espn.best && (!local.best || espn.score > local.score || (espn.score === local.score && espn.ratio > local.ratio))) {
-      result = espn.best;
+      // Si el club de ESPN es el mismo que uno de la carpeta (ej. "Pasto" = "Deportivo Pasto"), se usa el de la carpeta
+      const same = bestLogoMatch(LOGOS.list, espn.best.fullWords || []);
+      const sameClub = same.best && same.ratio === 1 && same.score === (espn.best.fullWords || []).length;
+      result = sameClub ? same.best : espn.best;
     } else {
       result = local.best;
     }
@@ -978,7 +981,8 @@ function findLogo(teamName) {
 }
 // Gana el escudo con más palabras en común; en empate, el que tenga menos palabras sobrantes.
 // Si dos escudos distintos empatan (ej. "Internacional" sirve para Bogotá y Palmira), mejor no adivinar.
-function bestLogoMatch(list, words) {
+function bestLogoMatch(list, words, teamName) {
+  const full = teamName ? normalizeName(teamName) : "";
   const hasSpecific = words.some((w) => !LOGO_GENERIC.has(w));
   let best = null, score = 0, ratio = 0, tie = false;
   list.forEach((l) => {
@@ -989,7 +993,12 @@ function bestLogoMatch(list, words) {
     if (common.length > score || (common.length === score && r > ratio)) {
       best = l; score = common.length; ratio = r; tie = false;
     } else if (common.length === score && r === ratio && best && (l.key || l.base) !== (best.key || best.base)) {
-      tie = true;
+      // Empate en ESPN: 1) gana el nombre idéntico al del calendario ("Barcelona SC" frente a "Barcelona");
+      // 2) gana el club cuyo nombre PRINCIPAL coincide ("Libertad" de Paraguay frente a "Libertad (Ecuador)")
+      const lExact = !!full && l.base === full, bExact = !!full && best.base === full;
+      if (lExact !== bExact) { if (lExact) { best = l; tie = false; } }
+      else if (l.primary && !best.primary) { best = l; tie = false; }
+      else if (!(best.primary && !l.primary)) tie = true;
     }
   });
   return tie ? { best: null, score, ratio } : { best, score, ratio };
@@ -1010,11 +1019,13 @@ async function fetchEspnLogos() {
   ((data && data.equipos) || []).forEach((t) => {
     if (!t.logo) return;
     // el equipo se guarda con todos sus nombres: completo, corto y ciudad/nombre alterno
-    (t.nombres || []).forEach((n) => {
+    const fullWords = logoWords((t.nombres || [])[0] || "");
+    (t.nombres || []).forEach((n, i) => {
       const k = t.id + "|" + normalizeName(n);
       if (!n || seen.has(k)) return;
       seen.add(k);
-      list.push({ key: "espn" + t.id, base: normalizeName(n), words: logoWords(n), url: t.logo, alts: [] });
+      const words = logoWords(n);
+      list.push({ key: "espn" + t.id, primary: i === 0, fullWords, base: normalizeName(n), words, url: t.logo, alts: [] });
     });
   });
   if (!list.length) console.warn("Escudos ESPN: el archivo " + file + " no existe todavía o está vacío");
