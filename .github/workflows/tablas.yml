@@ -40,7 +40,13 @@ jobs:
 
           const BASE = "https://dimayor.com.co";
           const AJAX = BASE + "/wp-admin/admin-ajax.php";
-          const UA = { "User-Agent": "Mozilla/5.0 (DIMAYOR pantallas)" };
+          // Se identifica como un navegador Chrome normal (los firewalls suelen bloquear nombres raros)
+          const UA = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "es-CO,es;q=0.9,en;q=0.8",
+            "Referer": "https://dimayor.com.co/"
+          };
           let cookies = "";
           async function pedir(url, opts = {}) {
             const r = await fetch(url, { ...opts, headers: { ...UA, ...(opts.headers || {}), ...(cookies ? { Cookie: cookies } : {}) },
