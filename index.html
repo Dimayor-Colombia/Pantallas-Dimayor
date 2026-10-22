@@ -11,7 +11,7 @@
 <title>DIMAYOR · Pantallas</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <style>
-  /* Pantalla combinada: alterna el calendario (calendario.html) y las noticias (noticias.html) */
+  /* Pantalla combinada: alterna calendario.html, noticias.html y tablas.html */
   html,body{ width:100%; height:100%; margin:0; padding:0; overflow:hidden; background:#050608; }
   iframe{
     position:fixed; top:0; left:0; width:100%; height:100%; border:0; background:#050608;
@@ -21,65 +21,78 @@
 </style>
 </head>
 <body>
-<iframe id="cal"  src="calendario.html?combinado=1"    title="Calendario"></iframe>
-<iframe id="news" src="noticias.html?combinado=1" title="Noticias"></iframe>
 <script>
 /* =========================================================
-   CONFIGURACIÓN
+   CONFIGURACIÓN: orden y tiempos de la rotación
+   - tipo "tiempo": se queda en pantalla los segundos indicados
+   - tipo "ciclo":  muestra todo su contenido una vez y avisa cuando termina;
+                    "max" es un seguro por si no avisa (vuelve a la rotación igual)
+   Para cambiar el orden, mover las líneas. Para quitar una pantalla, borrar su línea.
    ========================================================= */
-const CONFIG = {
-  CALENDARIO_SEGUNDOS: 600,        // tiempo del calendario en pantalla (2 minutos)
-  NOTICIAS_MAX_SEGUNDOS: 300,      // seguridad: si noticias no avisa que terminó, vuelve al calendario a los 5 min
-  RELOAD_AT_MIDNIGHT: true         // recarga todo a medianoche
-};
+const PASOS = [
+  { nombre: "Calendario", src: "calendario.html?combinado=1", tipo: "tiempo", segundos: 300 },               // 5 minutos
+  { nombre: "Noticias",   src: "noticias.html?combinado=1",   tipo: "ciclo",  fin: "newsDone",   max: 300 },  // todas las noticias
+  { nombre: "Tablas",     src: "tablas.html?combinado=1",     tipo: "ciclo",  fin: "tablasDone", max: 600 }   // todas las tablas
+];
+const RELOAD_AT_MIDNIGHT = true;   // recarga todo a medianoche
 
-const cal = document.getElementById("cal");
-const news = document.getElementById("news");
-let timer = null, view = "";
+/* ---------- Pantallas (un iframe por paso) ---------- */
+PASOS.forEach((p) => {
+  const f = document.createElement("iframe");
+  f.src = p.src; f.title = p.nombre;
+  document.body.appendChild(f);
+  p.frame = f;
+});
+
+let actual = -1, timer = null, seMostroAlgo = false;
 
 function send(frame, msg) {
   try { frame.contentWindow.postMessage(msg, "*"); } catch (e) { console.warn(e); }
 }
-function show(frame) {
-  cal.classList.toggle("on", frame === cal);
-  news.classList.toggle("on", frame === news);
+function show(paso) {
+  PASOS.forEach((p) => p.frame.classList.toggle("on", p === paso));
 }
 
-// 1) Calendario durante 2 minutos
-function showCalendar(reiniciar) {
-  view = "cal";
+function mostrar(i) {
   clearTimeout(timer);
-  if (reiniciar !== false) send(cal, { cmd: "start" });   // vuelve a la página 1 de cada día
-  show(cal);
-  timer = setTimeout(showNews, CONFIG.CALENDARIO_SEGUNDOS * 1e3);
+  actual = i;
+  const paso = PASOS[i];
+  if (paso.tipo === "tiempo") {
+    // al volver a esta pantalla empieza desde su primera página (si en el medio se mostró algo más)
+    if (seMostroAlgo || i !== 0) send(paso.frame, { cmd: "start" });
+    seMostroAlgo = false;
+    show(paso);
+    timer = setTimeout(siguiente, paso.segundos * 1e3);
+  } else {
+    send(paso.frame, { cmd: "start" });
+    timer = setTimeout(siguiente, paso.max * 1e3);
+    // se muestra un instante después, para que su primera página ya esté puesta al aparecer;
+    // si no tiene nada que mostrar (avisa con total 0), se salta sin aparecer
+    setTimeout(() => { if (actual === i) { show(paso); seMostroAlgo = true; } }, 700);
+  }
 }
-
-// 2) Todas las noticias una vez; al terminar, noticias.html avisa "newsDone"
-function showNews() {
-  view = "news";
-  clearTimeout(timer);
-  send(news, { cmd: "start" });
-  timer = setTimeout(showCalendar, CONFIG.NOTICIAS_MAX_SEGUNDOS * 1e3);
-  // se muestra un instante después para que la primera noticia ya esté puesta al aparecer
-  setTimeout(() => { if (view === "news") show(news); }, 700);
+function siguiente() {
+  // si todo lo demás está vacío se vuelve al primero sin parpadear
+  mostrar((actual + 1) % PASOS.length);
 }
 
 window.addEventListener("message", (e) => {
-  // si no hay noticias de hoy ni ayer, el calendario sigue sin reiniciarse
-  if (e.data && e.data.evt === "newsDone" && view === "news") showCalendar(e.data.total > 0);
+  const paso = PASOS[actual];
+  if (!e.data || !paso || paso.tipo !== "ciclo" || e.data.evt !== paso.fin) return;
+  siguiente();
 });
 
-// Arranca cuando el calendario termina de cargar
+// Arranca cuando la primera pantalla termina de cargar
 let started = false;
-function start() { if (!started) { started = true; showCalendar(); } }
-cal.addEventListener("load", () => setTimeout(start, 500));
+function start() { if (!started) { started = true; mostrar(0); } }
+PASOS[0].frame.addEventListener("load", () => setTimeout(start, 500));
 setTimeout(start, 8000); // por si el evento load no llega
 
 // Recarga completa a medianoche (hora Colombia)
 let day = new Date(Date.now() - 5 * 36e5).toISOString().slice(0, 10);
 setInterval(() => {
   const d = new Date(Date.now() - 5 * 36e5).toISOString().slice(0, 10);
-  if (d !== day && CONFIG.RELOAD_AT_MIDNIGHT) location.reload();
+  if (d !== day && RELOAD_AT_MIDNIGHT) location.reload();
 }, 60e3);
 </script>
 </body>
