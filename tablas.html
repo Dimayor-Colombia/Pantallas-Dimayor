@@ -565,6 +565,35 @@ function startRotation() {
   }, CONFIG.SEGUNDOS_POR_PAGINA * 1e3);
 }
 
+/* ---------- Modo combinado (dentro de index.html) ----------
+   No rota sola: cuando index.html le dice "start", muestra TODAS las páginas una vez desde la primera
+   y al terminar avisa "tablasDone" para que la pantalla siga con lo siguiente. */
+const COMBINADO = /[?&]combinado=1/.test(location.search);
+let cycleTimer = null;
+function cycleDone() {
+  clearInterval(cycleTimer); cycleTimer = null;
+  if (window.parent !== window) window.parent.postMessage({ evt: "tablasDone", total: PAGES.length }, "*");
+}
+function startCycle() {
+  clearInterval(cycleTimer);
+  if (!PAGES.length) { cycleDone(); return; }
+  let shown = 1;
+  pageIdx = 0;
+  render(true);
+  cycleTimer = setInterval(() => {
+    // la última página también se queda su tiempo completo (se suma la animación de entrada)
+    if (shown >= PAGES.length) { clearInterval(cycleTimer); cycleTimer = null; setTimeout(cycleDone, 700); return; }
+    pageIdx = (pageIdx + 1) % PAGES.length;
+    shown++;
+    render(false);
+  }, CONFIG.SEGUNDOS_POR_PAGINA * 1e3);
+}
+if (COMBINADO) {
+  window.addEventListener("message", (e) => {
+    if (e.data && e.data.cmd === "start") startCycle();
+  });
+}
+
 /* ---------- Reloj ---------- */
 let currentDay = todayKey();
 function renderClock() {
@@ -585,7 +614,7 @@ fitStage();
 document.documentElement.style.setProperty("--page-seconds", CONFIG.SEGUNDOS_POR_PAGINA + "s");
 renderClock();
 setInterval(renderClock, 20e3);
-loadData().then(startRotation);
+loadData().then(() => { if (!COMBINADO) startRotation(); });
 setInterval(loadData, CONFIG.REFRESH_MS);
 fetchLogos();
 </script>
