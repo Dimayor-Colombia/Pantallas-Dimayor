@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-22T17:12:41.843Z",
+   "actualizado": "2026-10-23T02:51:48.298Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -16,6 +16,19 @@
        "filas": [
         {
          "pos": 1,
+         "equipo": "Atlético Nacional",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
+         "pj": 14,
+         "g": 9,
+         "e": 2,
+         "p": 3,
+         "gf": 28,
+         "gc": 12,
+         "dg": 16,
+         "pts": 29
+        },
+        {
+         "pos": 2,
          "equipo": "Deportivo Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
          "pj": 15,
@@ -28,7 +41,7 @@
          "pts": 29
         },
         {
-         "pos": 2,
+         "pos": 3,
          "equipo": "América de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
          "pj": 14,
@@ -39,19 +52,6 @@
          "gc": 10,
          "dg": 16,
          "pts": 28
-        },
-        {
-         "pos": 3,
-         "equipo": "Atlético Nacional",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
-         "pj": 13,
-         "g": 8,
-         "e": 2,
-         "p": 3,
-         "gf": 25,
-         "gc": 12,
-         "dg": 13,
-         "pts": 26
         },
         {
          "pos": 4,
@@ -265,13 +265,13 @@
          "pos": 20,
          "equipo": "Deportivo Pasto",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
-         "pj": 13,
+         "pj": 14,
          "g": 2,
          "e": 3,
-         "p": 8,
+         "p": 9,
          "gf": 9,
-         "gc": 19,
-         "dg": -10,
+         "gc": 22,
+         "dg": -13,
          "pts": 9
         }
        ]
@@ -288,14 +288,14 @@
          "pos": 1,
          "equipo": "Atlético Nacional",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
-         "pj": 38,
-         "g": 26,
+         "pj": 39,
+         "g": 27,
          "e": 3,
          "p": 9,
-         "gf": 74,
+         "gf": 77,
          "gc": 33,
-         "dg": 41,
-         "pts": 81
+         "dg": 44,
+         "pts": 84
         },
         {
          "pos": 2,
@@ -444,13 +444,13 @@
          "pos": 13,
          "equipo": "Deportivo Pasto",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
-         "pj": 34,
+         "pj": 35,
          "g": 12,
          "e": 7,
-         "p": 15,
+         "p": 16,
          "gf": 38,
-         "gc": 47,
-         "dg": -9,
+         "gc": 50,
+         "dg": -12,
          "pts": 43
         },
         {
@@ -790,13 +790,13 @@
          "pts": 48
         },
         {
-         "pj": 32,
+         "pj": 33,
          "pts": 43
         }
        ],
-       "pj": 110,
+       "pj": 111,
        "pts": 140,
-       "pro": "1,2727"
+       "pro": "1,2613"
       },
       {
        "pos": 9,
@@ -988,13 +988,13 @@
          "pts": 72
         },
         {
-         "pj": 32,
-         "pts": 66
+         "pj": 33,
+         "pts": 69
         }
        ],
-       "pj": 110,
-       "pts": 194,
-       "pro": "1,7636"
+       "pj": 111,
+       "pts": 197,
+       "pro": "1,7748"
       }
      ]
     }
