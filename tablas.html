@@ -223,25 +223,28 @@ const CONFIG = {
 };
 
 /* Competencias: mismos colores y logos del calendario. "id" es el que usa tablas.json.
-   PARA OCULTAR:
-     - una competencia completa: ponerle "//" al inicio de su línea (o líneas) en esta lista
+   PARA OCULTAR (cada competencia ocupa UNA sola línea):
+     - una competencia completa: ponerle "//" al inicio de su línea; para mostrarla, quitar el "//"
      - una sola tabla de una competencia: escribirla en "ocultar", ej. ocultar: ["descenso"]
        (opciones: "posiciones", "reclasificacion", "descenso")
    "zonas": barras de color en las tablas (AJUSTAR según el reglamento del semestre):
      - clasifican: en la tabla de posiciones de las fases cuyo nombre coincide, los N primeros
      - descienden: en la tabla de descenso, los N últimos (barra roja) */
+const LOGOS_COMP = {
+  liga:      "https://lh3.googleusercontent.com/d/1tVCRbR0BNTcSqzoDd0jgs_9dvrvYK2pX",
+  torneo:    "https://lh3.googleusercontent.com/d/1t64NZwLCkCo4ofMZVYzhfcV8pSsVwCfv",
+  femenina:  "https://lh3.googleusercontent.com/d/1GRGoELSTVM2sDydzsswzi6XvjCDxK84y",
+  copa:      "https://lh3.googleusercontent.com/d/1TELaujxqcd_Q_I3HwUxriPuUuwOx2Wrl",
+  superliga: "https://lh3.googleusercontent.com/d/1UJxk_10wBGXLNs5_gaVFI6xmUkT47uYq"
+};
 const COMPETENCIAS = [
-  { id: "liga",      label: "Liga BetPlay Dimayor",          color: "#f3cc23", logo: "https://lh3.googleusercontent.com/d/1tVCRbR0BNTcSqzoDd0jgs_9dvrvYK2pX",
-    ocultar: [], zonas: { clasifican: [{ fase: /todos contra todos/i, n: 8 }], descienden: 2 } },
-  { id: "torneo",    label: "Torneo BetPlay Dimayor",        color: "#6fb2e3", logo: "https://lh3.googleusercontent.com/d/1t64NZwLCkCo4ofMZVYzhfcV8pSsVwCfv",
-    ocultar: [], zonas: { clasifican: [{ fase: /todos contra todos/i, n: 8 }] } },
-  //{ id: "femenina",  label: "Liga Femenina BetPlay Dimayor", color: "#b51a65", logo: "https://lh3.googleusercontent.com/d/1GRGoELSTVM2sDydzsswzi6XvjCDxK84y",
-    ocultar: [], zonas: { clasifican: [{ fase: /^fase i\b(?!i)/i, n: 8 }] } },
-  { id: "copa",      label: "Copa BetPlay Dimayor",          color: "#3bad4c", logo: "https://lh3.googleusercontent.com/d/1TELaujxqcd_Q_I3HwUxriPuUuwOx2Wrl",
-    ocultar: [], zonas: {} },
-  { id: "superliga", label: "Superliga BetPlay Dimayor",     color: "#062a63", logo: "https://lh3.googleusercontent.com/d/1UJxk_10wBGXLNs5_gaVFI6xmUkT47uYq",
-    ocultar: [], zonas: {} }
+  { id: "liga",      label: "Liga BetPlay Dimayor",          color: "#f3cc23", ocultar: [], zonas: { clasifican: [{ fase: /todos contra todos/i, n: 8 }], descienden: 2 } },
+  { id: "torneo",    label: "Torneo BetPlay Dimayor",        color: "#6fb2e3", ocultar: [], zonas: { clasifican: [{ fase: /todos contra todos/i, n: 8 }] } },
+//{ id: "femenina",  label: "Liga Femenina BetPlay Dimayor", color: "#b51a65", ocultar: [], zonas: { clasifican: [{ fase: /^fase i\b(?!i)/i, n: 8 }] } },
+  { id: "copa",      label: "Copa BetPlay Dimayor",          color: "#3bad4c", ocultar: [], zonas: {} },
+  { id: "superliga", label: "Superliga BetPlay Dimayor",     color: "#062a63", ocultar: [], zonas: {} },
 ];
+COMPETENCIAS.forEach((c) => { c.logo = LOGOS_COMP[c.id]; });
 // Si una tabla tiene más equipos que esto, se parte en dos columnas
 const MAX_FILAS_COLUMNA = 20;
 const COLOR_DESCENSO = "#ef4444";
