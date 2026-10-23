@@ -246,6 +246,26 @@
   .match.versus.on-dark .vname{ color:#fff; }
   .match.vivo{ box-shadow:0 0 0 2px #fff, 0 0 0 5px var(--live), 0 6px 22px rgba(225,29,72,.45); animation:liveGlow 2s ease-in-out infinite; }
   .match.vivo .score b{ color:var(--live); }
+
+  /* ---------- Tarjeta de SORTEO (cualquier evento con la palabra "sorteo" en el título) ---------- */
+  .sorteo{ display:flex; align-items:center; gap:10px; height:80px; padding:0 2px 0 0; }
+  .sIco{ flex:0 0 46px; width:46px; height:46px; border-radius:50%; background:#fff; border:3px solid var(--comp-color);
+    display:flex; align-items:center; justify-content:center; color:#0f172a; box-shadow:0 2px 6px rgba(15,23,42,.18); }
+  .sIco svg{ width:27px; height:27px; }
+  .sIco .balon{ width:36px; height:36px; animation:girarBalon 8s linear infinite; }
+  @keyframes girarBalon{ from{ transform:rotate(0deg); } to{ transform:rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce){ .sIco .balon{ animation:none; } }
+  .sTxt{ flex:1 1 auto; min-width:0; display:flex; flex-direction:column; gap:3px; }
+  .sLbl{ align-self:flex-start; font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase;
+    background:#0f172a; color:#fff; padding:3px 9px; border-radius:20px; }
+  /* el título completo, en hasta 3 líneas; el tamaño de letra se ajusta solo para que quepa */
+  .sTit{ font-size:var(--sfs, 17px); font-weight:800; line-height:1.12; color:var(--ink); overflow:hidden; max-height:58px;
+    overflow-wrap:break-word; hyphens:manual; }
+  .sHora{ flex:0 0 auto; display:flex; flex-direction:column; align-items:flex-end; }
+  .sHora .kickoff{ font-size:20px; display:flex; align-items:baseline; gap:3px; }
+  .sHora .kickoff small{ font-family:'DM Sans', sans-serif; font-size:12px; font-weight:800; letter-spacing:.04em; }
+  .match.on-dark .sTit{ color:#fff; }
+  .match.on-dark .sLbl{ background:#fff; color:#0f172a; }
   .match{ background:var(--card-bg, #fff); }
   .match.finalizado{ background:var(--card-bg, #f4f6f9); }
   /* Tarjeta sólida con fondo oscuro: todo el texto en blanco */
@@ -1129,13 +1149,41 @@ function nameSize(name) {
   const longest = String(name).split(/\s+/).reduce((m, w) => Math.max(m, w.length), 0);
   return longest >= 12 ? "sm" : longest >= 10 ? "md" : "";
 }
+// Tarjeta de sorteo: ícono, etiqueta SORTEO, nombre de la fase (sin la palabra "sorteo" ni la competencia) y hora
+const ICONO_SORTEO = '<svg class="balon" viewBox="0 0 24 24"><defs><clipPath id="bc"><circle cx="12" cy="12" r="10.4"/></clipPath></defs><circle cx="12" cy="12" r="10.4" fill="#fff"/><g clip-path="url(#bc)"><polygon points="12.00,8.70 15.14,10.98 13.94,14.67 10.06,14.67 8.86,10.98" fill="#0f172a"/><line x1="12.00" y1="8.70" x2="12.00" y2="4.80" stroke="#0f172a" stroke-width="0.9"/><polygon points="10.18,4.21 9.05,0.74 12.00,-1.40 14.95,0.74 13.82,4.21" fill="#0f172a"/><line x1="12.00" y1="4.80" x2="18.23" y2="3.42" stroke="#0f172a" stroke-width="0.9"/><line x1="15.14" y1="10.98" x2="18.85" y2="9.78" stroke="#0f172a" stroke-width="0.9"/><polygon points="18.85,7.86 21.80,5.72 24.74,7.86 23.62,11.33 19.97,11.33" fill="#0f172a"/><line x1="18.85" y1="9.78" x2="22.08" y2="15.28" stroke="#0f172a" stroke-width="0.9"/><line x1="13.94" y1="14.67" x2="16.23" y2="17.82" stroke="#0f172a" stroke-width="0.9"/><polygon points="18.05,17.23 21.00,19.37 19.88,22.84 16.23,22.84 15.11,19.37" fill="#0f172a"/><line x1="16.23" y1="17.82" x2="12.00" y2="22.60" stroke="#0f172a" stroke-width="0.9"/><line x1="10.06" y1="14.67" x2="7.77" y2="17.82" stroke="#0f172a" stroke-width="0.9"/><polygon points="8.89,19.37 7.77,22.84 4.12,22.84 3.00,19.37 5.95,17.23" fill="#0f172a"/><line x1="7.77" y1="17.82" x2="1.92" y2="15.28" stroke="#0f172a" stroke-width="0.9"/><line x1="8.86" y1="10.98" x2="5.15" y2="9.78" stroke="#0f172a" stroke-width="0.9"/><polygon points="4.03,11.33 0.38,11.33 -0.74,7.86 2.20,5.72 5.15,7.86" fill="#0f172a"/><line x1="5.15" y1="9.78" x2="5.77" y2="3.42" stroke="#0f172a" stroke-width="0.9"/></g><circle cx="12" cy="12" r="10.4" fill="none" stroke="#0f172a" stroke-width="1.1"/></svg>';
+function sorteoHTML(ev, center) {
+  // Se muestra el título completo; solo se quita la palabra "Sorteo" del inicio y el nombre de la
+  // competencia cuando va como parte separada por guiones ("Sorteo - Liga BetPlay Dimayor - Cuartos")
+  const label = String(ev.cal.label);
+  const nombres = [label, label.replace(/\s+Dimayor$/i, ""), label.replace(/^CONMEBOL\s+/i, "")].map(normalizeName);
+  let t = String(ev.title || "").trim().replace(/^sorteo\b\s*[:\-–—]?\s*/i, "");
+  t = t.split(/\s+[-–—|]\s+/).map((x) => x.trim()).filter((x) => x && nombres.indexOf(normalizeName(x)) === -1).join(" · ");
+  t = t.replace(/^[\s\-–—:|·,]+/, "").replace(/\s+/g, " ").trim();
+  t = t.charAt(0).toUpperCase() + t.slice(1);   // "de la Fase II…" -> "De la Fase II…"
+  return `<div class="sorteo">
+      <div class="sIco">${ICONO_SORTEO}</div>
+      <div class="sTxt"><span class="sLbl">Sorteo</span>${t ? `<span class="sTit" style="--sfs:${t.length <= 16 ? 17 : t.length <= 28 ? 15 : 13.5}px">${esc(t)}</span>` : ""}</div>
+      <div class="sHora">${center}</div>
+    </div>`;
+}
+// Después de dibujar: si el título de un sorteo no cabe completo, se reduce la letra hasta que quepa
+function ajustarSorteos(root) {
+  (root || document).querySelectorAll(".sTit").forEach((el) => {
+    let fs = parseFloat(getComputedStyle(el).fontSize) || 17;
+    while ((el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1) && fs > 10) {
+      fs -= 0.5; el.style.setProperty("--sfs", fs + "px");
+    }
+  });
+}
 function cardHTML(ev) {
   const st = matchStatus(ev);
   const info = getMatchInfo(ev);
   let state = st.state;
   if (info) state = info.completed ? "finalizado" : "en_vivo";
   const parsed = parseTitle(ev.title);
-  const teams = parsed.teams;
+  // Sorteo: si el título dice "sorteo" no es un partido (aunque tenga un guion, no se toma como "equipo - equipo")
+  const esSorteo = /\bsorteo\b/i.test(ev.title || "");
+  const teams = esSorteo ? null : parsed.teams;
   let badge = "", side = "", minute = "", progress = "";
   const hasScore = !!info;
   const gh = hasScore ? Number(info.golesHome) : null, ga = hasScore ? Number(info.golesAway) : null;
@@ -1166,9 +1214,11 @@ function cardHTML(ev) {
     const t = ev.allDay ? "" : fmtTime(ev.startISO).split(" ");
     center = `<span class="kickoff"${color}>${ev.allDay ? "Por definir" : `${t[0]}<small>${t[1]}</small>`}</span>`;
   }
-  const versus = CONFIG.CARD_LAYOUT === "versus" && teams;
+  const versus = CONFIG.CARD_LAYOUT === "versus" && (teams || esSorteo);
   const roundText = cleanRound(parsed.round, ev.cal.label);
-  const teamBlock = versus
+  const teamBlock = esSorteo
+    ? sorteoHTML(ev, center)
+    : versus
     ? `<div class="vs">
         <div class="vteam">${crestHTML(teams[0], ev.cal)}<span class="vname ${nameSize(teams[0])}">${esc(teams[0])}</span></div>
         <div class="vmid">${center}${minute}${roundText ? `<span class="vround">${esc(roundText)}</span>` : ""}</div>
@@ -1243,6 +1293,8 @@ function renderTable() {
   if (comparable === lastTableHTML) return;
   lastTableHTML = comparable;
   document.getElementById("table").innerHTML = html;
+  ajustarSorteos(document.getElementById("table"));
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => ajustarSorteos(document.getElementById("table")));
   renderLegend();
 }
 function renderLegend() {
