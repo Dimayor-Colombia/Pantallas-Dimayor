@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-23T02:51:48.298Z",
+   "actualizado": "2026-10-24T02:01:27.013Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -70,13 +70,13 @@
          "pos": 5,
          "equipo": "Atlético Bucaramanga",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
-         "pj": 13,
+         "pj": 14,
          "g": 6,
          "e": 7,
-         "p": 0,
+         "p": 1,
          "gf": 22,
-         "gc": 12,
-         "dg": 10,
+         "gc": 13,
+         "dg": 9,
          "pts": 25
         },
         {
@@ -198,6 +198,19 @@
         },
         {
          "pos": 15,
+         "equipo": "Boyacá Chicó F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
+         "pj": 15,
+         "g": 4,
+         "e": 3,
+         "p": 8,
+         "gf": 12,
+         "gc": 25,
+         "dg": -13,
+         "pts": 15
+        },
+        {
+         "pos": 16,
          "equipo": "Deportivo Pereira",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0009_Escudo-Pereira-1-5.png",
          "pj": 14,
@@ -210,7 +223,7 @@
          "pts": 13
         },
         {
-         "pos": 16,
+         "pos": 17,
          "equipo": "Junior F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
          "pj": 14,
@@ -220,19 +233,6 @@
          "gf": 19,
          "gc": 23,
          "dg": -4,
-         "pts": 12
-        },
-        {
-         "pos": 17,
-         "equipo": "Boyacá Chicó F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
-         "pj": 14,
-         "g": 3,
-         "e": 3,
-         "p": 8,
-         "gf": 11,
-         "gc": 25,
-         "dg": -14,
          "pts": 12
         },
         {
@@ -405,13 +405,13 @@
          "pos": 10,
          "equipo": "Atlético Bucaramanga",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
-         "pj": 32,
+         "pj": 33,
          "g": 11,
          "e": 15,
-         "p": 6,
+         "p": 7,
          "gf": 48,
-         "gc": 32,
-         "dg": 16,
+         "gc": 33,
+         "dg": 15,
          "pts": 48
         },
         {
@@ -509,14 +509,14 @@
          "pos": 18,
          "equipo": "Boyacá Chicó F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
-         "pj": 33,
-         "g": 8,
+         "pj": 34,
+         "g": 9,
          "e": 5,
          "p": 20,
-         "gf": 26,
+         "gf": 27,
          "gc": 57,
-         "dg": -31,
-         "pts": 29
+         "dg": -30,
+         "pts": 32
         },
         {
          "pos": 19,
@@ -592,13 +592,13 @@
          "pts": 36
         },
         {
-         "pj": 33,
-         "pts": 29
+         "pj": 34,
+         "pts": 32
         }
        ],
-       "pj": 111,
-       "pts": 98,
-       "pro": "0,8829"
+       "pj": 112,
+       "pts": 101,
+       "pro": "0,9018"
       },
       {
        "pos": 18,
@@ -900,13 +900,13 @@
          "pts": 66
         },
         {
-         "pj": 32,
+         "pj": 33,
          "pts": 48
         }
        ],
-       "pj": 110,
+       "pj": 111,
        "pts": 180,
-       "pro": "1,6364"
+       "pro": "1,6216"
       },
       {
        "pos": 4,
