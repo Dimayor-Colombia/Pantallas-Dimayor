@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-24T04:01:54.330Z",
+   "actualizado": "2026-10-25T01:10:27.498Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -16,6 +16,19 @@
        "filas": [
         {
          "pos": 1,
+         "equipo": "América de Cali",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
+         "pj": 15,
+         "g": 9,
+         "e": 4,
+         "p": 2,
+         "gf": 29,
+         "gc": 11,
+         "dg": 18,
+         "pts": 31
+        },
+        {
+         "pos": 2,
          "equipo": "Atlético Nacional",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
          "pj": 14,
@@ -28,7 +41,7 @@
          "pts": 29
         },
         {
-         "pos": 2,
+         "pos": 3,
          "equipo": "Deportivo Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
          "pj": 15,
@@ -39,19 +52,6 @@
          "gc": 9,
          "dg": 14,
          "pts": 29
-        },
-        {
-         "pos": 3,
-         "equipo": "América de Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
-         "pj": 14,
-         "g": 8,
-         "e": 4,
-         "p": 2,
-         "gf": 26,
-         "gc": 10,
-         "dg": 16,
-         "pts": 28
         },
         {
          "pos": 4,
@@ -109,13 +109,13 @@
          "pos": 8,
          "equipo": "Cúcuta Deportivo",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0015_CUCUTA-DEPORTIVO-5.png",
-         "pj": 14,
+         "pj": 15,
          "g": 6,
          "e": 3,
-         "p": 5,
-         "gf": 17,
-         "gc": 19,
-         "dg": -2,
+         "p": 6,
+         "gf": 18,
+         "gc": 22,
+         "dg": -4,
          "pts": 21
         },
         {
@@ -301,14 +301,14 @@
          "pos": 2,
          "equipo": "América de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
-         "pj": 35,
-         "g": 18,
+         "pj": 36,
+         "g": 19,
          "e": 8,
          "p": 9,
-         "gf": 52,
-         "gc": 30,
-         "dg": 22,
-         "pts": 62
+         "gf": 55,
+         "gc": 31,
+         "dg": 24,
+         "pts": 65
         },
         {
          "pos": 3,
@@ -470,13 +470,13 @@
          "pos": 15,
          "equipo": "Cúcuta Deportivo",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0015_CUCUTA-DEPORTIVO-5.png",
-         "pj": 33,
+         "pj": 34,
          "g": 9,
          "e": 10,
-         "p": 14,
-         "gf": 39,
-         "gc": 54,
-         "dg": -15,
+         "p": 15,
+         "gf": 40,
+         "gc": 57,
+         "dg": -17,
          "pts": 37
         },
         {
@@ -602,6 +602,28 @@
       },
       {
        "pos": 18,
+       "equipo": "Cúcuta Deportivo",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0015_CUCUTA-DEPORTIVO-5.png",
+       "anios": [
+        {
+         "pj": 0,
+         "pts": 0
+        },
+        {
+         "pj": 0,
+         "pts": 0
+        },
+        {
+         "pj": 34,
+         "pts": 37
+        }
+       ],
+       "pj": 34,
+       "pts": 37,
+       "pro": "1,0882"
+      },
+      {
+       "pos": 17,
        "equipo": "Internacional de Bogotá",
        "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
        "anios": [
@@ -623,7 +645,7 @@
        "pro": "1,1071"
       },
       {
-       "pos": 17,
+       "pos": 16,
        "equipo": "Alianza Valledupar F.C.",
        "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
        "anios": [
@@ -643,28 +665,6 @@
        "pj": 111,
        "pts": 123,
        "pro": "1,1081"
-      },
-      {
-       "pos": 16,
-       "equipo": "Cúcuta Deportivo",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0015_CUCUTA-DEPORTIVO-5.png",
-       "anios": [
-        {
-         "pj": 0,
-         "pts": 0
-        },
-        {
-         "pj": 0,
-         "pts": 0
-        },
-        {
-         "pj": 33,
-         "pts": 37
-        }
-       ],
-       "pj": 33,
-       "pts": 37,
-       "pro": "1,1212"
       },
       {
        "pos": 15,
@@ -944,13 +944,13 @@
          "pts": 68
         },
         {
-         "pj": 33,
-         "pts": 61
+         "pj": 34,
+         "pts": 64
         }
        ],
-       "pj": 111,
-       "pts": 191,
-       "pro": "1,7207"
+       "pj": 112,
+       "pts": 194,
+       "pro": "1,7321"
       },
       {
        "pos": 2,
