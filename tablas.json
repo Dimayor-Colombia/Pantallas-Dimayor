@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-25T01:10:27.498Z",
+   "actualizado": "2026-10-25T03:13:01.273Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -107,6 +107,19 @@
         },
         {
          "pos": 8,
+         "equipo": "Once Caldas DAF",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
+         "pj": 16,
+         "g": 5,
+         "e": 6,
+         "p": 5,
+         "gf": 20,
+         "gc": 18,
+         "dg": 2,
+         "pts": 21
+        },
+        {
+         "pos": 9,
          "equipo": "Cúcuta Deportivo",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0015_CUCUTA-DEPORTIVO-5.png",
          "pj": 15,
@@ -117,19 +130,6 @@
          "gc": 22,
          "dg": -4,
          "pts": 21
-        },
-        {
-         "pos": 9,
-         "equipo": "Once Caldas DAF",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
-         "pj": 15,
-         "g": 5,
-         "e": 5,
-         "p": 5,
-         "gf": 19,
-         "gc": 17,
-         "dg": 2,
-         "pts": 20
         },
         {
          "pos": 10,
@@ -226,14 +226,14 @@
          "pos": 17,
          "equipo": "Deportivo Pereira",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0009_Escudo-Pereira-1-5.png",
-         "pj": 14,
+         "pj": 15,
          "g": 2,
-         "e": 7,
+         "e": 8,
          "p": 5,
-         "gf": 10,
-         "gc": 18,
+         "gf": 11,
+         "gc": 19,
          "dg": -8,
-         "pts": 13
+         "pts": 14
         },
         {
          "pos": 18,
@@ -366,14 +366,14 @@
          "pos": 7,
          "equipo": "Once Caldas DAF",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
-         "pj": 36,
+         "pj": 37,
          "g": 13,
-         "e": 15,
+         "e": 16,
          "p": 8,
-         "gf": 52,
-         "gc": 42,
+         "gf": 53,
+         "gc": 43,
          "dg": 10,
-         "pts": 54
+         "pts": 55
         },
         {
          "pos": 8,
@@ -535,14 +535,14 @@
          "pos": 20,
          "equipo": "Deportivo Pereira",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0009_Escudo-Pereira-1-5.png",
-         "pj": 33,
+         "pj": 34,
          "g": 3,
-         "e": 14,
+         "e": 15,
          "p": 16,
-         "gf": 25,
-         "gc": 50,
+         "gf": 26,
+         "gc": 51,
          "dg": -25,
-         "pts": 23
+         "pts": 24
         }
        ]
       }
@@ -702,13 +702,13 @@
          "pts": 46
         },
         {
-         "pj": 33,
-         "pts": 23
+         "pj": 34,
+         "pts": 24
         }
        ],
-       "pj": 111,
-       "pts": 130,
-       "pro": "1,1712"
+       "pj": 112,
+       "pts": 131,
+       "pro": "1,1696"
       },
       {
        "pos": 13,
@@ -812,13 +812,13 @@
          "pts": 60
         },
         {
-         "pj": 34,
-         "pts": 53
+         "pj": 35,
+         "pts": 54
         }
        ],
-       "pj": 112,
-       "pts": 173,
-       "pro": "1,5446"
+       "pj": 113,
+       "pts": 174,
+       "pro": "1,5398"
       },
       {
        "pos": 8,
@@ -1496,12 +1496,12 @@
    "id": "copa",
    "competicion": "Copa Betplay Dimayor 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-22T17:12:41.867Z",
+   "actualizado": "2026-10-25T03:13:04.457Z",
    "bloques": [
     {
      "tipo": "posiciones",
      "fase": "FASE III - CUARTOS DE FINAL",
-     "actual": false,
+     "actual": true,
      "grupos": [
       {
        "nombre": "",
