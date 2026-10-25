@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-25T21:22:41.834Z",
+   "actualizado": "2026-10-25T23:25:17.630Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -159,19 +159,32 @@
         },
         {
          "pos": 12,
-         "equipo": "Internacional de Bogotá",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
+         "equipo": "Alianza Valledupar F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
          "pj": 15,
-         "g": 3,
-         "e": 8,
-         "p": 4,
-         "gf": 18,
-         "gc": 21,
-         "dg": -3,
-         "pts": 17
+         "g": 5,
+         "e": 3,
+         "p": 7,
+         "gf": 16,
+         "gc": 26,
+         "dg": -10,
+         "pts": 18
         },
         {
          "pos": 13,
+         "equipo": "Internacional de Bogotá",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
+         "pj": 16,
+         "g": 3,
+         "e": 8,
+         "p": 5,
+         "gf": 18,
+         "gc": 22,
+         "dg": -4,
+         "pts": 17
+        },
+        {
+         "pos": 14,
          "equipo": "Llaneros F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
          "pj": 15,
@@ -184,7 +197,7 @@
          "pts": 17
         },
         {
-         "pos": 14,
+         "pos": 15,
          "equipo": "Junior F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
          "pj": 15,
@@ -194,19 +207,6 @@
          "gf": 20,
          "gc": 23,
          "dg": -3,
-         "pts": 15
-        },
-        {
-         "pos": 15,
-         "equipo": "Alianza Valledupar F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
-         "pj": 14,
-         "g": 4,
-         "e": 3,
-         "p": 7,
-         "gf": 15,
-         "gc": 26,
-         "dg": -11,
          "pts": 15
         },
         {
@@ -431,13 +431,13 @@
          "pos": 12,
          "equipo": "Internacional de Bogotá",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
-         "pj": 36,
+         "pj": 37,
          "g": 10,
          "e": 15,
-         "p": 11,
+         "p": 12,
          "gf": 46,
-         "gc": 56,
-         "dg": -10,
+         "gc": 57,
+         "dg": -11,
          "pts": 45
         },
         {
@@ -481,6 +481,19 @@
         },
         {
          "pos": 16,
+         "equipo": "Alianza Valledupar F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
+         "pj": 34,
+         "g": 8,
+         "e": 11,
+         "p": 15,
+         "gf": 29,
+         "gc": 53,
+         "dg": -24,
+         "pts": 35
+        },
+        {
+         "pos": 17,
          "equipo": "Fortaleza",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0008_Fortaleza-nuevo-3-5.png",
          "pj": 34,
@@ -491,19 +504,6 @@
          "gc": 49,
          "dg": -11,
          "pts": 34
-        },
-        {
-         "pos": 17,
-         "equipo": "Alianza Valledupar F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
-         "pj": 33,
-         "g": 7,
-         "e": 11,
-         "p": 15,
-         "gf": 28,
-         "gc": 53,
-         "dg": -25,
-         "pts": 32
         },
         {
          "pos": 18,
@@ -636,13 +636,13 @@
          "pts": 24
         },
         {
-         "pj": 34,
+         "pj": 35,
          "pts": 45
         }
        ],
-       "pj": 112,
+       "pj": 113,
        "pts": 124,
-       "pro": "1,1071"
+       "pro": "1,0973"
       },
       {
        "pos": 16,
@@ -658,13 +658,13 @@
          "pts": 58
         },
         {
-         "pj": 33,
-         "pts": 32
+         "pj": 34,
+         "pts": 35
         }
        ],
-       "pj": 111,
-       "pts": 123,
-       "pro": "1,1081"
+       "pj": 112,
+       "pts": 126,
+       "pro": "1,1250"
       },
       {
        "pos": 15,
