@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-25T03:13:01.273Z",
+   "actualizado": "2026-10-25T21:22:41.834Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -29,6 +29,19 @@
         },
         {
          "pos": 2,
+         "equipo": "Deportivo Cali",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
+         "pj": 16,
+         "g": 8,
+         "e": 6,
+         "p": 2,
+         "gf": 24,
+         "gc": 10,
+         "dg": 14,
+         "pts": 30
+        },
+        {
+         "pos": 3,
          "equipo": "Atlético Nacional",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
          "pj": 14,
@@ -38,19 +51,6 @@
          "gf": 28,
          "gc": 12,
          "dg": 16,
-         "pts": 29
-        },
-        {
-         "pos": 3,
-         "equipo": "Deportivo Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
-         "pj": 15,
-         "g": 8,
-         "e": 5,
-         "p": 2,
-         "gf": 23,
-         "gc": 9,
-         "dg": 14,
          "pts": 29
         },
         {
@@ -239,14 +239,14 @@
          "pos": 18,
          "equipo": "Fortaleza",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0008_Fortaleza-nuevo-3-5.png",
-         "pj": 14,
+         "pj": 15,
          "g": 1,
-         "e": 8,
+         "e": 9,
          "p": 5,
-         "gf": 15,
-         "gc": 21,
+         "gf": 16,
+         "gc": 22,
          "dg": -6,
-         "pts": 11
+         "pts": 12
         },
         {
          "pos": 19,
@@ -338,6 +338,19 @@
         },
         {
          "pos": 5,
+         "equipo": "Deportivo Cali",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
+         "pj": 35,
+         "g": 15,
+         "e": 12,
+         "p": 8,
+         "gf": 44,
+         "gc": 26,
+         "dg": 18,
+         "pts": 57
+        },
+        {
+         "pos": 6,
          "equipo": "Deportes Tolima",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0013_DEPORTES-TOLIMA-FONDO-OSCURO-5.png",
          "pj": 38,
@@ -348,19 +361,6 @@
          "gc": 39,
          "dg": 10,
          "pts": 57
-        },
-        {
-         "pos": 6,
-         "equipo": "Deportivo Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
-         "pj": 34,
-         "g": 15,
-         "e": 11,
-         "p": 8,
-         "gf": 43,
-         "gc": 25,
-         "dg": 18,
-         "pts": 56
         },
         {
          "pos": 7,
@@ -483,14 +483,14 @@
          "pos": 16,
          "equipo": "Fortaleza",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0008_Fortaleza-nuevo-3-5.png",
-         "pj": 33,
+         "pj": 34,
          "g": 6,
-         "e": 15,
+         "e": 16,
          "p": 12,
-         "gf": 37,
-         "gc": 48,
+         "gf": 38,
+         "gc": 49,
          "dg": -11,
-         "pts": 33
+         "pts": 34
         },
         {
          "pos": 17,
@@ -712,6 +712,28 @@
       },
       {
        "pos": 13,
+       "equipo": "Deportivo Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
+       "anios": [
+        {
+         "pj": 38,
+         "pts": 38
+        },
+        {
+         "pj": 40,
+         "pts": 45
+        },
+        {
+         "pj": 35,
+         "pts": 57
+        }
+       ],
+       "pj": 113,
+       "pts": 140,
+       "pro": "1,2389"
+      },
+      {
+       "pos": 12,
        "equipo": "Águilas Doradas",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
        "anios": [
@@ -733,28 +755,6 @@
        "pro": "1,2411"
       },
       {
-       "pos": 12,
-       "equipo": "Deportivo Cali",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
-       "anios": [
-        {
-         "pj": 38,
-         "pts": 38
-        },
-        {
-         "pj": 40,
-         "pts": 45
-        },
-        {
-         "pj": 34,
-         "pts": 56
-        }
-       ],
-       "pj": 112,
-       "pts": 139,
-       "pro": "1,2411"
-      },
-      {
        "pos": 11,
        "equipo": "Fortaleza",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0008_Fortaleza-nuevo-3-5.png",
@@ -768,13 +768,13 @@
          "pts": 55
         },
         {
-         "pj": 33,
-         "pts": 33
+         "pj": 34,
+         "pts": 34
         }
        ],
-       "pj": 111,
-       "pts": 139,
-       "pro": "1,2523"
+       "pj": 112,
+       "pts": 140,
+       "pro": "1,2500"
       },
       {
        "pos": 10,
