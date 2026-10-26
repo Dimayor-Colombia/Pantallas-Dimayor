@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-26T01:25:46.137Z",
+   "actualizado": "2026-10-26T03:26:15.085Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -135,13 +135,13 @@
          "pos": 10,
          "equipo": "Deportes Tolima",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0013_DEPORTES-TOLIMA-FONDO-OSCURO-5.png",
-         "pj": 15,
+         "pj": 16,
          "g": 5,
          "e": 5,
-         "p": 5,
+         "p": 6,
          "gf": 18,
-         "gc": 18,
-         "dg": 0,
+         "gc": 19,
+         "dg": -1,
          "pts": 20
         },
         {
@@ -250,6 +250,19 @@
         },
         {
          "pos": 19,
+         "equipo": "Deportivo Pasto",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
+         "pj": 15,
+         "g": 3,
+         "e": 3,
+         "p": 9,
+         "gf": 10,
+         "gc": 22,
+         "dg": -12,
+         "pts": 12
+        },
+        {
+         "pos": 20,
          "equipo": "Jaguares F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
          "pj": 14,
@@ -260,19 +273,6 @@
          "gc": 28,
          "dg": -12,
          "pts": 10
-        },
-        {
-         "pos": 20,
-         "equipo": "Deportivo Pasto",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
-         "pj": 14,
-         "g": 2,
-         "e": 3,
-         "p": 9,
-         "gf": 9,
-         "gc": 22,
-         "dg": -13,
-         "pts": 9
         }
        ]
       }
@@ -353,13 +353,13 @@
          "pos": 6,
          "equipo": "Deportes Tolima",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0013_DEPORTES-TOLIMA-FONDO-OSCURO-5.png",
-         "pj": 38,
+         "pj": 39,
          "g": 15,
          "e": 12,
-         "p": 11,
+         "p": 12,
          "gf": 49,
-         "gc": 39,
-         "dg": 10,
+         "gc": 40,
+         "dg": 9,
          "pts": 57
         },
         {
@@ -416,6 +416,19 @@
         },
         {
          "pos": 11,
+         "equipo": "Deportivo Pasto",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
+         "pj": 36,
+         "g": 13,
+         "e": 7,
+         "p": 16,
+         "gf": 39,
+         "gc": 50,
+         "dg": -11,
+         "pts": 46
+        },
+        {
+         "pos": 12,
          "equipo": "Águilas Doradas",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
          "pj": 34,
@@ -428,7 +441,7 @@
          "pts": 45
         },
         {
-         "pos": 12,
+         "pos": 13,
          "equipo": "Internacional de Bogotá",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
          "pj": 37,
@@ -439,19 +452,6 @@
          "gc": 57,
          "dg": -11,
          "pts": 45
-        },
-        {
-         "pos": 13,
-         "equipo": "Deportivo Pasto",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
-         "pj": 35,
-         "g": 12,
-         "e": 7,
-         "p": 16,
-         "gf": 38,
-         "gc": 50,
-         "dg": -12,
-         "pts": 43
         },
         {
          "pos": 14,
@@ -790,13 +790,13 @@
          "pts": 48
         },
         {
-         "pj": 33,
-         "pts": 43
+         "pj": 34,
+         "pts": 46
         }
        ],
-       "pj": 111,
-       "pts": 140,
-       "pro": "1,2613"
+       "pj": 112,
+       "pts": 143,
+       "pro": "1,2768"
       },
       {
        "pos": 9,
@@ -966,13 +966,13 @@
          "pts": 74
         },
         {
-         "pj": 34,
+         "pj": 35,
          "pts": 51
         }
        ],
-       "pj": 112,
+       "pj": 113,
        "pts": 197,
-       "pro": "1,7589"
+       "pro": "1,7434"
       },
       {
        "pos": 1,
