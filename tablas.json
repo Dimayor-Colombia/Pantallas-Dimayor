@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-26T03:26:15.085Z",
+   "actualizado": "2026-10-27T01:37:06.498Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -187,13 +187,13 @@
          "pos": 14,
          "equipo": "Llaneros F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
-         "pj": 15,
+         "pj": 16,
          "g": 5,
          "e": 2,
-         "p": 8,
+         "p": 9,
          "gf": 16,
-         "gc": 20,
-         "dg": -4,
+         "gc": 21,
+         "dg": -5,
          "pts": 17
         },
         {
@@ -237,6 +237,19 @@
         },
         {
          "pos": 18,
+         "equipo": "Jaguares F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
+         "pj": 15,
+         "g": 3,
+         "e": 4,
+         "p": 8,
+         "gf": 17,
+         "gc": 28,
+         "dg": -11,
+         "pts": 13
+        },
+        {
+         "pos": 19,
          "equipo": "Fortaleza",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0008_Fortaleza-nuevo-3-5.png",
          "pj": 15,
@@ -249,7 +262,7 @@
          "pts": 12
         },
         {
-         "pos": 19,
+         "pos": 20,
          "equipo": "Deportivo Pasto",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
          "pj": 15,
@@ -260,19 +273,6 @@
          "gc": 22,
          "dg": -12,
          "pts": 12
-        },
-        {
-         "pos": 20,
-         "equipo": "Jaguares F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
-         "pj": 14,
-         "g": 2,
-         "e": 4,
-         "p": 8,
-         "gf": 16,
-         "gc": 28,
-         "dg": -12,
-         "pts": 10
         }
        ]
       }
@@ -457,13 +457,13 @@
          "pos": 14,
          "equipo": "Llaneros F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
-         "pj": 34,
+         "pj": 35,
          "g": 9,
          "e": 12,
-         "p": 13,
+         "p": 14,
          "gf": 33,
-         "gc": 40,
-         "dg": -7,
+         "gc": 41,
+         "dg": -8,
          "pts": 39
         },
         {
@@ -522,14 +522,14 @@
          "pos": 19,
          "equipo": "Jaguares F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
-         "pj": 33,
-         "g": 7,
+         "pj": 34,
+         "g": 8,
          "e": 7,
          "p": 19,
-         "gf": 36,
+         "gf": 37,
          "gc": 61,
-         "dg": -25,
-         "pts": 28
+         "dg": -24,
+         "pts": 31
         },
         {
          "pos": 20,
@@ -558,28 +558,6 @@
      "filas": [
       {
        "pos": 20,
-       "equipo": "Jaguares F.C.",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
-       "anios": [
-        {
-         "pj": 0,
-         "pts": 0
-        },
-        {
-         "pj": 0,
-         "pts": 0
-        },
-        {
-         "pj": 33,
-         "pts": 28
-        }
-       ],
-       "pj": 33,
-       "pts": 28,
-       "pro": "0,8485"
-      },
-      {
-       "pos": 19,
        "equipo": "Boyacá Chicó F.C.",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
        "anios": [
@@ -599,6 +577,28 @@
        "pj": 112,
        "pts": 101,
        "pro": "0,9018"
+      },
+      {
+       "pos": 19,
+       "equipo": "Jaguares F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
+       "anios": [
+        {
+         "pj": 0,
+         "pts": 0
+        },
+        {
+         "pj": 0,
+         "pts": 0
+        },
+        {
+         "pj": 34,
+         "pts": 31
+        }
+       ],
+       "pj": 34,
+       "pts": 31,
+       "pro": "0,9118"
       },
       {
        "pos": 18,
@@ -646,6 +646,28 @@
       },
       {
        "pos": 16,
+       "equipo": "Llaneros F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
+       "anios": [
+        {
+         "pj": 0,
+         "pts": 0
+        },
+        {
+         "pj": 40,
+         "pts": 45
+        },
+        {
+         "pj": 35,
+         "pts": 39
+        }
+       ],
+       "pj": 75,
+       "pts": 84,
+       "pro": "1,1200"
+      },
+      {
+       "pos": 15,
        "equipo": "Alianza Valledupar F.C.",
        "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
        "anios": [
@@ -665,28 +687,6 @@
        "pj": 112,
        "pts": 126,
        "pro": "1,1250"
-      },
-      {
-       "pos": 15,
-       "equipo": "Llaneros F.C.",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
-       "anios": [
-        {
-         "pj": 0,
-         "pts": 0
-        },
-        {
-         "pj": 40,
-         "pts": 45
-        },
-        {
-         "pj": 34,
-         "pts": 39
-        }
-       ],
-       "pj": 74,
-       "pts": 84,
-       "pro": "1,1351"
       },
       {
        "pos": 14,
