@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-28T01:48:23.538Z",
+   "actualizado": "2026-10-28T03:48:47.064Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -200,27 +200,27 @@
          "pos": 15,
          "equipo": "Junior F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
-         "pj": 15,
+         "pj": 16,
          "g": 3,
-         "e": 6,
+         "e": 7,
          "p": 6,
-         "gf": 20,
-         "gc": 23,
+         "gf": 21,
+         "gc": 24,
          "dg": -3,
-         "pts": 15
+         "pts": 16
         },
         {
          "pos": 16,
          "equipo": "Boyacá Chicó F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
-         "pj": 15,
+         "pj": 16,
          "g": 4,
-         "e": 3,
+         "e": 4,
          "p": 8,
-         "gf": 12,
-         "gc": 25,
+         "gf": 13,
+         "gc": 26,
          "dg": -13,
-         "pts": 15
+         "pts": 16
         },
         {
          "pos": 17,
@@ -327,14 +327,14 @@
          "pos": 4,
          "equipo": "Junior F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
-         "pj": 40,
+         "pj": 41,
          "g": 16,
-         "e": 11,
+         "e": 12,
          "p": 13,
-         "gf": 58,
-         "gc": 51,
+         "gf": 59,
+         "gc": 52,
          "dg": 7,
-         "pts": 59
+         "pts": 60
         },
         {
          "pos": 5,
@@ -509,14 +509,14 @@
          "pos": 18,
          "equipo": "Boyacá Chicó F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
-         "pj": 34,
+         "pj": 35,
          "g": 9,
-         "e": 5,
+         "e": 6,
          "p": 20,
-         "gf": 27,
-         "gc": 57,
+         "gf": 28,
+         "gc": 58,
          "dg": -30,
-         "pts": 32
+         "pts": 33
         },
         {
          "pos": 19,
@@ -570,13 +570,13 @@
          "pts": 36
         },
         {
-         "pj": 34,
-         "pts": 32
+         "pj": 35,
+         "pts": 33
         }
        ],
-       "pj": 112,
-       "pts": 101,
-       "pro": "0,9018"
+       "pj": 113,
+       "pts": 102,
+       "pro": "0,9027"
       },
       {
        "pos": 19,
@@ -900,13 +900,13 @@
          "pts": 72
         },
         {
-         "pj": 34,
-         "pts": 50
+         "pj": 35,
+         "pts": 51
         }
        ],
-       "pj": 112,
-       "pts": 182,
-       "pro": "1,6250"
+       "pj": 113,
+       "pts": 183,
+       "pro": "1,6195"
       },
       {
        "pos": 4,
