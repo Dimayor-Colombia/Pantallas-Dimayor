@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-27T03:39:40.749Z",
+   "actualizado": "2026-10-28T01:48:23.538Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -107,6 +107,19 @@
         },
         {
          "pos": 8,
+         "equipo": "Águilas Doradas",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
+         "pj": 16,
+         "g": 5,
+         "e": 7,
+         "p": 4,
+         "gf": 21,
+         "gc": 20,
+         "dg": 1,
+         "pts": 22
+        },
+        {
+         "pos": 9,
          "equipo": "Once Caldas DAF",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
          "pj": 16,
@@ -119,20 +132,20 @@
          "pts": 21
         },
         {
-         "pos": 9,
+         "pos": 10,
          "equipo": "Cúcuta Deportivo",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0015_CUCUTA-DEPORTIVO-5.png",
-         "pj": 15,
+         "pj": 16,
          "g": 6,
          "e": 3,
-         "p": 6,
+         "p": 7,
          "gf": 18,
-         "gc": 22,
-         "dg": -4,
+         "gc": 24,
+         "dg": -6,
          "pts": 21
         },
         {
-         "pos": 10,
+         "pos": 11,
          "equipo": "Deportes Tolima",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0013_DEPORTES-TOLIMA-FONDO-OSCURO-5.png",
          "pj": 16,
@@ -143,19 +156,6 @@
          "gc": 19,
          "dg": -1,
          "pts": 20
-        },
-        {
-         "pos": 11,
-         "equipo": "Águilas Doradas",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
-         "pj": 15,
-         "g": 4,
-         "e": 7,
-         "p": 4,
-         "gf": 19,
-         "gc": 20,
-         "dg": -1,
-         "pts": 19
         },
         {
          "pos": 12,
@@ -416,6 +416,19 @@
         },
         {
          "pos": 11,
+         "equipo": "Águilas Doradas",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
+         "pj": 35,
+         "g": 12,
+         "e": 12,
+         "p": 11,
+         "gf": 41,
+         "gc": 45,
+         "dg": -4,
+         "pts": 48
+        },
+        {
+         "pos": 12,
          "equipo": "Deportivo Pasto",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
          "pj": 36,
@@ -426,19 +439,6 @@
          "gc": 50,
          "dg": -11,
          "pts": 46
-        },
-        {
-         "pos": 12,
-         "equipo": "Águilas Doradas",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
-         "pj": 34,
-         "g": 11,
-         "e": 12,
-         "p": 11,
-         "gf": 39,
-         "gc": 45,
-         "dg": -6,
-         "pts": 45
         },
         {
          "pos": 13,
@@ -470,13 +470,13 @@
          "pos": 15,
          "equipo": "Cúcuta Deportivo",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0015_CUCUTA-DEPORTIVO-5.png",
-         "pj": 34,
+         "pj": 35,
          "g": 9,
          "e": 10,
-         "p": 15,
+         "p": 16,
          "gf": 40,
-         "gc": 57,
-         "dg": -17,
+         "gc": 59,
+         "dg": -19,
          "pts": 37
         },
         {
@@ -614,13 +614,13 @@
          "pts": 0
         },
         {
-         "pj": 34,
+         "pj": 35,
          "pts": 37
         }
        ],
-       "pj": 34,
+       "pj": 35,
        "pts": 37,
-       "pro": "1,0882"
+       "pro": "1,0571"
       },
       {
        "pos": 17,
@@ -734,28 +734,6 @@
       },
       {
        "pos": 12,
-       "equipo": "Águilas Doradas",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
-       "anios": [
-        {
-         "pj": 38,
-         "pts": 46
-        },
-        {
-         "pj": 40,
-         "pts": 48
-        },
-        {
-         "pj": 34,
-         "pts": 45
-        }
-       ],
-       "pj": 112,
-       "pts": 139,
-       "pro": "1,2411"
-      },
-      {
-       "pos": 11,
        "equipo": "Fortaleza",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0008_Fortaleza-nuevo-3-5.png",
        "anios": [
@@ -775,6 +753,28 @@
        "pj": 112,
        "pts": 140,
        "pro": "1,2500"
+      },
+      {
+       "pos": 11,
+       "equipo": "Águilas Doradas",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
+       "anios": [
+        {
+         "pj": 38,
+         "pts": 46
+        },
+        {
+         "pj": 40,
+         "pts": 48
+        },
+        {
+         "pj": 35,
+         "pts": 48
+        }
+       ],
+       "pj": 113,
+       "pts": 142,
+       "pro": "1,2566"
       },
       {
        "pos": 10,
