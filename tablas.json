@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-29T03:01:58.433Z",
+   "actualizado": "2026-10-29T21:06:27.553Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1016,54 +1016,54 @@
        "filas": [
         {
          "pos": 1,
-         "equipo": "Boca Juniors de Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
-         "pj": 0,
-         "g": 0,
+         "equipo": "Envigado F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
+         "pj": 1,
+         "g": 1,
          "e": 0,
          "p": 0,
-         "gf": 0,
+         "gf": 2,
          "gc": 0,
-         "dg": 0,
-         "pts": 0
+         "dg": 2,
+         "pts": 3
         },
         {
          "pos": 2,
-         "equipo": "Envigado F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
-         "pj": 0,
+         "equipo": "Unión Magdalena",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
+         "pj": 1,
          "g": 0,
-         "e": 0,
+         "e": 1,
          "p": 0,
-         "gf": 0,
-         "gc": 0,
+         "gf": 1,
+         "gc": 1,
          "dg": 0,
-         "pts": 0
+         "pts": 1
         },
         {
          "pos": 3,
-         "equipo": "Independiente Valle del Cauca",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
-         "pj": 0,
+         "equipo": "Boca Juniors de Cali",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
+         "pj": 1,
          "g": 0,
-         "e": 0,
+         "e": 1,
          "p": 0,
-         "gf": 0,
-         "gc": 0,
+         "gf": 1,
+         "gc": 1,
          "dg": 0,
-         "pts": 0
+         "pts": 1
         },
         {
          "pos": 4,
-         "equipo": "Unión Magdalena",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
-         "pj": 0,
+         "equipo": "Independiente Valle del Cauca",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
+         "pj": 1,
          "g": 0,
          "e": 0,
-         "p": 0,
+         "p": 1,
          "gf": 0,
-         "gc": 0,
-         "dg": 0,
+         "gc": 2,
+         "dg": -2,
          "pts": 0
         }
        ]
@@ -1135,6 +1135,19 @@
        "filas": [
         {
          "pos": 1,
+         "equipo": "Envigado F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
+         "pj": 39,
+         "g": 18,
+         "e": 13,
+         "p": 8,
+         "gf": 53,
+         "gc": 33,
+         "dg": 20,
+         "pts": 67
+        },
+        {
+         "pos": 2,
          "equipo": "Deportes Quindío",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
          "pj": 37,
@@ -1147,20 +1160,20 @@
          "pts": 67
         },
         {
-         "pos": 2,
-         "equipo": "Envigado F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
-         "pj": 38,
+         "pos": 3,
+         "equipo": "Unión Magdalena",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
+         "pj": 37,
          "g": 17,
-         "e": 13,
-         "p": 8,
+         "e": 11,
+         "p": 9,
          "gf": 51,
-         "gc": 33,
-         "dg": 18,
-         "pts": 64
+         "gc": 35,
+         "dg": 16,
+         "pts": 62
         },
         {
-         "pos": 3,
+         "pos": 4,
          "equipo": "Real Cartagena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
          "pj": 38,
@@ -1170,19 +1183,6 @@
          "gf": 60,
          "gc": 43,
          "dg": 17,
-         "pts": 61
-        },
-        {
-         "pos": 4,
-         "equipo": "Unión Magdalena",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
-         "pj": 36,
-         "g": 17,
-         "e": 10,
-         "p": 9,
-         "gf": 50,
-         "gc": 34,
-         "dg": 16,
          "pts": 61
         },
         {
@@ -1215,13 +1215,13 @@
          "pos": 7,
          "equipo": "Independiente Valle del Cauca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
-         "pj": 30,
+         "pj": 31,
          "g": 12,
          "e": 11,
-         "p": 7,
+         "p": 8,
          "gf": 33,
-         "gc": 23,
-         "dg": 10,
+         "gc": 25,
+         "dg": 8,
          "pts": 47
         },
         {
@@ -1265,6 +1265,19 @@
         },
         {
          "pos": 11,
+         "equipo": "Boca Juniors de Cali",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
+         "pj": 31,
+         "g": 8,
+         "e": 11,
+         "p": 12,
+         "gf": 36,
+         "gc": 41,
+         "dg": -5,
+         "pts": 35
+        },
+        {
+         "pos": 12,
          "equipo": "Patriotas F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0009_PATRIOTAS-FC-5.png",
          "pj": 30,
@@ -1275,19 +1288,6 @@
          "gc": 40,
          "dg": -10,
          "pts": 35
-        },
-        {
-         "pos": 12,
-         "equipo": "Boca Juniors de Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
-         "pj": 30,
-         "g": 8,
-         "e": 10,
-         "p": 12,
-         "gf": 35,
-         "gc": 40,
-         "dg": -5,
-         "pts": 34
         },
         {
          "pos": 13,
