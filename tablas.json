@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-29T01:01:32.490Z",
+   "actualizado": "2026-10-29T03:01:57.168Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -109,13 +109,13 @@
          "pos": 8,
          "equipo": "Independiente Medellín",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
-         "pj": 15,
+         "pj": 16,
          "g": 7,
          "e": 2,
-         "p": 6,
-         "gf": 22,
-         "gc": 21,
-         "dg": 1,
+         "p": 7,
+         "gf": 23,
+         "gc": 24,
+         "dg": -1,
          "pts": 23
         },
         {
@@ -159,6 +159,19 @@
         },
         {
          "pos": 12,
+         "equipo": "Internacional de Bogotá",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
+         "pj": 17,
+         "g": 4,
+         "e": 8,
+         "p": 5,
+         "gf": 21,
+         "gc": 23,
+         "dg": -2,
+         "pts": 20
+        },
+        {
+         "pos": 13,
          "equipo": "Alianza Valledupar F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
          "pj": 16,
@@ -169,19 +182,6 @@
          "gc": 27,
          "dg": -11,
          "pts": 18
-        },
-        {
-         "pos": 13,
-         "equipo": "Internacional de Bogotá",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
-         "pj": 16,
-         "g": 3,
-         "e": 8,
-         "p": 5,
-         "gf": 18,
-         "gc": 22,
-         "dg": -4,
-         "pts": 17
         },
         {
          "pos": 14,
@@ -392,13 +392,13 @@
          "pos": 9,
          "equipo": "Independiente Medellín",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
-         "pj": 34,
+         "pj": 35,
          "g": 14,
          "e": 7,
-         "p": 13,
-         "gf": 48,
-         "gc": 45,
-         "dg": 3,
+         "p": 14,
+         "gf": 49,
+         "gc": 48,
+         "dg": 1,
          "pts": 49
         },
         {
@@ -429,6 +429,19 @@
         },
         {
          "pos": 12,
+         "equipo": "Internacional de Bogotá",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
+         "pj": 38,
+         "g": 11,
+         "e": 15,
+         "p": 12,
+         "gf": 49,
+         "gc": 58,
+         "dg": -9,
+         "pts": 48
+        },
+        {
+         "pos": 13,
          "equipo": "Deportivo Pasto",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
          "pj": 36,
@@ -439,19 +452,6 @@
          "gc": 50,
          "dg": -11,
          "pts": 46
-        },
-        {
-         "pos": 13,
-         "equipo": "Internacional de Bogotá",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
-         "pj": 37,
-         "g": 10,
-         "e": 15,
-         "p": 12,
-         "gf": 46,
-         "gc": 57,
-         "dg": -11,
-         "pts": 45
         },
         {
          "pos": 14,
@@ -636,13 +636,13 @@
          "pts": 24
         },
         {
-         "pj": 35,
-         "pts": 45
+         "pj": 36,
+         "pts": 48
         }
        ],
-       "pj": 113,
-       "pts": 124,
-       "pro": "1,0973"
+       "pj": 114,
+       "pts": 127,
+       "pro": "1,1140"
       },
       {
        "pos": 16,
@@ -834,13 +834,13 @@
          "pts": 72
         },
         {
-         "pj": 34,
+         "pj": 35,
          "pts": 49
         }
        ],
-       "pj": 112,
+       "pj": 113,
        "pts": 179,
-       "pro": "1,5982"
+       "pro": "1,5841"
       },
       {
        "pos": 7,
@@ -1004,223 +1004,124 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-26T17:35:25.780Z",
+   "actualizado": "2026-10-29T03:01:58.433Z",
    "bloques": [
     {
      "tipo": "posiciones",
-     "fase": "FASE I - TODOS CONTRA TODOS",
-     "actual": false,
+     "fase": "FASE II",
+     "actual": true,
      "grupos": [
       {
-       "nombre": "",
+       "nombre": "FASE II - CUADRANGULARES SEMIFINALES - GRUPO A",
        "filas": [
         {
          "pos": 1,
-         "equipo": "Independiente Valle del Cauca",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
-         "pj": 15,
-         "g": 8,
-         "e": 4,
-         "p": 3,
-         "gf": 20,
-         "gc": 9,
-         "dg": 11,
-         "pts": 28
+         "equipo": "Boca Juniors de Cali",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
+         "pj": 0,
+         "g": 0,
+         "e": 0,
+         "p": 0,
+         "gf": 0,
+         "gc": 0,
+         "dg": 0,
+         "pts": 0
         },
         {
          "pos": 2,
-         "equipo": "Real Cundinamarca",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0007_REAL-CUNDINAMARCA-5.png",
-         "pj": 15,
-         "g": 8,
-         "e": 4,
-         "p": 3,
-         "gf": 20,
-         "gc": 11,
-         "dg": 9,
-         "pts": 28
+         "equipo": "Envigado F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
+         "pj": 0,
+         "g": 0,
+         "e": 0,
+         "p": 0,
+         "gf": 0,
+         "gc": 0,
+         "dg": 0,
+         "pts": 0
+        },
+        {
+         "pos": 3,
+         "equipo": "Independiente Valle del Cauca",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
+         "pj": 0,
+         "g": 0,
+         "e": 0,
+         "p": 0,
+         "gf": 0,
+         "gc": 0,
+         "dg": 0,
+         "pts": 0
+        },
+        {
+         "pos": 4,
+         "equipo": "Unión Magdalena",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
+         "pj": 0,
+         "g": 0,
+         "e": 0,
+         "p": 0,
+         "gf": 0,
+         "gc": 0,
+         "dg": 0,
+         "pts": 0
+        }
+       ]
+      },
+      {
+       "nombre": "FASE II - CUADRANGULARES SEMIFINALES - GRUPO B",
+       "filas": [
+        {
+         "pos": 1,
+         "equipo": "Deportes Quindío",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
+         "pj": 1,
+         "g": 1,
+         "e": 0,
+         "p": 0,
+         "gf": 2,
+         "gc": 0,
+         "dg": 2,
+         "pts": 3
+        },
+        {
+         "pos": 2,
+         "equipo": "Real Cartagena",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
+         "pj": 0,
+         "g": 0,
+         "e": 0,
+         "p": 0,
+         "gf": 0,
+         "gc": 0,
+         "dg": 0,
+         "pts": 0
         },
         {
          "pos": 3,
          "equipo": "Tigres F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0005_TIGRES-FC-5.png",
-         "pj": 15,
-         "g": 6,
-         "e": 6,
-         "p": 3,
-         "gf": 16,
-         "gc": 9,
-         "dg": 7,
-         "pts": 24
+         "pj": 0,
+         "g": 0,
+         "e": 0,
+         "p": 0,
+         "gf": 0,
+         "gc": 0,
+         "dg": 0,
+         "pts": 0
         },
         {
          "pos": 4,
-         "equipo": "Deportes Quindío",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
-         "pj": 15,
-         "g": 6,
-         "e": 5,
-         "p": 4,
-         "gf": 14,
-         "gc": 13,
-         "dg": 1,
-         "pts": 23
-        },
-        {
-         "pos": 5,
-         "equipo": "Real Cartagena",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
-         "pj": 15,
-         "g": 5,
-         "e": 6,
-         "p": 4,
-         "gf": 26,
-         "gc": 18,
-         "dg": 8,
-         "pts": 21
-        },
-        {
-         "pos": 6,
-         "equipo": "Boca Juniors de Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
-         "pj": 15,
-         "g": 6,
-         "e": 3,
-         "p": 6,
-         "gf": 20,
-         "gc": 20,
-         "dg": 0,
-         "pts": 21
-        },
-        {
-         "pos": 7,
-         "equipo": "Envigado F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
-         "pj": 15,
-         "g": 4,
-         "e": 8,
-         "p": 3,
-         "gf": 17,
-         "gc": 13,
-         "dg": 4,
-         "pts": 20
-        },
-        {
-         "pos": 8,
-         "equipo": "Unión Magdalena",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
-         "pj": 15,
-         "g": 5,
-         "e": 5,
-         "p": 5,
-         "gf": 15,
-         "gc": 15,
-         "dg": 0,
-         "pts": 20
-        },
-        {
-         "pos": 9,
-         "equipo": "Real Santander S.A.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0006_REAL-SANTANDER-5.png",
-         "pj": 15,
-         "g": 4,
-         "e": 8,
-         "p": 3,
-         "gf": 17,
-         "gc": 20,
-         "dg": -3,
-         "pts": 20
-        },
-        {
-         "pos": 10,
-         "equipo": "Bogotá F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0000_BOGOTA-FC-5.png",
-         "pj": 15,
-         "g": 4,
-         "e": 6,
-         "p": 5,
-         "gf": 11,
-         "gc": 14,
-         "dg": -3,
-         "pts": 18
-        },
-        {
-         "pos": 11,
-         "equipo": "Atlético F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0004_ATLETICO-FC-5.png",
-         "pj": 15,
-         "g": 5,
-         "e": 3,
-         "p": 7,
-         "gf": 16,
-         "gc": 21,
-         "dg": -5,
-         "pts": 18
-        },
-        {
-         "pos": 12,
-         "equipo": "Patriotas F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0009_PATRIOTAS-FC-5.png",
-         "pj": 15,
-         "g": 5,
-         "e": 3,
-         "p": 7,
-         "gf": 17,
-         "gc": 23,
-         "dg": -6,
-         "pts": 18
-        },
-        {
-         "pos": 13,
-         "equipo": "Orsomarso S.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0010_ORSOMARSO-SC-5.png",
-         "pj": 15,
-         "g": 4,
-         "e": 5,
-         "p": 6,
-         "gf": 11,
-         "gc": 14,
-         "dg": -3,
-         "pts": 17
-        },
-        {
-         "pos": 14,
-         "equipo": "Internacional F.C. de Palmira",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0013_INTERNACIONAL-FC-DE-PALMIRA-5.png",
-         "pj": 15,
-         "g": 4,
-         "e": 4,
-         "p": 7,
-         "gf": 11,
-         "gc": 17,
-         "dg": -6,
-         "pts": 16
-        },
-        {
-         "pos": 15,
-         "equipo": "Barranquilla F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0002_BARRANQUILLA-FC-5.png",
-         "pj": 15,
-         "g": 3,
-         "e": 5,
-         "p": 7,
-         "gf": 18,
-         "gc": 22,
-         "dg": -4,
-         "pts": 14
-        },
-        {
-         "pos": 16,
-         "equipo": "Leones F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0011_LEONES-FC-5.png",
-         "pj": 15,
-         "g": 3,
-         "e": 5,
-         "p": 7,
-         "gf": 12,
-         "gc": 22,
-         "dg": -10,
-         "pts": 14
+         "equipo": "Real Cundinamarca",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0007_REAL-CUNDINAMARCA-5.png",
+         "pj": 1,
+         "g": 0,
+         "e": 0,
+         "p": 1,
+         "gf": 0,
+         "gc": 2,
+         "dg": -2,
+         "pts": 0
         }
        ]
       }
@@ -1234,6 +1135,19 @@
        "filas": [
         {
          "pos": 1,
+         "equipo": "Deportes Quindío",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
+         "pj": 37,
+         "g": 19,
+         "e": 10,
+         "p": 8,
+         "gf": 40,
+         "gc": 26,
+         "dg": 14,
+         "pts": 67
+        },
+        {
+         "pos": 2,
          "equipo": "Envigado F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
          "pj": 38,
@@ -1243,19 +1157,6 @@
          "gf": 51,
          "gc": 33,
          "dg": 18,
-         "pts": 64
-        },
-        {
-         "pos": 2,
-         "equipo": "Deportes Quindío",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
-         "pj": 36,
-         "g": 18,
-         "e": 10,
-         "p": 8,
-         "gf": 38,
-         "gc": 26,
-         "dg": 12,
          "pts": 64
         },
         {
@@ -1340,13 +1241,13 @@
          "pos": 9,
          "equipo": "Real Cundinamarca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0007_REAL-CUNDINAMARCA-5.png",
-         "pj": 30,
+         "pj": 31,
          "g": 10,
          "e": 11,
-         "p": 9,
+         "p": 10,
          "gf": 34,
-         "gc": 30,
-         "dg": 4,
+         "gc": 32,
+         "dg": 2,
          "pts": 41
         },
         {
