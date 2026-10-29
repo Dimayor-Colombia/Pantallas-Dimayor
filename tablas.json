@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-29T21:06:27.553Z",
+   "actualizado": "2026-10-29T23:07:03.488Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1088,27 +1088,27 @@
          "pos": 2,
          "equipo": "Real Cartagena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
-         "pj": 0,
+         "pj": 1,
          "g": 0,
-         "e": 0,
+         "e": 1,
          "p": 0,
          "gf": 0,
          "gc": 0,
          "dg": 0,
-         "pts": 0
+         "pts": 1
         },
         {
          "pos": 3,
          "equipo": "Tigres F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0005_TIGRES-FC-5.png",
-         "pj": 0,
+         "pj": 1,
          "g": 0,
-         "e": 0,
+         "e": 1,
          "p": 0,
          "gf": 0,
          "gc": 0,
          "dg": 0,
-         "pts": 0
+         "pts": 1
         },
         {
          "pos": 4,
@@ -1161,6 +1161,19 @@
         },
         {
          "pos": 3,
+         "equipo": "Real Cartagena",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
+         "pj": 39,
+         "g": 16,
+         "e": 14,
+         "p": 9,
+         "gf": 60,
+         "gc": 43,
+         "dg": 17,
+         "pts": 62
+        },
+        {
+         "pos": 4,
          "equipo": "Unión Magdalena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
          "pj": 37,
@@ -1171,19 +1184,6 @@
          "gc": 35,
          "dg": 16,
          "pts": 62
-        },
-        {
-         "pos": 4,
-         "equipo": "Real Cartagena",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
-         "pj": 38,
-         "g": 16,
-         "e": 13,
-         "p": 9,
-         "gf": 60,
-         "gc": 43,
-         "dg": 17,
-         "pts": 61
         },
         {
          "pos": 5,
@@ -1202,14 +1202,14 @@
          "pos": 6,
          "equipo": "Tigres F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0005_TIGRES-FC-5.png",
-         "pj": 36,
+         "pj": 37,
          "g": 12,
-         "e": 12,
+         "e": 13,
          "p": 12,
          "gf": 35,
          "gc": 31,
          "dg": 4,
-         "pts": 48
+         "pts": 49
         },
         {
          "pos": 7,
