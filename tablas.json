@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-30T04:08:10.202Z",
+   "actualizado": "2026-10-30T23:14:12.225Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -198,6 +198,19 @@
         },
         {
          "pos": 15,
+         "equipo": "Deportivo Pereira",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0009_Escudo-Pereira-1-5.png",
+         "pj": 16,
+         "g": 3,
+         "e": 8,
+         "p": 5,
+         "gf": 12,
+         "gc": 19,
+         "dg": -7,
+         "pts": 17
+        },
+        {
+         "pos": 16,
          "equipo": "Junior F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
          "pj": 16,
@@ -210,7 +223,7 @@
          "pts": 16
         },
         {
-         "pos": 16,
+         "pos": 17,
          "equipo": "Boyacá Chicó F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
          "pj": 16,
@@ -223,29 +236,16 @@
          "pts": 16
         },
         {
-         "pos": 17,
-         "equipo": "Deportivo Pereira",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0009_Escudo-Pereira-1-5.png",
-         "pj": 15,
-         "g": 2,
-         "e": 8,
-         "p": 5,
-         "gf": 11,
-         "gc": 19,
-         "dg": -8,
-         "pts": 14
-        },
-        {
          "pos": 18,
          "equipo": "Jaguares F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
-         "pj": 15,
+         "pj": 16,
          "g": 3,
          "e": 4,
-         "p": 8,
+         "p": 9,
          "gf": 17,
-         "gc": 28,
-         "dg": -11,
+         "gc": 29,
+         "dg": -12,
          "pts": 13
         },
         {
@@ -522,27 +522,27 @@
          "pos": 19,
          "equipo": "Jaguares F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
-         "pj": 34,
+         "pj": 35,
          "g": 8,
          "e": 7,
-         "p": 19,
+         "p": 20,
          "gf": 37,
-         "gc": 61,
-         "dg": -24,
+         "gc": 62,
+         "dg": -25,
          "pts": 31
         },
         {
          "pos": 20,
          "equipo": "Deportivo Pereira",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0009_Escudo-Pereira-1-5.png",
-         "pj": 34,
-         "g": 3,
+         "pj": 35,
+         "g": 4,
          "e": 15,
          "p": 16,
-         "gf": 26,
+         "gf": 27,
          "gc": 51,
-         "dg": -25,
-         "pts": 24
+         "dg": -24,
+         "pts": 27
         }
        ]
       }
@@ -558,6 +558,28 @@
      "filas": [
       {
        "pos": 20,
+       "equipo": "Jaguares F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
+       "anios": [
+        {
+         "pj": 0,
+         "pts": 0
+        },
+        {
+         "pj": 0,
+         "pts": 0
+        },
+        {
+         "pj": 35,
+         "pts": 31
+        }
+       ],
+       "pj": 35,
+       "pts": 31,
+       "pro": "0,8857"
+      },
+      {
+       "pos": 19,
        "equipo": "Boyacá Chicó F.C.",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
        "anios": [
@@ -577,28 +599,6 @@
        "pj": 113,
        "pts": 102,
        "pro": "0,9027"
-      },
-      {
-       "pos": 19,
-       "equipo": "Jaguares F.C.",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
-       "anios": [
-        {
-         "pj": 0,
-         "pts": 0
-        },
-        {
-         "pj": 0,
-         "pts": 0
-        },
-        {
-         "pj": 34,
-         "pts": 31
-        }
-       ],
-       "pj": 34,
-       "pts": 31,
-       "pro": "0,9118"
       },
       {
        "pos": 18,
@@ -702,13 +702,13 @@
          "pts": 46
         },
         {
-         "pj": 34,
-         "pts": 24
+         "pj": 35,
+         "pts": 27
         }
        ],
-       "pj": 112,
-       "pts": 131,
-       "pro": "1,1696"
+       "pj": 113,
+       "pts": 134,
+       "pro": "1,1858"
       },
       {
        "pos": 13,
