@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-30T02:07:41.304Z",
+   "actualizado": "2026-10-30T04:08:10.202Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -16,6 +16,19 @@
        "filas": [
         {
          "pos": 1,
+         "equipo": "Atlético Nacional",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
+         "pj": 16,
+         "g": 11,
+         "e": 2,
+         "p": 3,
+         "gf": 32,
+         "gc": 13,
+         "dg": 19,
+         "pts": 35
+        },
+        {
+         "pos": 2,
          "equipo": "América de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
          "pj": 16,
@@ -26,19 +39,6 @@
          "gc": 12,
          "dg": 19,
          "pts": 34
-        },
-        {
-         "pos": 2,
-         "equipo": "Atlético Nacional",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
-         "pj": 15,
-         "g": 10,
-         "e": 2,
-         "p": 3,
-         "gf": 30,
-         "gc": 13,
-         "dg": 17,
-         "pts": 32
         },
         {
          "pos": 3,
@@ -57,13 +57,13 @@
          "pos": 4,
          "equipo": "Independiente Santa Fe",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-         "pj": 15,
+         "pj": 16,
          "g": 8,
          "e": 4,
-         "p": 3,
+         "p": 4,
          "gf": 23,
-         "gc": 15,
-         "dg": 8,
+         "gc": 17,
+         "dg": 6,
          "pts": 28
         },
         {
@@ -288,14 +288,14 @@
          "pos": 1,
          "equipo": "Atlético Nacional",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
-         "pj": 40,
-         "g": 28,
+         "pj": 41,
+         "g": 29,
          "e": 3,
          "p": 9,
-         "gf": 79,
+         "gf": 81,
          "gc": 34,
-         "dg": 45,
-         "pts": 87
+         "dg": 47,
+         "pts": 90
         },
         {
          "pos": 2,
@@ -314,13 +314,13 @@
          "pos": 3,
          "equipo": "Independiente Santa Fe",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-         "pj": 38,
+         "pj": 39,
          "g": 16,
          "e": 15,
-         "p": 7,
+         "p": 8,
          "gf": 58,
-         "gc": 39,
-         "dg": 19,
+         "gc": 41,
+         "dg": 17,
          "pts": 63
         },
         {
@@ -922,13 +922,13 @@
          "pts": 64
         },
         {
-         "pj": 34,
+         "pj": 35,
          "pts": 57
         }
        ],
-       "pj": 112,
+       "pj": 113,
        "pts": 192,
-       "pro": "1,7143"
+       "pro": "1,6991"
       },
       {
        "pos": 3,
@@ -988,13 +988,13 @@
          "pts": 72
         },
         {
-         "pj": 34,
-         "pts": 72
+         "pj": 35,
+         "pts": 75
         }
        ],
-       "pj": 112,
-       "pts": 200,
-       "pro": "1,7857"
+       "pj": 113,
+       "pts": 203,
+       "pro": "1,7965"
       }
      ]
     }
