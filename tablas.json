@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-29T23:07:03.488Z",
+   "actualizado": "2026-11-01T21:27:03.407Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1086,21 +1086,21 @@
         },
         {
          "pos": 2,
-         "equipo": "Real Cartagena",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
-         "pj": 1,
+         "equipo": "Tigres F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0005_TIGRES-FC-5.png",
+         "pj": 2,
          "g": 0,
-         "e": 1,
+         "e": 2,
          "p": 0,
          "gf": 0,
          "gc": 0,
          "dg": 0,
-         "pts": 1
+         "pts": 2
         },
         {
          "pos": 3,
-         "equipo": "Tigres F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0005_TIGRES-FC-5.png",
+         "equipo": "Real Cartagena",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
          "pj": 1,
          "g": 0,
          "e": 1,
@@ -1114,14 +1114,14 @@
          "pos": 4,
          "equipo": "Real Cundinamarca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0007_REAL-CUNDINAMARCA-5.png",
-         "pj": 1,
+         "pj": 2,
          "g": 0,
-         "e": 0,
+         "e": 1,
          "p": 1,
          "gf": 0,
          "gc": 2,
          "dg": -2,
-         "pts": 0
+         "pts": 1
         }
        ]
       }
@@ -1202,14 +1202,14 @@
          "pos": 6,
          "equipo": "Tigres F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0005_TIGRES-FC-5.png",
-         "pj": 37,
+         "pj": 38,
          "g": 12,
-         "e": 13,
+         "e": 14,
          "p": 12,
          "gf": 35,
          "gc": 31,
          "dg": 4,
-         "pts": 49
+         "pts": 50
         },
         {
          "pos": 7,
@@ -1241,14 +1241,14 @@
          "pos": 9,
          "equipo": "Real Cundinamarca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0007_REAL-CUNDINAMARCA-5.png",
-         "pj": 31,
+         "pj": 32,
          "g": 10,
-         "e": 11,
+         "e": 12,
          "p": 10,
          "gf": 34,
          "gc": 32,
          "dg": 2,
-         "pts": 41
+         "pts": 42
         },
         {
          "pos": 10,
