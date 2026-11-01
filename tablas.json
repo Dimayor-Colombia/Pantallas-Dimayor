@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-31T03:14:56.084Z",
+   "actualizado": "2026-11-01T01:21:14.804Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -172,6 +172,19 @@
         },
         {
          "pos": 13,
+         "equipo": "Llaneros F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
+         "pj": 17,
+         "g": 6,
+         "e": 2,
+         "p": 9,
+         "gf": 19,
+         "gc": 23,
+         "dg": -4,
+         "pts": 20
+        },
+        {
+         "pos": 14,
          "equipo": "Alianza Valledupar F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
          "pj": 16,
@@ -182,19 +195,6 @@
          "gc": 27,
          "dg": -11,
          "pts": 18
-        },
-        {
-         "pos": 14,
-         "equipo": "Llaneros F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
-         "pj": 16,
-         "g": 5,
-         "e": 2,
-         "p": 9,
-         "gf": 16,
-         "gc": 21,
-         "dg": -5,
-         "pts": 17
         },
         {
          "pos": 15,
@@ -213,13 +213,13 @@
          "pos": 16,
          "equipo": "Junior F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
-         "pj": 16,
+         "pj": 17,
          "g": 3,
          "e": 7,
-         "p": 6,
-         "gf": 21,
-         "gc": 24,
-         "dg": -3,
+         "p": 7,
+         "gf": 23,
+         "gc": 27,
+         "dg": -4,
          "pts": 16
         },
         {
@@ -327,13 +327,13 @@
          "pos": 4,
          "equipo": "Junior F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
-         "pj": 41,
+         "pj": 42,
          "g": 16,
          "e": 12,
-         "p": 13,
-         "gf": 59,
-         "gc": 52,
-         "dg": 7,
+         "p": 14,
+         "gf": 61,
+         "gc": 55,
+         "dg": 6,
          "pts": 60
         },
         {
@@ -457,14 +457,14 @@
          "pos": 14,
          "equipo": "Llaneros F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
-         "pj": 35,
-         "g": 9,
+         "pj": 36,
+         "g": 10,
          "e": 12,
          "p": 14,
-         "gf": 33,
-         "gc": 41,
-         "dg": -8,
-         "pts": 39
+         "gf": 36,
+         "gc": 43,
+         "dg": -7,
+         "pts": 42
         },
         {
          "pos": 15,
@@ -680,13 +680,13 @@
          "pts": 45
         },
         {
-         "pj": 35,
-         "pts": 39
+         "pj": 36,
+         "pts": 42
         }
        ],
-       "pj": 75,
-       "pts": 84,
-       "pro": "1,1200"
+       "pj": 76,
+       "pts": 87,
+       "pro": "1,1447"
       },
       {
        "pos": 14,
@@ -844,6 +844,28 @@
       },
       {
        "pos": 7,
+       "equipo": "Junior F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
+       "anios": [
+        {
+         "pj": 38,
+         "pts": 60
+        },
+        {
+         "pj": 40,
+         "pts": 72
+        },
+        {
+         "pj": 36,
+         "pts": 51
+        }
+       ],
+       "pj": 114,
+       "pts": 183,
+       "pro": "1,6053"
+      },
+      {
+       "pos": 6,
        "equipo": "Millonarios F.C.",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
        "anios": [
@@ -865,7 +887,7 @@
        "pro": "1,6106"
       },
       {
-       "pos": 6,
+       "pos": 5,
        "equipo": "Atlético Bucaramanga",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
        "anios": [
@@ -876,28 +898,6 @@
         {
          "pj": 40,
          "pts": 66
-        },
-        {
-         "pj": 35,
-         "pts": 51
-        }
-       ],
-       "pj": 113,
-       "pts": 183,
-       "pro": "1,6195"
-      },
-      {
-       "pos": 5,
-       "equipo": "Junior F.C.",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
-       "anios": [
-        {
-         "pj": 38,
-         "pts": 60
-        },
-        {
-         "pj": 40,
-         "pts": 72
         },
         {
          "pj": 35,
