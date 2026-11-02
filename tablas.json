@@ -1397,12 +1397,12 @@
    "id": "copa",
    "competicion": "Copa Betplay Dimayor 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-25T03:13:04.457Z",
+   "actualizado": "2026-11-02T03:28:15.606Z",
    "bloques": [
     {
      "tipo": "posiciones",
      "fase": "FASE III - CUARTOS DE FINAL",
-     "actual": true,
+     "actual": false,
      "grupos": [
       {
        "nombre": "",
@@ -1435,6 +1435,19 @@
         },
         {
          "pos": 3,
+         "equipo": "Once Caldas DAF",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
+         "pj": 1,
+         "g": 1,
+         "e": 0,
+         "p": 0,
+         "gf": 2,
+         "gc": 0,
+         "dg": 2,
+         "pts": 3
+        },
+        {
+         "pos": 4,
          "equipo": "Atlético Nacional",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
          "pj": 1,
@@ -1447,33 +1460,7 @@
          "pts": 3
         },
         {
-         "pos": 4,
-         "equipo": "Independiente Santa Fe",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-         "pj": 0,
-         "g": 0,
-         "e": 0,
-         "p": 0,
-         "gf": 0,
-         "gc": 0,
-         "dg": 0,
-         "pts": 0
-        },
-        {
          "pos": 5,
-         "equipo": "Once Caldas DAF",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
-         "pj": 0,
-         "g": 0,
-         "e": 0,
-         "p": 0,
-         "gf": 0,
-         "gc": 0,
-         "dg": 0,
-         "pts": 0
-        },
-        {
-         "pos": 6,
          "equipo": "Independiente Medellín",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
          "pj": 1,
@@ -1483,6 +1470,19 @@
          "gf": 2,
          "gc": 3,
          "dg": -1,
+         "pts": 0
+        },
+        {
+         "pos": 6,
+         "equipo": "Independiente Santa Fe",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+         "pj": 1,
+         "g": 0,
+         "e": 0,
+         "p": 1,
+         "gf": 0,
+         "gc": 2,
+         "dg": -2,
          "pts": 0
         },
         {
