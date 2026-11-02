@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-01T23:27:25.690Z",
+   "actualizado": "2026-11-02T01:27:44.558Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -94,6 +94,19 @@
         },
         {
          "pos": 7,
+         "equipo": "Independiente Medellín",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
+         "pj": 17,
+         "g": 8,
+         "e": 2,
+         "p": 7,
+         "gf": 25,
+         "gc": 25,
+         "dg": 0,
+         "pts": 26
+        },
+        {
+         "pos": 8,
          "equipo": "Once Caldas DAF",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
          "pj": 17,
@@ -104,19 +117,6 @@
          "gc": 18,
          "dg": 3,
          "pts": 24
-        },
-        {
-         "pos": 8,
-         "equipo": "Independiente Medellín",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
-         "pj": 16,
-         "g": 7,
-         "e": 2,
-         "p": 7,
-         "gf": 23,
-         "gc": 24,
-         "dg": -1,
-         "pts": 23
         },
         {
          "pos": 9,
@@ -187,13 +187,13 @@
          "pos": 14,
          "equipo": "Alianza Valledupar F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
-         "pj": 16,
+         "pj": 17,
          "g": 5,
          "e": 3,
-         "p": 8,
-         "gf": 16,
-         "gc": 27,
-         "dg": -11,
+         "p": 9,
+         "gf": 17,
+         "gc": 29,
+         "dg": -12,
          "pts": 18
         },
         {
@@ -390,6 +390,19 @@
         },
         {
          "pos": 9,
+         "equipo": "Independiente Medellín",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
+         "pj": 36,
+         "g": 15,
+         "e": 7,
+         "p": 14,
+         "gf": 51,
+         "gc": 49,
+         "dg": 2,
+         "pts": 52
+        },
+        {
+         "pos": 10,
          "equipo": "Atlético Bucaramanga",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
          "pj": 35,
@@ -400,19 +413,6 @@
          "gc": 36,
          "dg": 15,
          "pts": 51
-        },
-        {
-         "pos": 10,
-         "equipo": "Independiente Medellín",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
-         "pj": 35,
-         "g": 14,
-         "e": 7,
-         "p": 14,
-         "gf": 49,
-         "gc": 48,
-         "dg": 1,
-         "pts": 49
         },
         {
          "pos": 11,
@@ -483,13 +483,13 @@
          "pos": 16,
          "equipo": "Alianza Valledupar F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
-         "pj": 35,
+         "pj": 36,
          "g": 8,
          "e": 11,
-         "p": 16,
-         "gf": 29,
-         "gc": 54,
-         "dg": -25,
+         "p": 17,
+         "gf": 30,
+         "gc": 56,
+         "dg": -26,
          "pts": 35
         },
         {
@@ -624,6 +624,28 @@
       },
       {
        "pos": 17,
+       "equipo": "Alianza Valledupar F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
+       "anios": [
+        {
+         "pj": 38,
+         "pts": 33
+        },
+        {
+         "pj": 40,
+         "pts": 58
+        },
+        {
+         "pj": 36,
+         "pts": 35
+        }
+       ],
+       "pj": 114,
+       "pts": 126,
+       "pro": "1,1053"
+      },
+      {
+       "pos": 16,
        "equipo": "Internacional de Bogotá",
        "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
        "anios": [
@@ -643,28 +665,6 @@
        "pj": 114,
        "pts": 127,
        "pro": "1,1140"
-      },
-      {
-       "pos": 16,
-       "equipo": "Alianza Valledupar F.C.",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
-       "anios": [
-        {
-         "pj": 38,
-         "pts": 33
-        },
-        {
-         "pj": 40,
-         "pts": 58
-        },
-        {
-         "pj": 35,
-         "pts": 35
-        }
-       ],
-       "pj": 113,
-       "pts": 126,
-       "pro": "1,1150"
       },
       {
        "pos": 15,
@@ -834,13 +834,13 @@
          "pts": 72
         },
         {
-         "pj": 35,
-         "pts": 49
+         "pj": 36,
+         "pts": 52
         }
        ],
-       "pj": 113,
-       "pts": 179,
-       "pro": "1,5841"
+       "pj": 114,
+       "pts": 182,
+       "pro": "1,5965"
       },
       {
        "pos": 7,
