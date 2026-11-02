@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-01T21:27:03.407Z",
+   "actualizado": "2026-11-02T21:33:50.430Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1016,6 +1016,19 @@
        "filas": [
         {
          "pos": 1,
+         "equipo": "Boca Juniors de Cali",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
+         "pj": 2,
+         "g": 1,
+         "e": 1,
+         "p": 0,
+         "gf": 5,
+         "gc": 3,
+         "dg": 2,
+         "pts": 4
+        },
+        {
+         "pos": 2,
          "equipo": "Envigado F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
          "pj": 1,
@@ -1028,22 +1041,9 @@
          "pts": 3
         },
         {
-         "pos": 2,
+         "pos": 3,
          "equipo": "Unión Magdalena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
-         "pj": 1,
-         "g": 0,
-         "e": 1,
-         "p": 0,
-         "gf": 1,
-         "gc": 1,
-         "dg": 0,
-         "pts": 1
-        },
-        {
-         "pos": 3,
-         "equipo": "Boca Juniors de Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
          "pj": 1,
          "g": 0,
          "e": 1,
@@ -1057,13 +1057,13 @@
          "pos": 4,
          "equipo": "Independiente Valle del Cauca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
-         "pj": 1,
+         "pj": 2,
          "g": 0,
          "e": 0,
-         "p": 1,
-         "gf": 0,
-         "gc": 2,
-         "dg": -2,
+         "p": 2,
+         "gf": 2,
+         "gc": 6,
+         "dg": -4,
          "pts": 0
         }
        ]
@@ -1215,13 +1215,13 @@
          "pos": 7,
          "equipo": "Independiente Valle del Cauca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
-         "pj": 31,
+         "pj": 32,
          "g": 12,
          "e": 11,
-         "p": 8,
-         "gf": 33,
-         "gc": 25,
-         "dg": 8,
+         "p": 9,
+         "gf": 35,
+         "gc": 29,
+         "dg": 6,
          "pts": 47
         },
         {
@@ -1267,14 +1267,14 @@
          "pos": 11,
          "equipo": "Boca Juniors de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
-         "pj": 31,
-         "g": 8,
+         "pj": 32,
+         "g": 9,
          "e": 11,
          "p": 12,
-         "gf": 36,
-         "gc": 41,
-         "dg": -5,
-         "pts": 35
+         "gf": 40,
+         "gc": 43,
+         "dg": -3,
+         "pts": 38
         },
         {
          "pos": 12,
