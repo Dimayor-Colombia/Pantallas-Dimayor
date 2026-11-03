@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-02T01:27:44.558Z",
+   "actualizado": "2026-11-03T00:34:35.535Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -107,6 +107,19 @@
         },
         {
          "pos": 8,
+         "equipo": "Águilas Doradas",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
+         "pj": 17,
+         "g": 6,
+         "e": 7,
+         "p": 4,
+         "gf": 22,
+         "gc": 20,
+         "dg": 2,
+         "pts": 25
+        },
+        {
+         "pos": 9,
          "equipo": "Once Caldas DAF",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
          "pj": 17,
@@ -117,19 +130,6 @@
          "gc": 18,
          "dg": 3,
          "pts": 24
-        },
-        {
-         "pos": 9,
-         "equipo": "Águilas Doradas",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
-         "pj": 16,
-         "g": 5,
-         "e": 7,
-         "p": 4,
-         "gf": 21,
-         "gc": 20,
-         "dg": 1,
-         "pts": 22
         },
         {
          "pos": 10,
@@ -252,13 +252,13 @@
          "pos": 19,
          "equipo": "Fortaleza",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0008_Fortaleza-nuevo-3-5.png",
-         "pj": 16,
+         "pj": 17,
          "g": 1,
          "e": 9,
-         "p": 6,
+         "p": 7,
          "gf": 17,
-         "gc": 24,
-         "dg": -7,
+         "gc": 25,
+         "dg": -8,
          "pts": 12
         },
         {
@@ -418,14 +418,14 @@
          "pos": 11,
          "equipo": "Águilas Doradas",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
-         "pj": 35,
-         "g": 12,
+         "pj": 36,
+         "g": 13,
          "e": 12,
          "p": 11,
-         "gf": 41,
+         "gf": 42,
          "gc": 45,
-         "dg": -4,
-         "pts": 48
+         "dg": -3,
+         "pts": 51
         },
         {
          "pos": 12,
@@ -496,13 +496,13 @@
          "pos": 17,
          "equipo": "Fortaleza",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0008_Fortaleza-nuevo-3-5.png",
-         "pj": 35,
+         "pj": 36,
          "g": 6,
          "e": 16,
-         "p": 13,
+         "p": 14,
          "gf": 39,
-         "gc": 51,
-         "dg": -12,
+         "gc": 52,
+         "dg": -13,
          "pts": 34
         },
         {
@@ -724,13 +724,13 @@
          "pts": 55
         },
         {
-         "pj": 35,
+         "pj": 36,
          "pts": 34
         }
        ],
-       "pj": 113,
+       "pj": 114,
        "pts": 140,
-       "pro": "1,2389"
+       "pro": "1,2281"
       },
       {
        "pos": 12,
@@ -756,28 +756,6 @@
       },
       {
        "pos": 11,
-       "equipo": "Águilas Doradas",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
-       "anios": [
-        {
-         "pj": 38,
-         "pts": 46
-        },
-        {
-         "pj": 40,
-         "pts": 48
-        },
-        {
-         "pj": 35,
-         "pts": 48
-        }
-       ],
-       "pj": 113,
-       "pts": 142,
-       "pro": "1,2566"
-      },
-      {
-       "pos": 10,
        "equipo": "Deportivo Pasto",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
        "anios": [
@@ -797,6 +775,28 @@
        "pj": 113,
        "pts": 143,
        "pro": "1,2655"
+      },
+      {
+       "pos": 10,
+       "equipo": "Águilas Doradas",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
+       "anios": [
+        {
+         "pj": 38,
+         "pts": 46
+        },
+        {
+         "pj": 40,
+         "pts": 48
+        },
+        {
+         "pj": 36,
+         "pts": 51
+        }
+       ],
+       "pj": 114,
+       "pts": 145,
+       "pro": "1,2719"
       },
       {
        "pos": 9,
