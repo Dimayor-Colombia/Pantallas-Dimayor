@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-02T21:33:50.430Z",
+   "actualizado": "2026-11-03T01:34:50.158Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1031,27 +1031,27 @@
          "pos": 2,
          "equipo": "Envigado F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
-         "pj": 1,
+         "pj": 2,
          "g": 1,
-         "e": 0,
+         "e": 1,
          "p": 0,
-         "gf": 2,
-         "gc": 0,
+         "gf": 3,
+         "gc": 1,
          "dg": 2,
-         "pts": 3
+         "pts": 4
         },
         {
          "pos": 3,
          "equipo": "Unión Magdalena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
-         "pj": 1,
+         "pj": 2,
          "g": 0,
-         "e": 1,
+         "e": 2,
          "p": 0,
-         "gf": 1,
-         "gc": 1,
+         "gf": 2,
+         "gc": 2,
          "dg": 0,
-         "pts": 1
+         "pts": 2
         },
         {
          "pos": 4,
@@ -1137,14 +1137,14 @@
          "pos": 1,
          "equipo": "Envigado F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
-         "pj": 39,
+         "pj": 40,
          "g": 18,
-         "e": 13,
+         "e": 14,
          "p": 8,
-         "gf": 53,
-         "gc": 33,
+         "gf": 54,
+         "gc": 34,
          "dg": 20,
-         "pts": 67
+         "pts": 68
         },
         {
          "pos": 2,
@@ -1161,6 +1161,19 @@
         },
         {
          "pos": 3,
+         "equipo": "Unión Magdalena",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
+         "pj": 38,
+         "g": 17,
+         "e": 12,
+         "p": 9,
+         "gf": 52,
+         "gc": 36,
+         "dg": 16,
+         "pts": 63
+        },
+        {
+         "pos": 4,
          "equipo": "Real Cartagena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
          "pj": 39,
@@ -1170,19 +1183,6 @@
          "gf": 60,
          "gc": 43,
          "dg": 17,
-         "pts": 62
-        },
-        {
-         "pos": 4,
-         "equipo": "Unión Magdalena",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
-         "pj": 37,
-         "g": 17,
-         "e": 11,
-         "p": 9,
-         "gf": 51,
-         "gc": 35,
-         "dg": 16,
          "pts": 62
         },
         {
