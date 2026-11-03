@@ -1004,11 +1004,11 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-03T01:34:50.158Z",
+   "actualizado": "2026-11-03T16:40:13.691Z",
    "bloques": [
     {
      "tipo": "posiciones",
-     "fase": "FASE II",
+     "fase": "FASE II CUADRANGULARES",
      "actual": true,
      "grupos": [
       {
