@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-03T00:34:35.535Z",
+   "actualizado": "2026-11-03T03:35:15.055Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -18,14 +18,14 @@
          "pos": 1,
          "equipo": "Atlético Nacional",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
-         "pj": 16,
+         "pj": 17,
          "g": 11,
-         "e": 2,
+         "e": 3,
          "p": 3,
-         "gf": 32,
-         "gc": 13,
+         "gf": 33,
+         "gc": 14,
          "dg": 19,
-         "pts": 35
+         "pts": 36
         },
         {
          "pos": 2,
@@ -57,14 +57,14 @@
          "pos": 4,
          "equipo": "Atlético Bucaramanga",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
-         "pj": 16,
+         "pj": 17,
          "g": 7,
-         "e": 7,
+         "e": 8,
          "p": 2,
-         "gf": 25,
-         "gc": 16,
+         "gf": 26,
+         "gc": 17,
          "dg": 9,
-         "pts": 28
+         "pts": 29
         },
         {
          "pos": 5,
@@ -288,14 +288,14 @@
          "pos": 1,
          "equipo": "Atlético Nacional",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
-         "pj": 41,
+         "pj": 42,
          "g": 29,
-         "e": 3,
+         "e": 4,
          "p": 9,
-         "gf": 81,
-         "gc": 34,
+         "gf": 82,
+         "gc": 35,
          "dg": 47,
-         "pts": 90
+         "pts": 91
         },
         {
          "pos": 2,
@@ -390,6 +390,19 @@
         },
         {
          "pos": 9,
+         "equipo": "Atlético Bucaramanga",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
+         "pj": 36,
+         "g": 12,
+         "e": 16,
+         "p": 8,
+         "gf": 52,
+         "gc": 37,
+         "dg": 15,
+         "pts": 52
+        },
+        {
+         "pos": 10,
          "equipo": "Independiente Medellín",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
          "pj": 36,
@@ -400,19 +413,6 @@
          "gc": 49,
          "dg": 2,
          "pts": 52
-        },
-        {
-         "pos": 10,
-         "equipo": "Atlético Bucaramanga",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
-         "pj": 35,
-         "g": 12,
-         "e": 15,
-         "p": 8,
-         "gf": 51,
-         "gc": 36,
-         "dg": 15,
-         "pts": 51
         },
         {
          "pos": 11,
@@ -900,13 +900,13 @@
          "pts": 66
         },
         {
-         "pj": 35,
-         "pts": 51
+         "pj": 36,
+         "pts": 52
         }
        ],
-       "pj": 113,
-       "pts": 183,
-       "pro": "1,6195"
+       "pj": 114,
+       "pts": 184,
+       "pro": "1,6140"
       },
       {
        "pos": 4,
@@ -988,13 +988,13 @@
          "pts": 72
         },
         {
-         "pj": 35,
-         "pts": 75
+         "pj": 36,
+         "pts": 76
         }
        ],
-       "pj": 113,
-       "pts": 203,
-       "pro": "1,7965"
+       "pj": 114,
+       "pts": 204,
+       "pro": "1,7895"
       }
      ]
     }
