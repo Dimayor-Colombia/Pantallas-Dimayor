@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-03T03:35:15.055Z",
+   "actualizado": "2026-11-03T22:41:18.573Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -133,6 +133,19 @@
         },
         {
          "pos": 10,
+         "equipo": "Deportes Tolima",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0013_DEPORTES-TOLIMA-FONDO-OSCURO-5.png",
+         "pj": 17,
+         "g": 6,
+         "e": 5,
+         "p": 6,
+         "gf": 21,
+         "gc": 20,
+         "dg": 1,
+         "pts": 23
+        },
+        {
+         "pos": 11,
          "equipo": "Cúcuta Deportivo",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0015_CUCUTA-DEPORTIVO-5.png",
          "pj": 16,
@@ -143,19 +156,6 @@
          "gc": 24,
          "dg": -6,
          "pts": 21
-        },
-        {
-         "pos": 11,
-         "equipo": "Deportes Tolima",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0013_DEPORTES-TOLIMA-FONDO-OSCURO-5.png",
-         "pj": 16,
-         "g": 5,
-         "e": 5,
-         "p": 6,
-         "gf": 18,
-         "gc": 19,
-         "dg": -1,
-         "pts": 20
         },
         {
          "pos": 12,
@@ -200,13 +200,13 @@
          "pos": 15,
          "equipo": "Deportivo Pereira",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0009_Escudo-Pereira-1-5.png",
-         "pj": 16,
+         "pj": 17,
          "g": 3,
          "e": 8,
-         "p": 5,
-         "gf": 12,
-         "gc": 19,
-         "dg": -7,
+         "p": 6,
+         "gf": 13,
+         "gc": 22,
+         "dg": -9,
          "pts": 17
         },
         {
@@ -338,6 +338,19 @@
         },
         {
          "pos": 5,
+         "equipo": "Deportes Tolima",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0013_DEPORTES-TOLIMA-FONDO-OSCURO-5.png",
+         "pj": 40,
+         "g": 16,
+         "e": 12,
+         "p": 12,
+         "gf": 52,
+         "gc": 41,
+         "dg": 11,
+         "pts": 60
+        },
+        {
+         "pos": 6,
          "equipo": "Junior F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
          "pj": 42,
@@ -350,7 +363,7 @@
          "pts": 60
         },
         {
-         "pos": 6,
+         "pos": 7,
          "equipo": "Once Caldas DAF",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
          "pj": 38,
@@ -361,19 +374,6 @@
          "gc": 43,
          "dg": 11,
          "pts": 58
-        },
-        {
-         "pos": 7,
-         "equipo": "Deportes Tolima",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0013_DEPORTES-TOLIMA-FONDO-OSCURO-5.png",
-         "pj": 39,
-         "g": 15,
-         "e": 12,
-         "p": 12,
-         "gf": 49,
-         "gc": 40,
-         "dg": 9,
-         "pts": 57
         },
         {
          "pos": 8,
@@ -535,13 +535,13 @@
          "pos": 20,
          "equipo": "Deportivo Pereira",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0009_Escudo-Pereira-1-5.png",
-         "pj": 35,
+         "pj": 36,
          "g": 4,
          "e": 15,
-         "p": 16,
-         "gf": 27,
-         "gc": 51,
-         "dg": -24,
+         "p": 17,
+         "gf": 28,
+         "gc": 54,
+         "dg": -26,
          "pts": 27
         }
        ]
@@ -702,13 +702,13 @@
          "pts": 46
         },
         {
-         "pj": 35,
+         "pj": 36,
          "pts": 27
         }
        ],
-       "pj": 113,
+       "pj": 114,
        "pts": 134,
-       "pro": "1,1858"
+       "pro": "1,1754"
       },
       {
        "pos": 13,
@@ -932,28 +932,6 @@
       },
       {
        "pos": 3,
-       "equipo": "Deportes Tolima",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0013_DEPORTES-TOLIMA-FONDO-OSCURO-5.png",
-       "anios": [
-        {
-         "pj": 38,
-         "pts": 72
-        },
-        {
-         "pj": 40,
-         "pts": 74
-        },
-        {
-         "pj": 35,
-         "pts": 51
-        }
-       ],
-       "pj": 113,
-       "pts": 197,
-       "pro": "1,7434"
-      },
-      {
-       "pos": 2,
        "equipo": "América de Cali",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
        "anios": [
@@ -973,6 +951,28 @@
        "pj": 113,
        "pts": 197,
        "pro": "1,7434"
+      },
+      {
+       "pos": 2,
+       "equipo": "Deportes Tolima",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0013_DEPORTES-TOLIMA-FONDO-OSCURO-5.png",
+       "anios": [
+        {
+         "pj": 38,
+         "pts": 72
+        },
+        {
+         "pj": 40,
+         "pts": 74
+        },
+        {
+         "pj": 36,
+         "pts": 54
+        }
+       ],
+       "pj": 114,
+       "pts": 200,
+       "pro": "1,7544"
       },
       {
        "pos": 1,
