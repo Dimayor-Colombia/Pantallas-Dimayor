@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-03T22:41:18.573Z",
+   "actualizado": "2026-11-04T01:44:04.125Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -237,19 +237,32 @@
         },
         {
          "pos": 18,
-         "equipo": "Jaguares F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
-         "pj": 16,
-         "g": 3,
-         "e": 4,
-         "p": 9,
-         "gf": 17,
-         "gc": 29,
-         "dg": -12,
-         "pts": 13
+         "equipo": "Deportivo Pasto",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
+         "pj": 17,
+         "g": 4,
+         "e": 3,
+         "p": 10,
+         "gf": 13,
+         "gc": 24,
+         "dg": -11,
+         "pts": 15
         },
         {
          "pos": 19,
+         "equipo": "Jaguares F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
+         "pj": 17,
+         "g": 3,
+         "e": 4,
+         "p": 10,
+         "gf": 17,
+         "gc": 31,
+         "dg": -14,
+         "pts": 13
+        },
+        {
+         "pos": 20,
          "equipo": "Fortaleza",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0008_Fortaleza-nuevo-3-5.png",
          "pj": 17,
@@ -259,19 +272,6 @@
          "gf": 17,
          "gc": 25,
          "dg": -8,
-         "pts": 12
-        },
-        {
-         "pos": 20,
-         "equipo": "Deportivo Pasto",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
-         "pj": 16,
-         "g": 3,
-         "e": 3,
-         "p": 10,
-         "gf": 11,
-         "gc": 24,
-         "dg": -13,
          "pts": 12
         }
        ]
@@ -429,6 +429,19 @@
         },
         {
          "pos": 12,
+         "equipo": "Deportivo Pasto",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
+         "pj": 38,
+         "g": 14,
+         "e": 7,
+         "p": 17,
+         "gf": 42,
+         "gc": 52,
+         "dg": -10,
+         "pts": 49
+        },
+        {
+         "pos": 13,
          "equipo": "Internacional de Bogotá",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
          "pj": 38,
@@ -439,19 +452,6 @@
          "gc": 58,
          "dg": -9,
          "pts": 48
-        },
-        {
-         "pos": 13,
-         "equipo": "Deportivo Pasto",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
-         "pj": 37,
-         "g": 13,
-         "e": 7,
-         "p": 17,
-         "gf": 40,
-         "gc": 52,
-         "dg": -12,
-         "pts": 46
         },
         {
          "pos": 14,
@@ -522,13 +522,13 @@
          "pos": 19,
          "equipo": "Jaguares F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
-         "pj": 35,
+         "pj": 36,
          "g": 8,
          "e": 7,
-         "p": 20,
+         "p": 21,
          "gf": 37,
-         "gc": 62,
-         "dg": -25,
+         "gc": 64,
+         "dg": -27,
          "pts": 31
         },
         {
@@ -570,13 +570,13 @@
          "pts": 0
         },
         {
-         "pj": 35,
+         "pj": 36,
          "pts": 31
         }
        ],
-       "pj": 35,
+       "pj": 36,
        "pts": 31,
-       "pro": "0,8857"
+       "pro": "0,8611"
       },
       {
        "pos": 19,
@@ -756,28 +756,6 @@
       },
       {
        "pos": 11,
-       "equipo": "Deportivo Pasto",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
-       "anios": [
-        {
-         "pj": 38,
-         "pts": 49
-        },
-        {
-         "pj": 40,
-         "pts": 48
-        },
-        {
-         "pj": 35,
-         "pts": 46
-        }
-       ],
-       "pj": 113,
-       "pts": 143,
-       "pro": "1,2655"
-      },
-      {
-       "pos": 10,
        "equipo": "Águilas Doradas",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
        "anios": [
@@ -797,6 +775,28 @@
        "pj": 114,
        "pts": 145,
        "pro": "1,2719"
+      },
+      {
+       "pos": 10,
+       "equipo": "Deportivo Pasto",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
+       "anios": [
+        {
+         "pj": 38,
+         "pts": 49
+        },
+        {
+         "pj": 40,
+         "pts": 48
+        },
+        {
+         "pj": 36,
+         "pts": 49
+        }
+       ],
+       "pj": 114,
+       "pts": 146,
+       "pro": "1,2807"
       },
       {
        "pos": 9,
