@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-03T16:40:13.691Z",
+   "actualizado": "2026-11-04T03:44:34.142Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1075,14 +1075,14 @@
          "pos": 1,
          "equipo": "Deportes Quindío",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
-         "pj": 1,
-         "g": 1,
+         "pj": 2,
+         "g": 2,
          "e": 0,
          "p": 0,
-         "gf": 2,
-         "gc": 0,
-         "dg": 2,
-         "pts": 3
+         "gf": 5,
+         "gc": 2,
+         "dg": 3,
+         "pts": 6
         },
         {
          "pos": 2,
@@ -1101,13 +1101,13 @@
          "pos": 3,
          "equipo": "Real Cartagena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
-         "pj": 1,
+         "pj": 2,
          "g": 0,
          "e": 1,
-         "p": 0,
-         "gf": 0,
-         "gc": 0,
-         "dg": 0,
+         "p": 1,
+         "gf": 2,
+         "gc": 3,
+         "dg": -1,
          "pts": 1
         },
         {
@@ -1135,6 +1135,19 @@
        "filas": [
         {
          "pos": 1,
+         "equipo": "Deportes Quindío",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
+         "pj": 38,
+         "g": 20,
+         "e": 10,
+         "p": 8,
+         "gf": 43,
+         "gc": 28,
+         "dg": 15,
+         "pts": 70
+        },
+        {
+         "pos": 2,
          "equipo": "Envigado F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
          "pj": 40,
@@ -1145,19 +1158,6 @@
          "gc": 34,
          "dg": 20,
          "pts": 68
-        },
-        {
-         "pos": 2,
-         "equipo": "Deportes Quindío",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
-         "pj": 37,
-         "g": 19,
-         "e": 10,
-         "p": 8,
-         "gf": 40,
-         "gc": 26,
-         "dg": 14,
-         "pts": 67
         },
         {
          "pos": 3,
@@ -1176,13 +1176,13 @@
          "pos": 4,
          "equipo": "Real Cartagena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
-         "pj": 39,
+         "pj": 40,
          "g": 16,
          "e": 14,
-         "p": 9,
-         "gf": 60,
-         "gc": 43,
-         "dg": 17,
+         "p": 10,
+         "gf": 62,
+         "gc": 46,
+         "dg": 16,
          "pts": 62
         },
         {
