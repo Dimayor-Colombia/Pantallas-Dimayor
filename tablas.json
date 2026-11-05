@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-04T01:44:04.125Z",
+   "actualizado": "2026-11-05T02:51:29.897Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -70,13 +70,13 @@
          "pos": 5,
          "equipo": "Independiente Santa Fe",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-         "pj": 16,
+         "pj": 17,
          "g": 8,
          "e": 4,
-         "p": 4,
+         "p": 5,
          "gf": 23,
-         "gc": 17,
-         "dg": 6,
+         "gc": 18,
+         "dg": 5,
          "pts": 28
         },
         {
@@ -133,6 +133,19 @@
         },
         {
          "pos": 10,
+         "equipo": "Cúcuta Deportivo",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0015_CUCUTA-DEPORTIVO-5.png",
+         "pj": 17,
+         "g": 7,
+         "e": 3,
+         "p": 7,
+         "gf": 19,
+         "gc": 24,
+         "dg": -5,
+         "pts": 24
+        },
+        {
+         "pos": 11,
          "equipo": "Deportes Tolima",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0013_DEPORTES-TOLIMA-FONDO-OSCURO-5.png",
          "pj": 17,
@@ -143,19 +156,6 @@
          "gc": 20,
          "dg": 1,
          "pts": 23
-        },
-        {
-         "pos": 11,
-         "equipo": "Cúcuta Deportivo",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0015_CUCUTA-DEPORTIVO-5.png",
-         "pj": 16,
-         "g": 6,
-         "e": 3,
-         "p": 7,
-         "gf": 18,
-         "gc": 24,
-         "dg": -6,
-         "pts": 21
         },
         {
          "pos": 12,
@@ -314,13 +314,13 @@
          "pos": 3,
          "equipo": "Independiente Santa Fe",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-         "pj": 39,
+         "pj": 40,
          "g": 16,
          "e": 15,
-         "p": 8,
+         "p": 9,
          "gf": 58,
-         "gc": 41,
-         "dg": 17,
+         "gc": 42,
+         "dg": 16,
          "pts": 63
         },
         {
@@ -470,14 +470,14 @@
          "pos": 15,
          "equipo": "Cúcuta Deportivo",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0015_CUCUTA-DEPORTIVO-5.png",
-         "pj": 35,
-         "g": 9,
+         "pj": 36,
+         "g": 10,
          "e": 10,
          "p": 16,
-         "gf": 40,
+         "gf": 41,
          "gc": 59,
-         "dg": -19,
-         "pts": 37
+         "dg": -18,
+         "pts": 40
         },
         {
          "pos": 16,
@@ -602,28 +602,6 @@
       },
       {
        "pos": 18,
-       "equipo": "Cúcuta Deportivo",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0015_CUCUTA-DEPORTIVO-5.png",
-       "anios": [
-        {
-         "pj": 0,
-         "pts": 0
-        },
-        {
-         "pj": 0,
-         "pts": 0
-        },
-        {
-         "pj": 35,
-         "pts": 37
-        }
-       ],
-       "pj": 35,
-       "pts": 37,
-       "pro": "1,0571"
-      },
-      {
-       "pos": 17,
        "equipo": "Alianza Valledupar F.C.",
        "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
        "anios": [
@@ -643,6 +621,28 @@
        "pj": 114,
        "pts": 126,
        "pro": "1,1053"
+      },
+      {
+       "pos": 17,
+       "equipo": "Cúcuta Deportivo",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0015_CUCUTA-DEPORTIVO-5.png",
+       "anios": [
+        {
+         "pj": 0,
+         "pts": 0
+        },
+        {
+         "pj": 0,
+         "pts": 0
+        },
+        {
+         "pj": 36,
+         "pts": 40
+        }
+       ],
+       "pj": 36,
+       "pts": 40,
+       "pro": "1,1111"
       },
       {
        "pos": 16,
@@ -922,13 +922,13 @@
          "pts": 64
         },
         {
-         "pj": 35,
+         "pj": 36,
          "pts": 57
         }
        ],
-       "pj": 113,
+       "pj": 114,
        "pts": 192,
-       "pro": "1,6991"
+       "pro": "1,6842"
       },
       {
        "pos": 3,
