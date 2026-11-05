@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-05T02:51:29.897Z",
+   "actualizado": "2026-11-05T03:51:45.596Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -31,14 +31,14 @@
          "pos": 2,
          "equipo": "América de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
-         "pj": 16,
+         "pj": 17,
          "g": 10,
-         "e": 4,
+         "e": 5,
          "p": 2,
          "gf": 31,
          "gc": 12,
          "dg": 19,
-         "pts": 34
+         "pts": 35
         },
         {
          "pos": 3,
@@ -83,14 +83,14 @@
          "pos": 6,
          "equipo": "Millonarios F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
-         "pj": 16,
+         "pj": 17,
          "g": 6,
-         "e": 8,
+         "e": 9,
          "p": 2,
          "gf": 24,
          "gc": 14,
          "dg": 10,
-         "pts": 26
+         "pts": 27
         },
         {
          "pos": 7,
@@ -301,14 +301,14 @@
          "pos": 2,
          "equipo": "América de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
-         "pj": 37,
+         "pj": 38,
          "g": 20,
-         "e": 8,
+         "e": 9,
          "p": 9,
          "gf": 57,
          "gc": 32,
          "dg": 25,
-         "pts": 68
+         "pts": 69
         },
         {
          "pos": 3,
@@ -379,14 +379,14 @@
          "pos": 8,
          "equipo": "Millonarios F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
-         "pj": 35,
+         "pj": 36,
          "g": 13,
-         "e": 13,
+         "e": 14,
          "p": 9,
          "gf": 55,
          "gc": 37,
          "dg": 18,
-         "pts": 52
+         "pts": 53
         },
         {
          "pos": 9,
@@ -878,13 +878,13 @@
          "pts": 64
         },
         {
-         "pj": 35,
-         "pts": 52
+         "pj": 36,
+         "pts": 53
         }
        ],
-       "pj": 113,
-       "pts": 182,
-       "pro": "1,6106"
+       "pj": 114,
+       "pts": 183,
+       "pro": "1,6053"
       },
       {
        "pos": 5,
@@ -944,13 +944,13 @@
          "pts": 68
         },
         {
-         "pj": 35,
-         "pts": 67
+         "pj": 36,
+         "pts": 68
         }
        ],
-       "pj": 113,
-       "pts": 197,
-       "pro": "1,7434"
+       "pj": 114,
+       "pts": 198,
+       "pro": "1,7368"
       },
       {
        "pos": 2,
