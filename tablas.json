@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-04T03:44:34.142Z",
+   "actualizado": "2026-11-06T01:55:58.780Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1044,27 +1044,27 @@
          "pos": 3,
          "equipo": "Unión Magdalena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
-         "pj": 2,
+         "pj": 3,
          "g": 0,
-         "e": 2,
+         "e": 3,
          "p": 0,
-         "gf": 2,
-         "gc": 2,
+         "gf": 3,
+         "gc": 3,
          "dg": 0,
-         "pts": 2
+         "pts": 3
         },
         {
          "pos": 4,
          "equipo": "Independiente Valle del Cauca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
-         "pj": 2,
+         "pj": 3,
          "g": 0,
-         "e": 0,
+         "e": 1,
          "p": 2,
-         "gf": 2,
-         "gc": 6,
+         "gf": 3,
+         "gc": 7,
          "dg": -4,
-         "pts": 0
+         "pts": 1
         }
        ]
       },
@@ -1163,14 +1163,14 @@
          "pos": 3,
          "equipo": "Unión Magdalena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
-         "pj": 38,
+         "pj": 39,
          "g": 17,
-         "e": 12,
+         "e": 13,
          "p": 9,
-         "gf": 52,
-         "gc": 36,
+         "gf": 53,
+         "gc": 37,
          "dg": 16,
-         "pts": 63
+         "pts": 64
         },
         {
          "pos": 4,
@@ -1215,14 +1215,14 @@
          "pos": 7,
          "equipo": "Independiente Valle del Cauca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
-         "pj": 32,
+         "pj": 33,
          "g": 12,
-         "e": 11,
+         "e": 12,
          "p": 9,
-         "gf": 35,
-         "gc": 29,
+         "gf": 36,
+         "gc": 30,
          "dg": 6,
-         "pts": 47
+         "pts": 48
         },
         {
          "pos": 8,
