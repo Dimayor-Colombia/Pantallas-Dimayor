@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-06T01:55:58.780Z",
+   "actualizado": "2026-11-06T23:04:09.792Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1018,26 +1018,26 @@
          "pos": 1,
          "equipo": "Boca Juniors de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
-         "pj": 2,
-         "g": 1,
+         "pj": 3,
+         "g": 2,
          "e": 1,
          "p": 0,
-         "gf": 5,
+         "gf": 6,
          "gc": 3,
-         "dg": 2,
-         "pts": 4
+         "dg": 3,
+         "pts": 7
         },
         {
          "pos": 2,
          "equipo": "Envigado F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
-         "pj": 2,
+         "pj": 3,
          "g": 1,
          "e": 1,
-         "p": 0,
+         "p": 1,
          "gf": 3,
-         "gc": 1,
-         "dg": 2,
+         "gc": 2,
+         "dg": 1,
          "pts": 4
         },
         {
@@ -1150,13 +1150,13 @@
          "pos": 2,
          "equipo": "Envigado F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
-         "pj": 40,
+         "pj": 41,
          "g": 18,
          "e": 14,
-         "p": 8,
+         "p": 9,
          "gf": 54,
-         "gc": 34,
-         "dg": 20,
+         "gc": 35,
+         "dg": 19,
          "pts": 68
         },
         {
@@ -1252,6 +1252,19 @@
         },
         {
          "pos": 10,
+         "equipo": "Boca Juniors de Cali",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
+         "pj": 33,
+         "g": 10,
+         "e": 11,
+         "p": 12,
+         "gf": 41,
+         "gc": 43,
+         "dg": -2,
+         "pts": 41
+        },
+        {
+         "pos": 11,
          "equipo": "Barranquilla F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0002_BARRANQUILLA-FC-5.png",
          "pj": 36,
@@ -1262,19 +1275,6 @@
          "gc": 48,
          "dg": -4,
          "pts": 40
-        },
-        {
-         "pos": 11,
-         "equipo": "Boca Juniors de Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
-         "pj": 32,
-         "g": 9,
-         "e": 11,
-         "p": 12,
-         "gf": 40,
-         "gc": 43,
-         "dg": -3,
-         "pts": 38
         },
         {
          "pos": 12,
