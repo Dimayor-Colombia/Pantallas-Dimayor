@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-07T03:05:03.466Z",
+   "actualizado": "2026-11-07T23:13:02.335Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -107,29 +107,29 @@
         },
         {
          "pos": 8,
-         "equipo": "Águilas Doradas",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
-         "pj": 17,
-         "g": 6,
-         "e": 7,
-         "p": 4,
+         "equipo": "Once Caldas DAF",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
+         "pj": 18,
+         "g": 7,
+         "e": 6,
+         "p": 5,
          "gf": 22,
-         "gc": 20,
-         "dg": 2,
-         "pts": 25
+         "gc": 18,
+         "dg": 4,
+         "pts": 27
         },
         {
          "pos": 9,
-         "equipo": "Once Caldas DAF",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
-         "pj": 17,
+         "equipo": "Águilas Doradas",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
+         "pj": 18,
          "g": 6,
-         "e": 6,
+         "e": 7,
          "p": 5,
-         "gf": 21,
-         "gc": 18,
-         "dg": 3,
-         "pts": 24
+         "gf": 22,
+         "gc": 21,
+         "dg": 1,
+         "pts": 25
         },
         {
          "pos": 10,
@@ -325,6 +325,19 @@
         },
         {
          "pos": 4,
+         "equipo": "Once Caldas DAF",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
+         "pj": 39,
+         "g": 15,
+         "e": 16,
+         "p": 8,
+         "gf": 55,
+         "gc": 43,
+         "dg": 12,
+         "pts": 61
+        },
+        {
+         "pos": 5,
          "equipo": "Deportivo Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
          "pj": 36,
@@ -337,7 +350,7 @@
          "pts": 60
         },
         {
-         "pos": 5,
+         "pos": 6,
          "equipo": "Deportes Tolima",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0013_DEPORTES-TOLIMA-FONDO-OSCURO-5.png",
          "pj": 40,
@@ -350,7 +363,7 @@
          "pts": 60
         },
         {
-         "pos": 6,
+         "pos": 7,
          "equipo": "Junior F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
          "pj": 42,
@@ -361,19 +374,6 @@
          "gc": 55,
          "dg": 6,
          "pts": 60
-        },
-        {
-         "pos": 7,
-         "equipo": "Once Caldas DAF",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
-         "pj": 38,
-         "g": 14,
-         "e": 16,
-         "p": 8,
-         "gf": 54,
-         "gc": 43,
-         "dg": 11,
-         "pts": 58
         },
         {
          "pos": 8,
@@ -418,13 +418,13 @@
          "pos": 11,
          "equipo": "Águilas Doradas",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
-         "pj": 36,
+         "pj": 37,
          "g": 13,
          "e": 12,
-         "p": 11,
+         "p": 12,
          "gf": 42,
-         "gc": 45,
-         "dg": -3,
+         "gc": 46,
+         "dg": -4,
          "pts": 51
         },
         {
@@ -768,13 +768,13 @@
          "pts": 48
         },
         {
-         "pj": 36,
+         "pj": 37,
          "pts": 51
         }
        ],
-       "pj": 114,
+       "pj": 115,
        "pts": 145,
-       "pro": "1,2719"
+       "pro": "1,2609"
       },
       {
        "pos": 10,
@@ -812,13 +812,13 @@
          "pts": 60
         },
         {
-         "pj": 36,
-         "pts": 57
+         "pj": 37,
+         "pts": 60
         }
        ],
-       "pj": 114,
-       "pts": 177,
-       "pro": "1,5526"
+       "pj": 115,
+       "pts": 180,
+       "pro": "1,5652"
       },
       {
        "pos": 8,
