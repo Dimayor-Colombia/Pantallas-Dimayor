@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-05T03:51:45.596Z",
+   "actualizado": "2026-11-07T01:04:30.391Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -161,13 +161,13 @@
          "pos": 12,
          "equipo": "Internacional de Bogotá",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
-         "pj": 17,
+         "pj": 18,
          "g": 4,
          "e": 8,
-         "p": 5,
-         "gf": 21,
-         "gc": 23,
-         "dg": -2,
+         "p": 6,
+         "gf": 22,
+         "gc": 25,
+         "dg": -3,
          "pts": 20
         },
         {
@@ -185,6 +185,19 @@
         },
         {
          "pos": 14,
+         "equipo": "Boyacá Chicó F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
+         "pj": 18,
+         "g": 5,
+         "e": 4,
+         "p": 9,
+         "gf": 15,
+         "gc": 29,
+         "dg": -14,
+         "pts": 19
+        },
+        {
+         "pos": 15,
          "equipo": "Alianza Valledupar F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
          "pj": 17,
@@ -197,7 +210,7 @@
          "pts": 18
         },
         {
-         "pos": 15,
+         "pos": 16,
          "equipo": "Deportivo Pereira",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0009_Escudo-Pereira-1-5.png",
          "pj": 17,
@@ -210,7 +223,7 @@
          "pts": 17
         },
         {
-         "pos": 16,
+         "pos": 17,
          "equipo": "Junior F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
          "pj": 17,
@@ -220,19 +233,6 @@
          "gf": 23,
          "gc": 27,
          "dg": -4,
-         "pts": 16
-        },
-        {
-         "pos": 17,
-         "equipo": "Boyacá Chicó F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
-         "pj": 17,
-         "g": 4,
-         "e": 4,
-         "p": 9,
-         "gf": 13,
-         "gc": 28,
-         "dg": -15,
          "pts": 16
         },
         {
@@ -444,13 +444,13 @@
          "pos": 13,
          "equipo": "Internacional de Bogotá",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
-         "pj": 38,
+         "pj": 39,
          "g": 11,
          "e": 15,
-         "p": 12,
-         "gf": 49,
-         "gc": 58,
-         "dg": -9,
+         "p": 13,
+         "gf": 50,
+         "gc": 60,
+         "dg": -10,
          "pts": 48
         },
         {
@@ -481,6 +481,19 @@
         },
         {
          "pos": 16,
+         "equipo": "Boyacá Chicó F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
+         "pj": 37,
+         "g": 10,
+         "e": 6,
+         "p": 21,
+         "gf": 30,
+         "gc": 61,
+         "dg": -31,
+         "pts": 36
+        },
+        {
+         "pos": 17,
          "equipo": "Alianza Valledupar F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
          "pj": 36,
@@ -493,7 +506,7 @@
          "pts": 35
         },
         {
-         "pos": 17,
+         "pos": 18,
          "equipo": "Fortaleza",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0008_Fortaleza-nuevo-3-5.png",
          "pj": 36,
@@ -504,19 +517,6 @@
          "gc": 52,
          "dg": -13,
          "pts": 34
-        },
-        {
-         "pos": 18,
-         "equipo": "Boyacá Chicó F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
-         "pj": 36,
-         "g": 9,
-         "e": 6,
-         "p": 21,
-         "gf": 28,
-         "gc": 60,
-         "dg": -32,
-         "pts": 33
         },
         {
          "pos": 19,
@@ -592,16 +592,38 @@
          "pts": 36
         },
         {
-         "pj": 36,
-         "pts": 33
+         "pj": 37,
+         "pts": 36
         }
        ],
-       "pj": 114,
-       "pts": 102,
-       "pro": "0,8947"
+       "pj": 115,
+       "pts": 105,
+       "pro": "0,9130"
       },
       {
        "pos": 18,
+       "equipo": "Internacional de Bogotá",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
+       "anios": [
+        {
+         "pj": 38,
+         "pts": 55
+        },
+        {
+         "pj": 40,
+         "pts": 24
+        },
+        {
+         "pj": 37,
+         "pts": 48
+        }
+       ],
+       "pj": 115,
+       "pts": 127,
+       "pro": "1,1043"
+      },
+      {
+       "pos": 17,
        "equipo": "Alianza Valledupar F.C.",
        "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
        "anios": [
@@ -623,7 +645,7 @@
        "pro": "1,1053"
       },
       {
-       "pos": 17,
+       "pos": 16,
        "equipo": "Cúcuta Deportivo",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0015_CUCUTA-DEPORTIVO-5.png",
        "anios": [
@@ -643,28 +665,6 @@
        "pj": 36,
        "pts": 40,
        "pro": "1,1111"
-      },
-      {
-       "pos": 16,
-       "equipo": "Internacional de Bogotá",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
-       "anios": [
-        {
-         "pj": 38,
-         "pts": 55
-        },
-        {
-         "pj": 40,
-         "pts": 24
-        },
-        {
-         "pj": 36,
-         "pts": 48
-        }
-       ],
-       "pj": 114,
-       "pts": 127,
-       "pro": "1,1140"
       },
       {
        "pos": 15,
