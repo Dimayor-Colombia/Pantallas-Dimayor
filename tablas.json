@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-07T01:04:30.391Z",
+   "actualizado": "2026-11-07T03:05:03.466Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -68,6 +68,19 @@
         },
         {
          "pos": 5,
+         "equipo": "Independiente Medellín",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
+         "pj": 18,
+         "g": 9,
+         "e": 2,
+         "p": 7,
+         "gf": 28,
+         "gc": 25,
+         "dg": 3,
+         "pts": 29
+        },
+        {
+         "pos": 6,
          "equipo": "Independiente Santa Fe",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
          "pj": 17,
@@ -80,7 +93,7 @@
          "pts": 28
         },
         {
-         "pos": 6,
+         "pos": 7,
          "equipo": "Millonarios F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
          "pj": 17,
@@ -91,19 +104,6 @@
          "gc": 14,
          "dg": 10,
          "pts": 27
-        },
-        {
-         "pos": 7,
-         "equipo": "Independiente Medellín",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
-         "pj": 17,
-         "g": 8,
-         "e": 2,
-         "p": 7,
-         "gf": 25,
-         "gc": 25,
-         "dg": 0,
-         "pts": 26
         },
         {
          "pos": 8,
@@ -265,13 +265,13 @@
          "pos": 20,
          "equipo": "Fortaleza",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0008_Fortaleza-nuevo-3-5.png",
-         "pj": 17,
+         "pj": 18,
          "g": 1,
          "e": 9,
-         "p": 7,
+         "p": 8,
          "gf": 17,
-         "gc": 25,
-         "dg": -8,
+         "gc": 28,
+         "dg": -11,
          "pts": 12
         }
        ]
@@ -377,6 +377,19 @@
         },
         {
          "pos": 8,
+         "equipo": "Independiente Medellín",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
+         "pj": 37,
+         "g": 16,
+         "e": 7,
+         "p": 14,
+         "gf": 54,
+         "gc": 49,
+         "dg": 5,
+         "pts": 55
+        },
+        {
+         "pos": 9,
          "equipo": "Millonarios F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
          "pj": 36,
@@ -389,7 +402,7 @@
          "pts": 53
         },
         {
-         "pos": 9,
+         "pos": 10,
          "equipo": "Atlético Bucaramanga",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
          "pj": 36,
@@ -399,19 +412,6 @@
          "gf": 52,
          "gc": 37,
          "dg": 15,
-         "pts": 52
-        },
-        {
-         "pos": 10,
-         "equipo": "Independiente Medellín",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
-         "pj": 36,
-         "g": 15,
-         "e": 7,
-         "p": 14,
-         "gf": 51,
-         "gc": 49,
-         "dg": 2,
          "pts": 52
         },
         {
@@ -509,13 +509,13 @@
          "pos": 18,
          "equipo": "Fortaleza",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0008_Fortaleza-nuevo-3-5.png",
-         "pj": 36,
+         "pj": 37,
          "g": 6,
          "e": 16,
-         "p": 14,
+         "p": 15,
          "gf": 39,
-         "gc": 52,
-         "dg": -13,
+         "gc": 55,
+         "dg": -16,
          "pts": 34
         },
         {
@@ -724,13 +724,13 @@
          "pts": 55
         },
         {
-         "pj": 36,
+         "pj": 37,
          "pts": 34
         }
        ],
-       "pj": 114,
+       "pj": 115,
        "pts": 140,
-       "pro": "1,2281"
+       "pro": "1,2174"
       },
       {
        "pos": 12,
@@ -822,28 +822,6 @@
       },
       {
        "pos": 8,
-       "equipo": "Independiente Medellín",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
-       "anios": [
-        {
-         "pj": 38,
-         "pts": 58
-        },
-        {
-         "pj": 40,
-         "pts": 72
-        },
-        {
-         "pj": 36,
-         "pts": 52
-        }
-       ],
-       "pj": 114,
-       "pts": 182,
-       "pro": "1,5965"
-      },
-      {
-       "pos": 7,
        "equipo": "Junior F.C.",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
        "anios": [
@@ -865,7 +843,7 @@
        "pro": "1,6053"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "equipo": "Millonarios F.C.",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
        "anios": [
@@ -885,6 +863,28 @@
        "pj": 114,
        "pts": 183,
        "pro": "1,6053"
+      },
+      {
+       "pos": 6,
+       "equipo": "Independiente Medellín",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
+       "anios": [
+        {
+         "pj": 38,
+         "pts": 58
+        },
+        {
+         "pj": 40,
+         "pts": 72
+        },
+        {
+         "pj": 37,
+         "pts": 55
+        }
+       ],
+       "pj": 115,
+       "pts": 185,
+       "pro": "1,6087"
       },
       {
        "pos": 5,
