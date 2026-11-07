@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-06T23:04:09.792Z",
+   "actualizado": "2026-11-07T21:12:37.687Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1075,27 +1075,27 @@
          "pos": 1,
          "equipo": "Deportes Quindío",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
-         "pj": 2,
+         "pj": 3,
          "g": 2,
          "e": 0,
-         "p": 0,
+         "p": 1,
          "gf": 5,
-         "gc": 2,
-         "dg": 3,
+         "gc": 4,
+         "dg": 1,
          "pts": 6
         },
         {
          "pos": 2,
          "equipo": "Tigres F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0005_TIGRES-FC-5.png",
-         "pj": 2,
-         "g": 0,
+         "pj": 3,
+         "g": 1,
          "e": 2,
          "p": 0,
-         "gf": 0,
+         "gf": 2,
          "gc": 0,
-         "dg": 0,
-         "pts": 2
+         "dg": 2,
+         "pts": 5
         },
         {
          "pos": 3,
@@ -1137,13 +1137,13 @@
          "pos": 1,
          "equipo": "Deportes Quindío",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
-         "pj": 38,
+         "pj": 39,
          "g": 20,
          "e": 10,
-         "p": 8,
+         "p": 9,
          "gf": 43,
-         "gc": 28,
-         "dg": 15,
+         "gc": 30,
+         "dg": 13,
          "pts": 70
         },
         {
@@ -1202,14 +1202,14 @@
          "pos": 6,
          "equipo": "Tigres F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0005_TIGRES-FC-5.png",
-         "pj": 38,
-         "g": 12,
+         "pj": 39,
+         "g": 13,
          "e": 14,
          "p": 12,
-         "gf": 35,
+         "gf": 37,
          "gc": 31,
-         "dg": 4,
-         "pts": 50
+         "dg": 6,
+         "pts": 53
         },
         {
          "pos": 7,
