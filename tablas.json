@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-08T01:29:41.603Z",
+   "actualizado": "2026-11-08T04:30:42.087Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -31,27 +31,27 @@
          "pos": 2,
          "equipo": "América de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
-         "pj": 17,
+         "pj": 18,
          "g": 10,
-         "e": 5,
+         "e": 6,
          "p": 2,
          "gf": 31,
          "gc": 12,
          "dg": 19,
-         "pts": 35
+         "pts": 36
         },
         {
          "pos": 3,
          "equipo": "Deportivo Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
-         "pj": 17,
+         "pj": 18,
          "g": 9,
-         "e": 6,
+         "e": 7,
          "p": 2,
          "gf": 26,
          "gc": 10,
          "dg": 16,
-         "pts": 33
+         "pts": 34
         },
         {
          "pos": 4,
@@ -301,14 +301,14 @@
          "pos": 2,
          "equipo": "América de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
-         "pj": 38,
+         "pj": 39,
          "g": 20,
-         "e": 9,
+         "e": 10,
          "p": 9,
          "gf": 57,
          "gc": 32,
          "dg": 25,
-         "pts": 69
+         "pts": 70
         },
         {
          "pos": 3,
@@ -325,6 +325,19 @@
         },
         {
          "pos": 4,
+         "equipo": "Deportivo Cali",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
+         "pj": 37,
+         "g": 16,
+         "e": 13,
+         "p": 8,
+         "gf": 46,
+         "gc": 26,
+         "dg": 20,
+         "pts": 61
+        },
+        {
+         "pos": 5,
          "equipo": "Once Caldas DAF",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
          "pj": 39,
@@ -335,19 +348,6 @@
          "gc": 43,
          "dg": 12,
          "pts": 61
-        },
-        {
-         "pos": 5,
-         "equipo": "Deportivo Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
-         "pj": 36,
-         "g": 16,
-         "e": 12,
-         "p": 8,
-         "gf": 46,
-         "gc": 26,
-         "dg": 20,
-         "pts": 60
         },
         {
          "pos": 6,
@@ -746,13 +746,13 @@
          "pts": 45
         },
         {
-         "pj": 36,
-         "pts": 60
+         "pj": 37,
+         "pts": 61
         }
        ],
-       "pj": 114,
-       "pts": 143,
-       "pro": "1,2544"
+       "pj": 115,
+       "pts": 144,
+       "pro": "1,2522"
       },
       {
        "pos": 11,
@@ -944,13 +944,13 @@
          "pts": 68
         },
         {
-         "pj": 36,
-         "pts": 68
+         "pj": 37,
+         "pts": 69
         }
        ],
-       "pj": 114,
-       "pts": 198,
-       "pro": "1,7368"
+       "pj": 115,
+       "pts": 199,
+       "pro": "1,7304"
       },
       {
        "pos": 2,
