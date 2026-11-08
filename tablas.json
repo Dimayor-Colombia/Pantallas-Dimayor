@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-08T04:30:42.087Z",
+   "actualizado": "2026-11-08T21:33:56.753Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -55,6 +55,19 @@
         },
         {
          "pos": 4,
+         "equipo": "Independiente Santa Fe",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+         "pj": 18,
+         "g": 9,
+         "e": 4,
+         "p": 5,
+         "gf": 28,
+         "gc": 18,
+         "dg": 10,
+         "pts": 31
+        },
+        {
+         "pos": 5,
          "equipo": "Atlético Bucaramanga",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
          "pj": 17,
@@ -67,7 +80,7 @@
          "pts": 29
         },
         {
-         "pos": 5,
+         "pos": 6,
          "equipo": "Independiente Medellín",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
          "pj": 18,
@@ -78,19 +91,6 @@
          "gc": 25,
          "dg": 3,
          "pts": 29
-        },
-        {
-         "pos": 6,
-         "equipo": "Independiente Santa Fe",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-         "pj": 17,
-         "g": 8,
-         "e": 4,
-         "p": 5,
-         "gf": 23,
-         "gc": 18,
-         "dg": 5,
-         "pts": 28
         },
         {
          "pos": 7,
@@ -239,13 +239,13 @@
          "pos": 18,
          "equipo": "Deportivo Pasto",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
-         "pj": 17,
+         "pj": 18,
          "g": 4,
          "e": 3,
-         "p": 10,
+         "p": 11,
          "gf": 13,
-         "gc": 24,
-         "dg": -11,
+         "gc": 29,
+         "dg": -16,
          "pts": 15
         },
         {
@@ -314,14 +314,14 @@
          "pos": 3,
          "equipo": "Independiente Santa Fe",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-         "pj": 40,
-         "g": 16,
+         "pj": 41,
+         "g": 17,
          "e": 15,
          "p": 9,
-         "gf": 58,
+         "gf": 63,
          "gc": 42,
-         "dg": 16,
-         "pts": 63
+         "dg": 21,
+         "pts": 66
         },
         {
          "pos": 4,
@@ -431,13 +431,13 @@
          "pos": 12,
          "equipo": "Deportivo Pasto",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
-         "pj": 38,
+         "pj": 39,
          "g": 14,
          "e": 7,
-         "p": 17,
+         "p": 18,
          "gf": 42,
-         "gc": 52,
-         "dg": -10,
+         "gc": 57,
+         "dg": -15,
          "pts": 49
         },
         {
@@ -790,13 +790,13 @@
          "pts": 48
         },
         {
-         "pj": 36,
+         "pj": 37,
          "pts": 49
         }
        ],
-       "pj": 114,
+       "pj": 115,
        "pts": 146,
-       "pro": "1,2807"
+       "pro": "1,2696"
       },
       {
        "pos": 9,
@@ -922,13 +922,13 @@
          "pts": 64
         },
         {
-         "pj": 36,
-         "pts": 57
+         "pj": 37,
+         "pts": 60
         }
        ],
-       "pj": 114,
-       "pts": 192,
-       "pro": "1,6842"
+       "pj": 115,
+       "pts": 195,
+       "pro": "1,6957"
       },
       {
        "pos": 3,
