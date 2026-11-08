@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-08T21:33:56.753Z",
+   "actualizado": "2026-11-08T23:34:25.556Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -55,6 +55,19 @@
         },
         {
          "pos": 4,
+         "equipo": "Atlético Bucaramanga",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
+         "pj": 18,
+         "g": 8,
+         "e": 8,
+         "p": 2,
+         "gf": 30,
+         "gc": 17,
+         "dg": 13,
+         "pts": 32
+        },
+        {
+         "pos": 5,
          "equipo": "Independiente Santa Fe",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
          "pj": 18,
@@ -65,19 +78,6 @@
          "gc": 18,
          "dg": 10,
          "pts": 31
-        },
-        {
-         "pos": 5,
-         "equipo": "Atlético Bucaramanga",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
-         "pj": 17,
-         "g": 7,
-         "e": 8,
-         "p": 2,
-         "gf": 26,
-         "gc": 17,
-         "dg": 9,
-         "pts": 29
         },
         {
          "pos": 6,
@@ -252,13 +252,13 @@
          "pos": 19,
          "equipo": "Jaguares F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
-         "pj": 17,
+         "pj": 18,
          "g": 3,
          "e": 4,
-         "p": 10,
+         "p": 11,
          "gf": 17,
-         "gc": 31,
-         "dg": -14,
+         "gc": 35,
+         "dg": -18,
          "pts": 13
         },
         {
@@ -377,6 +377,19 @@
         },
         {
          "pos": 8,
+         "equipo": "Atlético Bucaramanga",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
+         "pj": 37,
+         "g": 13,
+         "e": 16,
+         "p": 8,
+         "gf": 56,
+         "gc": 37,
+         "dg": 19,
+         "pts": 55
+        },
+        {
+         "pos": 9,
          "equipo": "Independiente Medellín",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
          "pj": 37,
@@ -389,7 +402,7 @@
          "pts": 55
         },
         {
-         "pos": 9,
+         "pos": 10,
          "equipo": "Millonarios F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
          "pj": 36,
@@ -400,19 +413,6 @@
          "gc": 37,
          "dg": 18,
          "pts": 53
-        },
-        {
-         "pos": 10,
-         "equipo": "Atlético Bucaramanga",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
-         "pj": 36,
-         "g": 12,
-         "e": 16,
-         "p": 8,
-         "gf": 52,
-         "gc": 37,
-         "dg": 15,
-         "pts": 52
         },
         {
          "pos": 11,
@@ -522,13 +522,13 @@
          "pos": 19,
          "equipo": "Jaguares F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
-         "pj": 36,
+         "pj": 37,
          "g": 8,
          "e": 7,
-         "p": 21,
+         "p": 22,
          "gf": 37,
-         "gc": 64,
-         "dg": -27,
+         "gc": 68,
+         "dg": -31,
          "pts": 31
         },
         {
@@ -570,13 +570,13 @@
          "pts": 0
         },
         {
-         "pj": 36,
+         "pj": 37,
          "pts": 31
         }
        ],
-       "pj": 36,
+       "pj": 37,
        "pts": 31,
-       "pro": "0,8611"
+       "pro": "0,8378"
       },
       {
        "pos": 19,
@@ -900,13 +900,13 @@
          "pts": 66
         },
         {
-         "pj": 36,
-         "pts": 52
+         "pj": 37,
+         "pts": 55
         }
        ],
-       "pj": 114,
-       "pts": 184,
-       "pro": "1,6140"
+       "pj": 115,
+       "pts": 187,
+       "pro": "1,6261"
       },
       {
        "pos": 4,
