@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-09T01:34:52.134Z",
+   "actualizado": "2026-11-09T03:37:31.691Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -159,6 +159,19 @@
         },
         {
          "pos": 12,
+         "equipo": "Llaneros F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
+         "pj": 18,
+         "g": 7,
+         "e": 2,
+         "p": 9,
+         "gf": 21,
+         "gc": 24,
+         "dg": -3,
+         "pts": 23
+        },
+        {
+         "pos": 13,
          "equipo": "Internacional de Bogotá",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
          "pj": 18,
@@ -168,19 +181,6 @@
          "gf": 22,
          "gc": 25,
          "dg": -3,
-         "pts": 20
-        },
-        {
-         "pos": 13,
-         "equipo": "Llaneros F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
-         "pj": 17,
-         "g": 6,
-         "e": 2,
-         "p": 9,
-         "gf": 19,
-         "gc": 23,
-         "dg": -4,
          "pts": 20
         },
         {
@@ -200,13 +200,13 @@
          "pos": 15,
          "equipo": "Alianza Valledupar F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
-         "pj": 17,
+         "pj": 18,
          "g": 5,
          "e": 3,
-         "p": 9,
-         "gf": 17,
-         "gc": 29,
-         "dg": -12,
+         "p": 10,
+         "gf": 18,
+         "gc": 31,
+         "dg": -13,
          "pts": 18
         },
         {
@@ -457,14 +457,14 @@
          "pos": 14,
          "equipo": "Llaneros F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
-         "pj": 36,
-         "g": 10,
+         "pj": 37,
+         "g": 11,
          "e": 12,
          "p": 14,
-         "gf": 36,
-         "gc": 43,
-         "dg": -7,
-         "pts": 42
+         "gf": 38,
+         "gc": 44,
+         "dg": -6,
+         "pts": 45
         },
         {
          "pos": 15,
@@ -496,13 +496,13 @@
          "pos": 17,
          "equipo": "Alianza Valledupar F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
-         "pj": 36,
+         "pj": 37,
          "g": 8,
          "e": 11,
-         "p": 17,
-         "gf": 30,
-         "gc": 56,
-         "dg": -26,
+         "p": 18,
+         "gf": 31,
+         "gc": 58,
+         "dg": -27,
          "pts": 35
         },
         {
@@ -602,6 +602,28 @@
       },
       {
        "pos": 18,
+       "equipo": "Alianza Valledupar F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
+       "anios": [
+        {
+         "pj": 38,
+         "pts": 33
+        },
+        {
+         "pj": 40,
+         "pts": 58
+        },
+        {
+         "pj": 37,
+         "pts": 35
+        }
+       ],
+       "pj": 115,
+       "pts": 126,
+       "pro": "1,0957"
+      },
+      {
+       "pos": 17,
        "equipo": "Internacional de Bogotá",
        "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
        "anios": [
@@ -621,28 +643,6 @@
        "pj": 115,
        "pts": 127,
        "pro": "1,1043"
-      },
-      {
-       "pos": 17,
-       "equipo": "Alianza Valledupar F.C.",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
-       "anios": [
-        {
-         "pj": 38,
-         "pts": 33
-        },
-        {
-         "pj": 40,
-         "pts": 58
-        },
-        {
-         "pj": 36,
-         "pts": 35
-        }
-       ],
-       "pj": 114,
-       "pts": 126,
-       "pro": "1,1053"
       },
       {
        "pos": 16,
@@ -668,28 +668,6 @@
       },
       {
        "pos": 15,
-       "equipo": "Llaneros F.C.",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
-       "anios": [
-        {
-         "pj": 0,
-         "pts": 0
-        },
-        {
-         "pj": 40,
-         "pts": 45
-        },
-        {
-         "pj": 36,
-         "pts": 42
-        }
-       ],
-       "pj": 76,
-       "pts": 87,
-       "pro": "1,1447"
-      },
-      {
-       "pos": 14,
        "equipo": "Deportivo Pereira",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0009_Escudo-Pereira-1-5.png",
        "anios": [
@@ -709,6 +687,28 @@
        "pj": 115,
        "pts": 134,
        "pro": "1,1652"
+      },
+      {
+       "pos": 14,
+       "equipo": "Llaneros F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
+       "anios": [
+        {
+         "pj": 0,
+         "pts": 0
+        },
+        {
+         "pj": 40,
+         "pts": 45
+        },
+        {
+         "pj": 37,
+         "pts": 45
+        }
+       ],
+       "pj": 77,
+       "pts": 90,
+       "pro": "1,1688"
       },
       {
        "pos": 13,
