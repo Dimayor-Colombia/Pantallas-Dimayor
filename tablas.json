@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-08T01:29:53.411Z",
+   "actualizado": "2026-11-09T22:43:44.223Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1044,27 +1044,27 @@
          "pos": 3,
          "equipo": "Unión Magdalena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
-         "pj": 3,
+         "pj": 4,
          "g": 0,
-         "e": 3,
+         "e": 4,
          "p": 0,
          "gf": 3,
          "gc": 3,
          "dg": 0,
-         "pts": 3
+         "pts": 4
         },
         {
          "pos": 4,
          "equipo": "Independiente Valle del Cauca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
-         "pj": 3,
+         "pj": 4,
          "g": 0,
-         "e": 1,
+         "e": 2,
          "p": 2,
          "gf": 3,
          "gc": 7,
          "dg": -4,
-         "pts": 1
+         "pts": 2
         }
        ]
       },
@@ -1176,14 +1176,14 @@
          "pos": 4,
          "equipo": "Unión Magdalena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
-         "pj": 39,
+         "pj": 40,
          "g": 17,
-         "e": 13,
+         "e": 14,
          "p": 9,
          "gf": 53,
          "gc": 37,
          "dg": 16,
-         "pts": 64
+         "pts": 65
         },
         {
          "pos": 5,
@@ -1215,14 +1215,14 @@
          "pos": 7,
          "equipo": "Independiente Valle del Cauca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
-         "pj": 33,
+         "pj": 34,
          "g": 12,
-         "e": 12,
+         "e": 13,
          "p": 9,
          "gf": 36,
          "gc": 30,
          "dg": 6,
-         "pts": 48
+         "pts": 49
         },
         {
          "pos": 8,
