@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-09T22:43:44.223Z",
+   "actualizado": "2026-11-10T22:54:42.891Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1016,29 +1016,29 @@
        "filas": [
         {
          "pos": 1,
-         "equipo": "Boca Juniors de Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
-         "pj": 3,
+         "equipo": "Envigado F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
+         "pj": 4,
          "g": 2,
          "e": 1,
-         "p": 0,
-         "gf": 6,
-         "gc": 3,
+         "p": 1,
+         "gf": 5,
+         "gc": 2,
          "dg": 3,
          "pts": 7
         },
         {
          "pos": 2,
-         "equipo": "Envigado F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
-         "pj": 3,
-         "g": 1,
+         "equipo": "Boca Juniors de Cali",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
+         "pj": 4,
+         "g": 2,
          "e": 1,
          "p": 1,
-         "gf": 3,
-         "gc": 2,
+         "gf": 6,
+         "gc": 5,
          "dg": 1,
-         "pts": 4
+         "pts": 7
         },
         {
          "pos": 3,
@@ -1135,6 +1135,19 @@
        "filas": [
         {
          "pos": 1,
+         "equipo": "Envigado F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
+         "pj": 42,
+         "g": 19,
+         "e": 14,
+         "p": 9,
+         "gf": 56,
+         "gc": 35,
+         "dg": 21,
+         "pts": 71
+        },
+        {
+         "pos": 2,
          "equipo": "Deportes Quindío",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
          "pj": 39,
@@ -1145,19 +1158,6 @@
          "gc": 30,
          "dg": 13,
          "pts": 70
-        },
-        {
-         "pos": 2,
-         "equipo": "Envigado F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
-         "pj": 41,
-         "g": 18,
-         "e": 14,
-         "p": 9,
-         "gf": 54,
-         "gc": 35,
-         "dg": 19,
-         "pts": 68
         },
         {
          "pos": 3,
@@ -1254,13 +1254,13 @@
          "pos": 10,
          "equipo": "Boca Juniors de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
-         "pj": 33,
+         "pj": 34,
          "g": 10,
          "e": 11,
-         "p": 12,
+         "p": 13,
          "gf": 41,
-         "gc": 43,
-         "dg": -2,
+         "gc": 45,
+         "dg": -4,
          "pts": 41
         },
         {
