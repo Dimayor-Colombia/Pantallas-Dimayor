@@ -1397,7 +1397,7 @@
    "id": "copa",
    "competicion": "Copa Betplay Dimayor 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-11T01:55:25.651Z",
+   "actualizado": "2026-11-11T03:55:46.552Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1424,27 +1424,27 @@
          "pos": 2,
          "equipo": "Atlético Nacional",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
-         "pj": 0,
+         "pj": 1,
          "g": 0,
-         "e": 0,
+         "e": 1,
          "p": 0,
-         "gf": 0,
-         "gc": 0,
+         "gf": 1,
+         "gc": 1,
          "dg": 0,
-         "pts": 0
+         "pts": 1
         },
         {
          "pos": 3,
          "equipo": "Once Caldas DAF",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
-         "pj": 0,
+         "pj": 1,
          "g": 0,
-         "e": 0,
+         "e": 1,
          "p": 0,
-         "gf": 0,
-         "gc": 0,
+         "gf": 1,
+         "gc": 1,
          "dg": 0,
-         "pts": 0
+         "pts": 1
         },
         {
          "pos": 4,
