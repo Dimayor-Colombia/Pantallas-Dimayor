@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-12T15:15:32.362Z",
+   "actualizado": "2026-11-12T19:16:19.476Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -29,19 +29,6 @@
         },
         {
          "pos": 2,
-         "equipo": "América de Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
-         "pj": 18,
-         "g": 10,
-         "e": 6,
-         "p": 2,
-         "gf": 31,
-         "gc": 12,
-         "dg": 19,
-         "pts": 36
-        },
-        {
-         "pos": 3,
          "equipo": "Deportivo Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
          "pj": 18,
@@ -52,6 +39,19 @@
          "gc": 10,
          "dg": 16,
          "pts": 34
+        },
+        {
+         "pos": 3,
+         "equipo": "América de Cali",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
+         "pj": 18,
+         "g": 9,
+         "e": 6,
+         "p": 3,
+         "gf": 29,
+         "gc": 15,
+         "dg": 14,
+         "pts": 33
         },
         {
          "pos": 4,
@@ -159,6 +159,19 @@
         },
         {
          "pos": 12,
+         "equipo": "Internacional de Bogotá",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
+         "pj": 18,
+         "g": 5,
+         "e": 8,
+         "p": 5,
+         "gf": 25,
+         "gc": 23,
+         "dg": 2,
+         "pts": 23
+        },
+        {
+         "pos": 13,
          "equipo": "Llaneros F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
          "pj": 18,
@@ -169,19 +182,6 @@
          "gc": 24,
          "dg": -3,
          "pts": 23
-        },
-        {
-         "pos": 13,
-         "equipo": "Internacional de Bogotá",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
-         "pj": 18,
-         "g": 4,
-         "e": 8,
-         "p": 6,
-         "gf": 22,
-         "gc": 25,
-         "dg": -3,
-         "pts": 20
         },
         {
          "pos": 14,
@@ -302,13 +302,13 @@
          "equipo": "América de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
          "pj": 39,
-         "g": 20,
+         "g": 19,
          "e": 10,
-         "p": 9,
-         "gf": 57,
-         "gc": 32,
-         "dg": 25,
-         "pts": 70
+         "p": 10,
+         "gf": 55,
+         "gc": 35,
+         "dg": 20,
+         "pts": 67
         },
         {
          "pos": 3,
@@ -429,6 +429,19 @@
         },
         {
          "pos": 12,
+         "equipo": "Internacional de Bogotá",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
+         "pj": 39,
+         "g": 12,
+         "e": 15,
+         "p": 12,
+         "gf": 53,
+         "gc": 58,
+         "dg": -5,
+         "pts": 51
+        },
+        {
+         "pos": 13,
          "equipo": "Deportivo Pasto",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/IMG_7724.png",
          "pj": 39,
@@ -439,19 +452,6 @@
          "gc": 57,
          "dg": -15,
          "pts": 49
-        },
-        {
-         "pos": 13,
-         "equipo": "Internacional de Bogotá",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
-         "pj": 39,
-         "g": 11,
-         "e": 15,
-         "p": 13,
-         "gf": 50,
-         "gc": 60,
-         "dg": -10,
-         "pts": 48
         },
         {
          "pos": 14,
@@ -659,12 +659,12 @@
         },
         {
          "pj": 37,
-         "pts": 48
+         "pts": 51
         }
        ],
        "pj": 115,
-       "pts": 127,
-       "pro": "1,1043"
+       "pts": 130,
+       "pro": "1,1304"
       },
       {
        "pos": 15,
@@ -945,12 +945,12 @@
         },
         {
          "pj": 37,
-         "pts": 69
+         "pts": 66
         }
        ],
        "pj": 115,
-       "pts": 199,
-       "pro": "1,7304"
+       "pts": 196,
+       "pro": "1,7043"
       },
       {
        "pos": 2,
