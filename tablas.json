@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-10T22:54:42.891Z",
+   "actualizado": "2026-11-12T01:05:59.889Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1101,27 +1101,27 @@
          "pos": 3,
          "equipo": "Real Cartagena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
-         "pj": 3,
+         "pj": 4,
          "g": 1,
-         "e": 1,
+         "e": 2,
          "p": 1,
-         "gf": 3,
-         "gc": 3,
+         "gf": 5,
+         "gc": 5,
          "dg": 0,
-         "pts": 4
+         "pts": 5
         },
         {
          "pos": 4,
          "equipo": "Real Cundinamarca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0007_REAL-CUNDINAMARCA-5.png",
-         "pj": 3,
+         "pj": 4,
          "g": 0,
-         "e": 1,
+         "e": 2,
          "p": 2,
-         "gf": 0,
-         "gc": 3,
+         "gf": 2,
+         "gc": 5,
          "dg": -3,
-         "pts": 1
+         "pts": 2
         }
        ]
       }
@@ -1163,14 +1163,14 @@
          "pos": 3,
          "equipo": "Real Cartagena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
-         "pj": 41,
+         "pj": 42,
          "g": 17,
-         "e": 14,
+         "e": 15,
          "p": 10,
-         "gf": 63,
-         "gc": 46,
+         "gf": 65,
+         "gc": 48,
          "dg": 17,
-         "pts": 65
+         "pts": 66
         },
         {
          "pos": 4,
@@ -1241,14 +1241,14 @@
          "pos": 9,
          "equipo": "Real Cundinamarca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0007_REAL-CUNDINAMARCA-5.png",
-         "pj": 33,
+         "pj": 34,
          "g": 10,
-         "e": 12,
+         "e": 13,
          "p": 11,
-         "gf": 34,
-         "gc": 33,
+         "gf": 36,
+         "gc": 35,
          "dg": 1,
-         "pts": 42
+         "pts": 43
         },
         {
          "pos": 10,
