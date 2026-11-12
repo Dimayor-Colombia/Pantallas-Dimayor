@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-10T02:46:35.042Z",
+   "actualizado": "2026-11-12T15:15:32.362Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -238,7 +238,7 @@
         {
          "pos": 18,
          "equipo": "Deportivo Pasto",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/IMG_7724.png",
          "pj": 18,
          "g": 4,
          "e": 3,
@@ -430,7 +430,7 @@
         {
          "pos": 12,
          "equipo": "Deportivo Pasto",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/IMG_7724.png",
          "pj": 39,
          "g": 14,
          "e": 7,
@@ -779,7 +779,7 @@
       {
        "pos": 10,
        "equipo": "Deportivo Pasto",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0011_DEPORTIVO-PASTO-5.png",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/IMG_7724.png",
        "anios": [
         {
          "pj": 38,
