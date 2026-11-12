@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-12T01:05:59.889Z",
+   "actualizado": "2026-11-12T03:08:37.296Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1075,26 +1075,26 @@
          "pos": 1,
          "equipo": "Deportes Quindío",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
-         "pj": 3,
-         "g": 2,
+         "pj": 4,
+         "g": 3,
          "e": 0,
          "p": 1,
-         "gf": 5,
+         "gf": 6,
          "gc": 4,
-         "dg": 1,
-         "pts": 6
+         "dg": 2,
+         "pts": 9
         },
         {
          "pos": 2,
          "equipo": "Tigres F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0005_TIGRES-FC-5.png",
-         "pj": 3,
+         "pj": 4,
          "g": 1,
          "e": 2,
-         "p": 0,
+         "p": 1,
          "gf": 2,
-         "gc": 0,
-         "dg": 2,
+         "gc": 1,
+         "dg": 1,
          "pts": 5
         },
         {
@@ -1135,6 +1135,19 @@
        "filas": [
         {
          "pos": 1,
+         "equipo": "Deportes Quindío",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
+         "pj": 40,
+         "g": 21,
+         "e": 10,
+         "p": 9,
+         "gf": 44,
+         "gc": 30,
+         "dg": 14,
+         "pts": 73
+        },
+        {
+         "pos": 2,
          "equipo": "Envigado F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
          "pj": 42,
@@ -1145,19 +1158,6 @@
          "gc": 35,
          "dg": 21,
          "pts": 71
-        },
-        {
-         "pos": 2,
-         "equipo": "Deportes Quindío",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
-         "pj": 39,
-         "g": 20,
-         "e": 10,
-         "p": 9,
-         "gf": 43,
-         "gc": 30,
-         "dg": 13,
-         "pts": 70
         },
         {
          "pos": 3,
@@ -1202,13 +1202,13 @@
          "pos": 6,
          "equipo": "Tigres F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0005_TIGRES-FC-5.png",
-         "pj": 39,
+         "pj": 40,
          "g": 13,
          "e": 14,
-         "p": 12,
+         "p": 13,
          "gf": 37,
-         "gc": 31,
-         "dg": 6,
+         "gc": 32,
+         "dg": 5,
          "pts": 53
         },
         {
