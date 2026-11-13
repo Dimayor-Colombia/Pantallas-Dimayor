@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-12T19:16:19.476Z",
+   "actualizado": "2026-11-13T01:21:41.883Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -187,14 +187,14 @@
          "pos": 14,
          "equipo": "Junior F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
-         "pj": 18,
-         "g": 4,
+         "pj": 19,
+         "g": 5,
          "e": 7,
          "p": 7,
-         "gf": 25,
+         "gf": 26,
          "gc": 27,
-         "dg": -2,
-         "pts": 19
+         "dg": -1,
+         "pts": 22
         },
         {
          "pos": 15,
@@ -239,13 +239,13 @@
          "pos": 18,
          "equipo": "Deportivo Pasto",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/IMG_7724.png",
-         "pj": 18,
+         "pj": 19,
          "g": 4,
          "e": 3,
-         "p": 11,
+         "p": 12,
          "gf": 13,
-         "gc": 29,
-         "dg": -16,
+         "gc": 30,
+         "dg": -17,
          "pts": 15
         },
         {
@@ -325,6 +325,19 @@
         },
         {
          "pos": 4,
+         "equipo": "Junior F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
+         "pj": 44,
+         "g": 18,
+         "e": 12,
+         "p": 14,
+         "gf": 64,
+         "gc": 55,
+         "dg": 9,
+         "pts": 66
+        },
+        {
+         "pos": 5,
          "equipo": "Deportes Tolima",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0013_DEPORTES-TOLIMA-FONDO-OSCURO-5.png",
          "pj": 41,
@@ -334,19 +347,6 @@
          "gf": 54,
          "gc": 42,
          "dg": 12,
-         "pts": 63
-        },
-        {
-         "pos": 5,
-         "equipo": "Junior F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
-         "pj": 43,
-         "g": 17,
-         "e": 12,
-         "p": 14,
-         "gf": 63,
-         "gc": 55,
-         "dg": 8,
          "pts": 63
         },
         {
@@ -444,13 +444,13 @@
          "pos": 13,
          "equipo": "Deportivo Pasto",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/IMG_7724.png",
-         "pj": 39,
+         "pj": 40,
          "g": 14,
          "e": 7,
-         "p": 18,
+         "p": 19,
          "gf": 42,
-         "gc": 57,
-         "dg": -15,
+         "gc": 58,
+         "dg": -16,
          "pts": 49
         },
         {
@@ -756,6 +756,28 @@
       },
       {
        "pos": 11,
+       "equipo": "Deportivo Pasto",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/IMG_7724.png",
+       "anios": [
+        {
+         "pj": 38,
+         "pts": 49
+        },
+        {
+         "pj": 40,
+         "pts": 48
+        },
+        {
+         "pj": 38,
+         "pts": 49
+        }
+       ],
+       "pj": 116,
+       "pts": 146,
+       "pro": "1,2586"
+      },
+      {
+       "pos": 10,
        "equipo": "Águilas Doradas",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0019_AGUILAS-DORADAS-5.png",
        "anios": [
@@ -775,28 +797,6 @@
        "pj": 115,
        "pts": 145,
        "pro": "1,2609"
-      },
-      {
-       "pos": 10,
-       "equipo": "Deportivo Pasto",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/IMG_7724.png",
-       "anios": [
-        {
-         "pj": 38,
-         "pts": 49
-        },
-        {
-         "pj": 40,
-         "pts": 48
-        },
-        {
-         "pj": 37,
-         "pts": 49
-        }
-       ],
-       "pj": 115,
-       "pts": 146,
-       "pro": "1,2696"
       },
       {
        "pos": 9,
@@ -866,28 +866,6 @@
       },
       {
        "pos": 6,
-       "equipo": "Junior F.C.",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
-       "anios": [
-        {
-         "pj": 38,
-         "pts": 60
-        },
-        {
-         "pj": 40,
-         "pts": 72
-        },
-        {
-         "pj": 37,
-         "pts": 54
-        }
-       ],
-       "pj": 115,
-       "pts": 186,
-       "pro": "1,6174"
-      },
-      {
-       "pos": 5,
        "equipo": "Atlético Bucaramanga",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
        "anios": [
@@ -907,6 +885,28 @@
        "pj": 115,
        "pts": 187,
        "pro": "1,6261"
+      },
+      {
+       "pos": 5,
+       "equipo": "Junior F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
+       "anios": [
+        {
+         "pj": 38,
+         "pts": 60
+        },
+        {
+         "pj": 40,
+         "pts": 72
+        },
+        {
+         "pj": 38,
+         "pts": 57
+        }
+       ],
+       "pj": 116,
+       "pts": 189,
+       "pro": "1,6293"
       },
       {
        "pos": 4,
