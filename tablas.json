@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-13T02:21:54.943Z",
+   "actualizado": "2026-11-14T03:32:46.256Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -42,6 +42,19 @@
         },
         {
          "pos": 3,
+         "equipo": "Independiente Santa Fe",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+         "pj": 19,
+         "g": 10,
+         "e": 4,
+         "p": 5,
+         "gf": 30,
+         "gc": 18,
+         "dg": 12,
+         "pts": 34
+        },
+        {
+         "pos": 4,
          "equipo": "América de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
          "pj": 18,
@@ -54,7 +67,7 @@
          "pts": 33
         },
         {
-         "pos": 4,
+         "pos": 5,
          "equipo": "Atlético Bucaramanga",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
          "pj": 18,
@@ -65,19 +78,6 @@
          "gc": 17,
          "dg": 13,
          "pts": 32
-        },
-        {
-         "pos": 5,
-         "equipo": "Independiente Santa Fe",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-         "pj": 18,
-         "g": 9,
-         "e": 4,
-         "p": 5,
-         "gf": 28,
-         "gc": 18,
-         "dg": 10,
-         "pts": 31
         },
         {
          "pos": 6,
@@ -174,13 +174,13 @@
          "pos": 13,
          "equipo": "Internacional de Bogotá",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
-         "pj": 18,
+         "pj": 19,
          "g": 5,
          "e": 8,
-         "p": 5,
+         "p": 6,
          "gf": 25,
-         "gc": 23,
-         "dg": 2,
+         "gc": 25,
+         "dg": 0,
          "pts": 23
         },
         {
@@ -299,6 +299,19 @@
         },
         {
          "pos": 2,
+         "equipo": "Independiente Santa Fe",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+         "pj": 42,
+         "g": 18,
+         "e": 15,
+         "p": 9,
+         "gf": 65,
+         "gc": 42,
+         "dg": 23,
+         "pts": 69
+        },
+        {
+         "pos": 3,
          "equipo": "América de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
          "pj": 39,
@@ -309,19 +322,6 @@
          "gc": 35,
          "dg": 20,
          "pts": 67
-        },
-        {
-         "pos": 3,
-         "equipo": "Independiente Santa Fe",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-         "pj": 41,
-         "g": 17,
-         "e": 15,
-         "p": 9,
-         "gf": 63,
-         "gc": 42,
-         "dg": 21,
-         "pts": 66
         },
         {
          "pos": 4,
@@ -431,13 +431,13 @@
          "pos": 12,
          "equipo": "Internacional de Bogotá",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
-         "pj": 39,
+         "pj": 40,
          "g": 12,
          "e": 15,
-         "p": 12,
+         "p": 13,
          "gf": 53,
-         "gc": 58,
-         "dg": -5,
+         "gc": 60,
+         "dg": -7,
          "pts": 51
         },
         {
@@ -658,13 +658,13 @@
          "pts": 24
         },
         {
-         "pj": 37,
+         "pj": 38,
          "pts": 51
         }
        ],
-       "pj": 115,
+       "pj": 116,
        "pts": 130,
-       "pro": "1,1304"
+       "pro": "1,1207"
       },
       {
        "pos": 15,
@@ -910,28 +910,6 @@
       },
       {
        "pos": 4,
-       "equipo": "Independiente Santa Fe",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-       "anios": [
-        {
-         "pj": 38,
-         "pts": 71
-        },
-        {
-         "pj": 40,
-         "pts": 64
-        },
-        {
-         "pj": 37,
-         "pts": 60
-        }
-       ],
-       "pj": 115,
-       "pts": 195,
-       "pro": "1,6957"
-      },
-      {
-       "pos": 3,
        "equipo": "América de Cali",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
        "anios": [
@@ -951,6 +929,28 @@
        "pj": 115,
        "pts": 196,
        "pro": "1,7043"
+      },
+      {
+       "pos": 3,
+       "equipo": "Independiente Santa Fe",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+       "anios": [
+        {
+         "pj": 38,
+         "pts": 71
+        },
+        {
+         "pj": 40,
+         "pts": 64
+        },
+        {
+         "pj": 38,
+         "pts": 63
+        }
+       ],
+       "pj": 116,
+       "pts": 198,
+       "pro": "1,7069"
       },
       {
        "pos": 2,
