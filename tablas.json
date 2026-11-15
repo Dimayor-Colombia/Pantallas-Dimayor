@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-12T03:08:37.296Z",
+   "actualizado": "2026-11-15T21:22:53.662Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1031,17 +1031,30 @@
          "pos": 2,
          "equipo": "Boca Juniors de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
-         "pj": 4,
+         "pj": 5,
          "g": 2,
          "e": 1,
-         "p": 1,
-         "gf": 6,
-         "gc": 5,
-         "dg": 1,
+         "p": 2,
+         "gf": 7,
+         "gc": 7,
+         "dg": 0,
          "pts": 7
         },
         {
          "pos": 3,
+         "equipo": "Independiente Valle del Cauca",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
+         "pj": 5,
+         "g": 1,
+         "e": 2,
+         "p": 2,
+         "gf": 5,
+         "gc": 8,
+         "dg": -3,
+         "pts": 5
+        },
+        {
+         "pos": 4,
          "equipo": "Unión Magdalena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
          "pj": 4,
@@ -1052,19 +1065,6 @@
          "gc": 3,
          "dg": 0,
          "pts": 4
-        },
-        {
-         "pos": 4,
-         "equipo": "Independiente Valle del Cauca",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
-         "pj": 4,
-         "g": 0,
-         "e": 2,
-         "p": 2,
-         "gf": 3,
-         "gc": 7,
-         "dg": -4,
-         "pts": 2
         }
        ]
       },
@@ -1215,14 +1215,14 @@
          "pos": 7,
          "equipo": "Independiente Valle del Cauca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
-         "pj": 34,
-         "g": 12,
+         "pj": 35,
+         "g": 13,
          "e": 13,
          "p": 9,
-         "gf": 36,
-         "gc": 30,
-         "dg": 6,
-         "pts": 49
+         "gf": 38,
+         "gc": 31,
+         "dg": 7,
+         "pts": 52
         },
         {
          "pos": 8,
@@ -1254,13 +1254,13 @@
          "pos": 10,
          "equipo": "Boca Juniors de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
-         "pj": 34,
+         "pj": 35,
          "g": 10,
          "e": 11,
-         "p": 13,
-         "gf": 41,
-         "gc": 45,
-         "dg": -4,
+         "p": 14,
+         "gf": 42,
+         "gc": 47,
+         "dg": -5,
          "pts": 41
         },
         {
