@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-15T21:22:53.662Z",
+   "actualizado": "2026-11-15T23:23:16.183Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1018,17 +1018,30 @@
          "pos": 1,
          "equipo": "Envigado F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
-         "pj": 4,
+         "pj": 5,
          "g": 2,
          "e": 1,
-         "p": 1,
-         "gf": 5,
-         "gc": 2,
-         "dg": 3,
+         "p": 2,
+         "gf": 7,
+         "gc": 5,
+         "dg": 2,
          "pts": 7
         },
         {
          "pos": 2,
+         "equipo": "Unión Magdalena",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
+         "pj": 5,
+         "g": 1,
+         "e": 4,
+         "p": 0,
+         "gf": 6,
+         "gc": 5,
+         "dg": 1,
+         "pts": 7
+        },
+        {
+         "pos": 3,
          "equipo": "Boca Juniors de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
          "pj": 5,
@@ -1041,7 +1054,7 @@
          "pts": 7
         },
         {
-         "pos": 3,
+         "pos": 4,
          "equipo": "Independiente Valle del Cauca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/07/ind-valle-512.png",
          "pj": 5,
@@ -1052,19 +1065,6 @@
          "gc": 8,
          "dg": -3,
          "pts": 5
-        },
-        {
-         "pos": 4,
-         "equipo": "Unión Magdalena",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
-         "pj": 4,
-         "g": 0,
-         "e": 4,
-         "p": 0,
-         "gf": 3,
-         "gc": 3,
-         "dg": 0,
-         "pts": 4
         }
        ]
       },
@@ -1150,17 +1150,30 @@
          "pos": 2,
          "equipo": "Envigado F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
-         "pj": 42,
+         "pj": 43,
          "g": 19,
          "e": 14,
-         "p": 9,
-         "gf": 56,
-         "gc": 35,
-         "dg": 21,
+         "p": 10,
+         "gf": 58,
+         "gc": 38,
+         "dg": 20,
          "pts": 71
         },
         {
          "pos": 3,
+         "equipo": "Unión Magdalena",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
+         "pj": 41,
+         "g": 18,
+         "e": 14,
+         "p": 9,
+         "gf": 56,
+         "gc": 39,
+         "dg": 17,
+         "pts": 68
+        },
+        {
+         "pos": 4,
          "equipo": "Real Cartagena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
          "pj": 42,
@@ -1171,19 +1184,6 @@
          "gc": 48,
          "dg": 17,
          "pts": 66
-        },
-        {
-         "pos": 4,
-         "equipo": "Unión Magdalena",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
-         "pj": 40,
-         "g": 17,
-         "e": 14,
-         "p": 9,
-         "gf": 53,
-         "gc": 37,
-         "dg": 16,
-         "pts": 65
         },
         {
          "pos": 5,
