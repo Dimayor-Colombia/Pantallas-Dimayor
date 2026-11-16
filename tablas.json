@@ -1004,7 +1004,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-15T23:23:16.183Z",
+   "actualizado": "2026-11-16T01:26:00.481Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -1086,19 +1086,6 @@
         },
         {
          "pos": 2,
-         "equipo": "Tigres F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0005_TIGRES-FC-5.png",
-         "pj": 4,
-         "g": 1,
-         "e": 2,
-         "p": 1,
-         "gf": 2,
-         "gc": 1,
-         "dg": 1,
-         "pts": 5
-        },
-        {
-         "pos": 3,
          "equipo": "Real Cartagena",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
          "pj": 4,
@@ -1111,17 +1098,30 @@
          "pts": 5
         },
         {
-         "pos": 4,
+         "pos": 3,
          "equipo": "Real Cundinamarca",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0007_REAL-CUNDINAMARCA-5.png",
-         "pj": 4,
-         "g": 0,
+         "pj": 5,
+         "g": 1,
+         "e": 2,
+         "p": 2,
+         "gf": 4,
+         "gc": 5,
+         "dg": -1,
+         "pts": 5
+        },
+        {
+         "pos": 4,
+         "equipo": "Tigres F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0005_TIGRES-FC-5.png",
+         "pj": 5,
+         "g": 1,
          "e": 2,
          "p": 2,
          "gf": 2,
-         "gc": 5,
-         "dg": -3,
-         "pts": 2
+         "gc": 3,
+         "dg": -1,
+         "pts": 5
         }
        ]
       }
@@ -1202,13 +1202,13 @@
          "pos": 6,
          "equipo": "Tigres F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0005_TIGRES-FC-5.png",
-         "pj": 40,
+         "pj": 41,
          "g": 13,
          "e": 14,
-         "p": 13,
+         "p": 14,
          "gf": 37,
-         "gc": 32,
-         "dg": 5,
+         "gc": 34,
+         "dg": 3,
          "pts": 53
         },
         {
@@ -1226,6 +1226,19 @@
         },
         {
          "pos": 8,
+         "equipo": "Real Cundinamarca",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0007_REAL-CUNDINAMARCA-5.png",
+         "pj": 35,
+         "g": 11,
+         "e": 13,
+         "p": 11,
+         "gf": 38,
+         "gc": 35,
+         "dg": 3,
+         "pts": 46
+        },
+        {
+         "pos": 9,
          "equipo": "Bogotá F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0000_BOGOTA-FC-5.png",
          "pj": 36,
@@ -1236,19 +1249,6 @@
          "gc": 36,
          "dg": -6,
          "pts": 44
-        },
-        {
-         "pos": 9,
-         "equipo": "Real Cundinamarca",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0007_REAL-CUNDINAMARCA-5.png",
-         "pj": 34,
-         "g": 10,
-         "e": 13,
-         "p": 11,
-         "gf": 36,
-         "gc": 35,
-         "dg": 1,
-         "pts": 43
         },
         {
          "pos": 10,
