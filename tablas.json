@@ -4,12 +4,12 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-15T00:18:43.594Z",
+   "actualizado": "2026-11-16T19:32:03.469Z",
    "bloques": [
     {
      "tipo": "posiciones",
      "fase": "FASE I - TODOS CONTRA TODOS",
-     "actual": true,
+     "actual": false,
      "grupos": [
       {
        "nombre": "",
