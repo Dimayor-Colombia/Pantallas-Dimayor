@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-21T00:58:47.471Z",
+   "actualizado": "2026-11-21T01:58:59.556Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -75,27 +75,27 @@
          "pos": 1,
          "equipo": "América de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
-         "pj": 0,
+         "pj": 1,
          "g": 0,
-         "e": 0,
+         "e": 1,
          "p": 0,
-         "gf": 0,
-         "gc": 0,
+         "gf": 2,
+         "gc": 2,
          "dg": 0,
-         "pts": 0
+         "pts": 1
         },
         {
          "pos": 2,
          "equipo": "Atlético Bucaramanga",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
-         "pj": 0,
+         "pj": 1,
          "g": 0,
-         "e": 0,
+         "e": 1,
          "p": 0,
-         "gf": 0,
-         "gc": 0,
+         "gf": 2,
+         "gc": 2,
          "dg": 0,
-         "pts": 0
+         "pts": 1
         },
         {
          "pos": 3,
@@ -150,14 +150,14 @@
          "pos": 2,
          "equipo": "América de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
-         "pj": 40,
+         "pj": 41,
          "g": 20,
-         "e": 10,
+         "e": 11,
          "p": 10,
-         "gf": 57,
-         "gc": 35,
+         "gf": 59,
+         "gc": 37,
          "dg": 22,
-         "pts": 70
+         "pts": 71
         },
         {
          "pos": 3,
@@ -241,14 +241,14 @@
          "pos": 9,
          "equipo": "Atlético Bucaramanga",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
-         "pj": 38,
+         "pj": 39,
          "g": 14,
-         "e": 16,
+         "e": 17,
          "p": 8,
-         "gf": 57,
-         "gc": 37,
+         "gf": 59,
+         "gc": 39,
          "dg": 20,
-         "pts": 58
+         "pts": 59
         },
         {
          "pos": 10,
