@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-21T01:58:59.556Z",
+   "actualizado": "2026-11-21T03:59:22.043Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -101,27 +101,27 @@
          "pos": 3,
          "equipo": "Deportivo Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
-         "pj": 0,
+         "pj": 1,
          "g": 0,
-         "e": 0,
+         "e": 1,
          "p": 0,
          "gf": 0,
          "gc": 0,
          "dg": 0,
-         "pts": 0
+         "pts": 1
         },
         {
          "pos": 4,
          "equipo": "Millonarios F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
-         "pj": 0,
+         "pj": 1,
          "g": 0,
-         "e": 0,
+         "e": 1,
          "p": 0,
          "gf": 0,
          "gc": 0,
          "dg": 0,
-         "pts": 0
+         "pts": 1
         }
        ]
       }
@@ -202,14 +202,14 @@
          "pos": 6,
          "equipo": "Deportivo Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
-         "pj": 38,
+         "pj": 39,
          "g": 16,
-         "e": 14,
+         "e": 15,
          "p": 8,
          "gf": 48,
          "gc": 28,
          "dg": 20,
-         "pts": 62
+         "pts": 63
         },
         {
          "pos": 7,
@@ -254,14 +254,14 @@
          "pos": 10,
          "equipo": "Millonarios F.C.",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
-         "pj": 38,
+         "pj": 39,
          "g": 14,
-         "e": 14,
+         "e": 15,
          "p": 10,
          "gf": 58,
          "gc": 39,
          "dg": 19,
-         "pts": 56
+         "pts": 57
         },
         {
          "pos": 11,
