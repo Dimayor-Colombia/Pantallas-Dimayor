@@ -952,7 +952,11 @@ const COUNTRY_INDEX = (() => {
         const code = String.fromCharCode(A + i) + String.fromCharCode(A + j);
         let name;
         try { name = dn.of(code); } catch (e) { continue; }
-        // si dos códigos dan el mismo nombre (ej. FR y FX = Francia) se queda el primero, que es el oficial
+        // Se ignoran los códigos viejos que el navegador todavía reconoce y que no tienen bandera
+        // (ej. CS y YU = Serbia -> se usa RS; DD = Alemania -> DE; BU = Myanmar -> MM; AN = Curazao -> CW)
+        let oficial = code;
+        try { oficial = (Intl.getCanonicalLocales("und-" + code)[0].split("-")[1] || code); } catch (e) {}
+        if (oficial !== code) continue;
         if (name && name !== code && !map.has(normalizeName(name))) map.set(normalizeName(name), code.toLowerCase());
       }
     }
