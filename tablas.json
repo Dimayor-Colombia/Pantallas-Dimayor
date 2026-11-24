@@ -853,43 +853,52 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-24T03:22:00.986Z",
+   "actualizado": "2026-11-24T20:06:30.107Z",
    "bloques": [
     {
-     "tipo": "posiciones",
+     "tipo": "cruce",
      "fase": "FASE III - FINAL",
      "actual": true,
-     "grupos": [
+     "llaves": [
       {
-       "nombre": "",
-       "filas": [
+       "a": "Boca Juniors de Cali",
+       "b": "Deportes Quindío",
+       "logoA": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
+       "logoB": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
+       "partidos": [
         {
-         "pos": 1,
-         "equipo": "Deportes Quindío",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
-         "pj": 1,
-         "g": 1,
-         "e": 0,
-         "p": 0,
-         "gf": 2,
-         "gc": 0,
-         "dg": 2,
-         "pts": 3
+         "etapa": "IDA",
+         "fecha": "2026-11-23 19:30",
+         "dia": "LUN 23 NOV",
+         "hora": "19:30",
+         "estado": "fin",
+         "texto": "",
+         "casa": "a",
+         "ga": 0,
+         "gb": 2,
+         "pa": null,
+         "pb": null
         },
         {
-         "pos": 2,
-         "equipo": "Boca Juniors de Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
-         "pj": 1,
-         "g": 0,
-         "e": 0,
-         "p": 1,
-         "gf": 0,
-         "gc": 2,
-         "dg": -2,
-         "pts": 0
+         "etapa": "VUELTA",
+         "fecha": "2026-11-28 16:30",
+         "dia": "SÁB 28 NOV",
+         "hora": "16:30",
+         "estado": "prog",
+         "texto": "vs",
+         "casa": "b",
+         "ga": null,
+         "gb": null,
+         "pa": null,
+         "pb": null
         }
-       ]
+       ],
+       "ga": 0,
+       "gb": 2,
+       "pa": null,
+       "pb": null,
+       "estado": "curso",
+       "ganador": null
       }
      ]
     },
@@ -1117,43 +1126,52 @@
    "id": "femenina",
    "competicion": "Liga Femenina 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-10-22T17:12:41.864Z",
+   "actualizado": "2026-11-24T20:06:31.179Z",
    "bloques": [
     {
-     "tipo": "posiciones",
+     "tipo": "cruce",
      "fase": "FASE IV - FINAL",
      "actual": true,
-     "grupos": [
+     "llaves": [
       {
-       "nombre": "",
-       "filas": [
+       "a": "Independiente Santa Fe",
+       "b": "Deportivo Cali",
+       "logoA": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+       "logoB": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
+       "partidos": [
         {
-         "pos": 1,
-         "equipo": "Deportivo Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
-         "pj": 2,
-         "g": 2,
-         "e": 0,
-         "p": 0,
-         "gf": 7,
-         "gc": 4,
-         "dg": 3,
-         "pts": 6
+         "etapa": "",
+         "fecha": "2026-09-23 19:00",
+         "dia": "MIÉ 23 SEP",
+         "hora": "19:00",
+         "estado": "fin",
+         "texto": "",
+         "casa": "a",
+         "ga": 2,
+         "gb": 3,
+         "pa": null,
+         "pb": null
         },
         {
-         "pos": 2,
-         "equipo": "Independiente Santa Fe",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-         "pj": 2,
-         "g": 0,
-         "e": 0,
-         "p": 2,
-         "gf": 4,
-         "gc": 7,
-         "dg": -3,
-         "pts": 0
+         "etapa": "",
+         "fecha": "2026-09-26 18:00",
+         "dia": "SÁB 26 SEP",
+         "hora": "18:00",
+         "estado": "fin",
+         "texto": "",
+         "casa": "b",
+         "ga": 2,
+         "gb": 4,
+         "pa": null,
+         "pb": null
         }
-       ]
+       ],
+       "ga": 4,
+       "gb": 7,
+       "pa": null,
+       "pb": null,
+       "estado": "fin",
+       "ganador": "b"
       }
      ]
     }
@@ -1163,69 +1181,147 @@
    "id": "copa",
    "competicion": "Copa Betplay Dimayor 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-18T11:30:58.102Z",
+   "actualizado": "2026-11-24T20:06:32.168Z",
    "bloques": [
     {
-     "tipo": "posiciones",
+     "tipo": "cruce",
      "fase": "FASE IV - SEMIFINALES",
      "actual": true,
-     "grupos": [
+     "llaves": [
       {
-       "nombre": "",
-       "filas": [
+       "a": "Internacional de Bogotá",
+       "b": "América de Cali",
+       "logoA": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
+       "logoB": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
+       "partidos": [
         {
-         "pos": 1,
-         "equipo": "América de Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
-         "pj": 2,
-         "g": 1,
-         "e": 1,
-         "p": 0,
-         "gf": 3,
-         "gc": 2,
-         "dg": 1,
-         "pts": 4
+         "etapa": "IDA",
+         "fecha": "2026-11-10 18:30",
+         "dia": "MAR 10 NOV",
+         "hora": "18:30",
+         "estado": "fin",
+         "texto": "",
+         "casa": "a",
+         "ga": 1,
+         "gb": 2,
+         "pa": null,
+         "pb": null
         },
         {
-         "pos": 2,
-         "equipo": "Once Caldas DAF",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
-         "pj": 2,
-         "g": 0,
-         "e": 2,
-         "p": 0,
-         "gf": 3,
-         "gc": 3,
-         "dg": 0,
-         "pts": 2
-        },
-        {
-         "pos": 3,
-         "equipo": "Atlético Nacional",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
-         "pj": 2,
-         "g": 0,
-         "e": 2,
-         "p": 0,
-         "gf": 3,
-         "gc": 3,
-         "dg": 0,
-         "pts": 2
-        },
-        {
-         "pos": 4,
-         "equipo": "Internacional de Bogotá",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
-         "pj": 2,
-         "g": 0,
-         "e": 1,
-         "p": 1,
-         "gf": 2,
-         "gc": 3,
-         "dg": -1,
-         "pts": 1
+         "etapa": "VUELTA",
+         "fecha": "2026-11-17 20:30",
+         "dia": "MAR 17 NOV",
+         "hora": "20:30",
+         "estado": "fin",
+         "texto": "",
+         "casa": "b",
+         "ga": 1,
+         "gb": 1,
+         "pa": null,
+         "pb": null
         }
-       ]
+       ],
+       "ga": 2,
+       "gb": 3,
+       "pa": null,
+       "pb": null,
+       "estado": "fin",
+       "ganador": "b"
+      },
+      {
+       "a": "Once Caldas DAF",
+       "b": "Atlético Nacional",
+       "logoA": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
+       "logoB": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
+       "partidos": [
+        {
+         "etapa": "IDA",
+         "fecha": "2026-11-10 20:30",
+         "dia": "MAR 10 NOV",
+         "hora": "20:30",
+         "estado": "fin",
+         "texto": "",
+         "casa": "a",
+         "ga": 1,
+         "gb": 1,
+         "pa": null,
+         "pb": null
+        },
+        {
+         "etapa": "VUELTA",
+         "fecha": "2026-11-17 18:30",
+         "dia": "MAR 17 NOV",
+         "hora": "18:30",
+         "estado": "fin",
+         "texto": "",
+         "casa": "b",
+         "ga": 2,
+         "gb": 2,
+         "pa": 4,
+         "pb": 3
+        }
+       ],
+       "ga": 3,
+       "gb": 3,
+       "pa": 4,
+       "pb": 3,
+       "estado": "fin",
+       "ganador": "a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "superliga",
+   "competicion": "Super LIga Betplay 2026",
+   "fuente": "dimayor.com.co",
+   "actualizado": "2026-11-24T20:06:33.146Z",
+   "bloques": [
+    {
+     "tipo": "cruce",
+     "fase": "SUPERLIGA BETPLAY DIMAYOR 2026",
+     "actual": true,
+     "llaves": [
+      {
+       "a": "Junior F.C.",
+       "b": "Independiente Santa Fe",
+       "logoA": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
+       "logoB": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+       "partidos": [
+        {
+         "etapa": "",
+         "fecha": "2026-01-15 19:30",
+         "dia": "JUE 15 ENE",
+         "hora": "19:30",
+         "estado": "fin",
+         "texto": "",
+         "casa": "a",
+         "ga": 1,
+         "gb": 1,
+         "pa": null,
+         "pb": null
+        },
+        {
+         "etapa": "",
+         "fecha": "2026-01-21 19:30",
+         "dia": "MIÉ 21 ENE",
+         "hora": "19:30",
+         "estado": "fin",
+         "texto": "",
+         "casa": "b",
+         "ga": 0,
+         "gb": 3,
+         "pa": null,
+         "pb": null
+        }
+       ],
+       "ga": 1,
+       "gb": 4,
+       "pa": null,
+       "pb": null,
+       "estado": "fin",
+       "ganador": "b"
       }
      ]
     }
