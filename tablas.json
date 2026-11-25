@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-25T14:14:52.802Z",
+   "actualizado": "2026-11-25T23:20:04.104Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -25,7 +25,14 @@
          "gf": 1,
          "gc": 0,
          "dg": 1,
-         "pts": 3
+         "pts": 3,
+         "racha": [
+          "p",
+          "g",
+          "g",
+          "g",
+          "g"
+         ]
         },
         {
          "pos": 2,
@@ -38,7 +45,14 @@
          "gf": 0,
          "gc": 0,
          "dg": 0,
-         "pts": 1
+         "pts": 1,
+         "racha": [
+          "g",
+          "e",
+          "g",
+          "e",
+          "e"
+         ]
         },
         {
          "pos": 3,
@@ -51,7 +65,14 @@
          "gf": 0,
          "gc": 0,
          "dg": 0,
-         "pts": 1
+         "pts": 1,
+         "racha": [
+          "e",
+          "g",
+          "g",
+          "e",
+          "e"
+         ]
         },
         {
          "pos": 4,
@@ -64,7 +85,14 @@
          "gf": 0,
          "gc": 1,
          "dg": -1,
-         "pts": 0
+         "pts": 0,
+         "racha": [
+          "p",
+          "p",
+          "g",
+          "g",
+          "p"
+         ]
         }
        ]
       },
@@ -82,7 +110,14 @@
          "gf": 4,
          "gc": 3,
          "dg": 1,
-         "pts": 4
+         "pts": 4,
+         "racha": [
+          "e",
+          "e",
+          "g",
+          "e",
+          "g"
+         ]
         },
         {
          "pos": 2,
@@ -95,7 +130,14 @@
          "gf": 4,
          "gc": 1,
          "dg": 3,
-         "pts": 4
+         "pts": 4,
+         "racha": [
+          "e",
+          "p",
+          "g",
+          "e",
+          "g"
+         ]
         },
         {
          "pos": 3,
@@ -108,7 +150,14 @@
          "gf": 1,
          "gc": 2,
          "dg": -1,
-         "pts": 1
+         "pts": 1,
+         "racha": [
+          "g",
+          "e",
+          "e",
+          "e",
+          "p"
+         ]
         },
         {
          "pos": 4,
@@ -121,9 +170,75 @@
          "gf": 3,
          "gc": 6,
          "dg": -3,
-         "pts": 1
+         "pts": 1,
+         "racha": [
+          "e",
+          "g",
+          "g",
+          "e",
+          "p"
+         ]
         }
        ]
+      }
+     ]
+    },
+    {
+     "tipo": "resultados",
+     "fase": "FASE II CUADRANGULARES",
+     "fecha": 2,
+     "partidos": [
+      {
+       "local": "Independiente Santa Fe",
+       "visitante": "Once Caldas DAF",
+       "logoL": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+       "logoV": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
+       "dia": "MIÉ 25 NOV",
+       "hora": "18:20",
+       "fecha": "2026-11-25 18:20",
+       "estado": "prog",
+       "texto": "vs",
+       "gl": null,
+       "gv": null
+      },
+      {
+       "local": "Atlético Nacional",
+       "visitante": "Independiente Medellín",
+       "logoL": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
+       "logoV": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
+       "dia": "MIÉ 25 NOV",
+       "hora": "20:30",
+       "fecha": "2026-11-25 20:30",
+       "estado": "prog",
+       "texto": "vs",
+       "gl": null,
+       "gv": null
+      },
+      {
+       "local": "Millonarios F.C.",
+       "visitante": "Atlético Bucaramanga",
+       "logoL": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
+       "logoV": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
+       "dia": "MAR 24 NOV",
+       "hora": "18:20",
+       "fecha": "2026-11-24 18:20",
+       "estado": "fin",
+       "texto": "",
+       "gl": 4,
+       "gv": 1
+      },
+      {
+       "local": "América de Cali",
+       "visitante": "Deportivo Cali",
+       "logoL": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
+       "logoV": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
+       "dia": "MAR 24 NOV",
+       "hora": "20:30",
+       "fecha": "2026-11-24 20:30",
+       "estado": "fin",
+       "texto": "",
+       "gl": 2,
+       "gv": 1
       }
      ]
     },
@@ -144,7 +259,14 @@
          "gf": 87,
          "gc": 39,
          "dg": 48,
-         "pts": 96
+         "pts": 96,
+         "racha": [
+          "g",
+          "e",
+          "g",
+          "e",
+          "e"
+         ]
         },
         {
          "pos": 2,
@@ -157,7 +279,14 @@
          "gf": 61,
          "gc": 38,
          "dg": 23,
-         "pts": 74
+         "pts": 74,
+         "racha": [
+          "e",
+          "e",
+          "g",
+          "e",
+          "g"
+         ]
         },
         {
          "pos": 3,
@@ -170,7 +299,14 @@
          "gf": 65,
          "gc": 43,
          "dg": 22,
-         "pts": 69
+         "pts": 69,
+         "racha": [
+          "p",
+          "p",
+          "g",
+          "g",
+          "p"
+         ]
         },
         {
          "pos": 4,
@@ -183,7 +319,14 @@
          "gf": 64,
          "gc": 55,
          "dg": 9,
-         "pts": 66
+         "pts": 66,
+         "racha": [
+          "g",
+          "e",
+          "p",
+          "g",
+          "g"
+         ]
         },
         {
          "pos": 5,
@@ -196,7 +339,14 @@
          "gf": 56,
          "gc": 44,
          "dg": 12,
-         "pts": 64
+         "pts": 64,
+         "racha": [
+          "p",
+          "p",
+          "g",
+          "g",
+          "e"
+         ]
         },
         {
          "pos": 6,
@@ -209,7 +359,14 @@
          "gf": 49,
          "gc": 30,
          "dg": 19,
-         "pts": 63
+         "pts": 63,
+         "racha": [
+          "g",
+          "e",
+          "e",
+          "e",
+          "p"
+         ]
         },
         {
          "pos": 7,
@@ -222,7 +379,14 @@
          "gf": 56,
          "gc": 44,
          "dg": 12,
-         "pts": 63
+         "pts": 63,
+         "racha": [
+          "e",
+          "g",
+          "g",
+          "e",
+          "e"
+         ]
         },
         {
          "pos": 8,
@@ -235,7 +399,14 @@
          "gf": 56,
          "gc": 49,
          "dg": 7,
-         "pts": 61
+         "pts": 61,
+         "racha": [
+          "p",
+          "g",
+          "g",
+          "g",
+          "g"
+         ]
         },
         {
          "pos": 9,
@@ -248,7 +419,14 @@
          "gf": 62,
          "gc": 40,
          "dg": 22,
-         "pts": 60
+         "pts": 60,
+         "racha": [
+          "e",
+          "p",
+          "g",
+          "e",
+          "g"
+         ]
         },
         {
          "pos": 10,
@@ -261,7 +439,14 @@
          "gf": 60,
          "gc": 43,
          "dg": 17,
-         "pts": 59
+         "pts": 59,
+         "racha": [
+          "e",
+          "g",
+          "g",
+          "e",
+          "p"
+         ]
         },
         {
          "pos": 11,
@@ -274,7 +459,14 @@
          "gf": 42,
          "gc": 47,
          "dg": -5,
-         "pts": 51
+         "pts": 51,
+         "racha": [
+          "p",
+          "g",
+          "g",
+          "p",
+          "p"
+         ]
         },
         {
          "pos": 12,
@@ -287,7 +479,14 @@
          "gf": 53,
          "gc": 60,
          "dg": -7,
-         "pts": 51
+         "pts": 51,
+         "racha": [
+          "g",
+          "p",
+          "g",
+          "p",
+          "p"
+         ]
         },
         {
          "pos": 13,
@@ -300,7 +499,14 @@
          "gf": 42,
          "gc": 58,
          "dg": -16,
-         "pts": 49
+         "pts": 49,
+         "racha": [
+          "g",
+          "p",
+          "g",
+          "p",
+          "p"
+         ]
         },
         {
          "pos": 14,
@@ -313,7 +519,14 @@
          "gf": 38,
          "gc": 44,
          "dg": -6,
-         "pts": 46
+         "pts": 46,
+         "racha": [
+          "p",
+          "p",
+          "g",
+          "g",
+          "e"
+         ]
         },
         {
          "pos": 15,
@@ -326,7 +539,14 @@
          "gf": 43,
          "gc": 61,
          "dg": -18,
-         "pts": 43
+         "pts": 43,
+         "racha": [
+          "p",
+          "p",
+          "g",
+          "p",
+          "g"
+         ]
         },
         {
          "pos": 16,
@@ -339,7 +559,14 @@
          "gf": 30,
          "gc": 61,
          "dg": -31,
-         "pts": 37
+         "pts": 37,
+         "racha": [
+          "g",
+          "e",
+          "p",
+          "g",
+          "e"
+         ]
         },
         {
          "pos": 17,
@@ -352,7 +579,14 @@
          "gf": 31,
          "gc": 60,
          "dg": -29,
-         "pts": 35
+         "pts": 35,
+         "racha": [
+          "g",
+          "p",
+          "p",
+          "p",
+          "p"
+         ]
         },
         {
          "pos": 18,
@@ -365,7 +599,14 @@
          "gf": 39,
          "gc": 56,
          "dg": -17,
-         "pts": 34
+         "pts": 34,
+         "racha": [
+          "e",
+          "p",
+          "p",
+          "p",
+          "p"
+         ]
         },
         {
          "pos": 19,
@@ -378,7 +619,14 @@
          "gf": 37,
          "gc": 70,
          "dg": -33,
-         "pts": 31
+         "pts": 31,
+         "racha": [
+          "g",
+          "p",
+          "p",
+          "p",
+          "p"
+         ]
         },
         {
          "pos": 20,
@@ -391,7 +639,14 @@
          "gf": 31,
          "gc": 60,
          "dg": -29,
-         "pts": 27
+         "pts": 27,
+         "racha": [
+          "e",
+          "g",
+          "p",
+          "p",
+          "p"
+         ]
         }
        ]
       }
@@ -846,6 +1101,92 @@
        "pro": "1,7931"
       }
      ]
+    },
+    {
+     "tipo": "goleadores",
+     "filas": [
+      {
+       "jugador": "Yeison Guzman",
+       "equipo": "América de Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/9d7d67dc-3eb0-4fd2-a935-6fba1363039a",
+       "goles": 10,
+       "pos": 1
+      },
+      {
+       "jugador": "Luciano Pons",
+       "equipo": "Atlético Bucaramanga",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/08b2d7e8-bc76-4672-a527-4f20437bf6c0",
+       "goles": 10,
+       "pos": 1
+      },
+      {
+       "jugador": "Emerson Batalla",
+       "equipo": "Atlético Bucaramanga",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/3b49b4b6-de05-4785-a8a6-42f1bee39948",
+       "goles": 8,
+       "pos": 3
+      },
+      {
+       "jugador": "Lautaro Bustos",
+       "equipo": "Independiente Santa Fe",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/fc731dba-069e-4108-82e0-5ee68cd727ae",
+       "goles": 7,
+       "pos": 4
+      },
+      {
+       "jugador": "Franco Fagundez",
+       "equipo": "Independiente Santa Fe",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/f60a772e-8049-4d77-a982-33c0ed69bf60",
+       "goles": 7,
+       "pos": 4
+      },
+      {
+       "jugador": "Dayro Moreno",
+       "equipo": "Once Caldas DAF",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/5148ef72-d00b-48c2-aa5b-4741b25cc7c7",
+       "goles": 7,
+       "pos": 4
+      },
+      {
+       "jugador": "Andres Sarmiento",
+       "equipo": "Atlético Nacional",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/7dd219a6-e002-4121-85f9-6abd2507879e",
+       "goles": 7,
+       "pos": 4
+      },
+      {
+       "jugador": "Tomas Angel",
+       "equipo": "América de Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/56acd804-9421-4b6c-8c40-ed16661f0656",
+       "goles": 6,
+       "pos": 8
+      },
+      {
+       "jugador": "Eduard Bello",
+       "equipo": "Deportivo Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/c40f87f9-6beb-4ba5-b0f5-484875ec25a7",
+       "goles": 6,
+       "pos": 8
+      },
+      {
+       "jugador": "Edwin Cardona",
+       "equipo": "Atlético Nacional",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/da64fa74-7f34-4420-81d7-d8ed6d862348",
+       "goles": 6,
+       "pos": 8
+      }
+     ],
+     "mas": 4
     }
    ]
   },
@@ -853,7 +1194,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-24T20:06:30.107Z",
+   "actualizado": "2026-11-25T23:20:09.005Z",
    "bloques": [
     {
      "tipo": "cruce",
@@ -919,7 +1260,14 @@
          "gf": 48,
          "gc": 31,
          "dg": 17,
-         "pts": 79
+         "pts": 79,
+         "racha": [
+          "p",
+          "g",
+          "p",
+          "g",
+          "g"
+         ]
         },
         {
          "pos": 2,
@@ -932,7 +1280,14 @@
          "gf": 71,
          "gc": 48,
          "dg": 23,
-         "pts": 72
+         "pts": 72,
+         "racha": [
+          "p",
+          "g",
+          "e",
+          "g",
+          "g"
+         ]
         },
         {
          "pos": 3,
@@ -945,7 +1300,14 @@
          "gf": 59,
          "gc": 39,
          "dg": 20,
-         "pts": 72
+         "pts": 72,
+         "racha": [
+          "e",
+          "p",
+          "g",
+          "p",
+          "e"
+         ]
         },
         {
          "pos": 4,
@@ -958,7 +1320,14 @@
          "gf": 57,
          "gc": 41,
          "dg": 16,
-         "pts": 68
+         "pts": 68,
+         "racha": [
+          "e",
+          "e",
+          "e",
+          "g",
+          "p"
+         ]
         },
         {
          "pos": 5,
@@ -971,7 +1340,14 @@
          "gf": 43,
          "gc": 33,
          "dg": 10,
-         "pts": 61
+         "pts": 61,
+         "racha": [
+          "p",
+          "e",
+          "e",
+          "p",
+          "p"
+         ]
         },
         {
          "pos": 6,
@@ -984,7 +1360,14 @@
          "gf": 39,
          "gc": 32,
          "dg": 7,
-         "pts": 53
+         "pts": 53,
+         "racha": [
+          "p",
+          "e",
+          "e",
+          "g",
+          "e"
+         ]
         },
         {
          "pos": 7,
@@ -997,7 +1380,14 @@
          "gf": 37,
          "gc": 39,
          "dg": -2,
-         "pts": 53
+         "pts": 53,
+         "racha": [
+          "e",
+          "g",
+          "p",
+          "p",
+          "p"
+         ]
         },
         {
          "pos": 8,
@@ -1010,7 +1400,14 @@
          "gf": 38,
          "gc": 37,
          "dg": 1,
-         "pts": 46
+         "pts": 46,
+         "racha": [
+          "e",
+          "p",
+          "e",
+          "g",
+          "p"
+         ]
         },
         {
          "pos": 9,
@@ -1023,7 +1420,14 @@
          "gf": 44,
          "gc": 50,
          "dg": -6,
-         "pts": 44
+         "pts": 44,
+         "racha": [
+          "g",
+          "p",
+          "p",
+          "g",
+          "p"
+         ]
         },
         {
          "pos": 10,
@@ -1036,7 +1440,14 @@
          "gf": 30,
          "gc": 36,
          "dg": -6,
-         "pts": 44
+         "pts": 44,
+         "racha": [
+          "e",
+          "e",
+          "e",
+          "g",
+          "e"
+         ]
         },
         {
          "pos": 11,
@@ -1049,7 +1460,14 @@
          "gf": 44,
          "gc": 48,
          "dg": -4,
-         "pts": 40
+         "pts": 40,
+         "racha": [
+          "e",
+          "g",
+          "e",
+          "p",
+          "e"
+         ]
         },
         {
          "pos": 12,
@@ -1062,7 +1480,14 @@
          "gf": 30,
          "gc": 40,
          "dg": -10,
-         "pts": 35
+         "pts": 35,
+         "racha": [
+          "p",
+          "e",
+          "p",
+          "p",
+          "p"
+         ]
         },
         {
          "pos": 13,
@@ -1075,7 +1500,14 @@
          "gf": 24,
          "gc": 31,
          "dg": -7,
-         "pts": 34
+         "pts": 34,
+         "racha": [
+          "p",
+          "g",
+          "e",
+          "p",
+          "g"
+         ]
         },
         {
          "pos": 14,
@@ -1088,7 +1520,14 @@
          "gf": 28,
          "gc": 44,
          "dg": -16,
-         "pts": 27
+         "pts": 27,
+         "racha": [
+          "p",
+          "e",
+          "g",
+          "p",
+          "p"
+         ]
         },
         {
          "pos": 15,
@@ -1101,7 +1540,14 @@
          "gf": 26,
          "gc": 43,
          "dg": -17,
-         "pts": 27
+         "pts": 27,
+         "racha": [
+          "p",
+          "g",
+          "e",
+          "g",
+          "e"
+         ]
         },
         {
          "pos": 16,
@@ -1114,11 +1560,104 @@
          "gf": 20,
          "gc": 46,
          "dg": -26,
-         "pts": 24
+         "pts": 24,
+         "racha": [
+          "e",
+          "e",
+          "g",
+          "p",
+          "p"
+         ]
         }
        ]
       }
      ]
+    },
+    {
+     "tipo": "goleadores",
+     "filas": [
+      {
+       "jugador": "Fredy Montero",
+       "equipo": "Real Cartagena",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/99dd5fa6-51ca-4f7a-93f9-21974e67c76e",
+       "goles": 12,
+       "pos": 1
+      },
+      {
+       "jugador": "Alejandro Oñate",
+       "equipo": "Atlético F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0004_ATLETICO-FC-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/78c1e2a7-92a2-4c1f-a4e3-b6b37339886a",
+       "goles": 9,
+       "pos": 2
+      },
+      {
+       "jugador": "Jhon Aponza",
+       "equipo": "Boca Juniors de Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/de5d1621-5b27-4e46-88b2-68f3b67aebe7",
+       "goles": 8,
+       "pos": 3
+      },
+      {
+       "jugador": "Jose Lloreda",
+       "equipo": "Deportes Quindío",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/eadc71fa-0979-445b-8fce-b088faa6139a",
+       "goles": 8,
+       "pos": 3
+      },
+      {
+       "jugador": "Kevin Alvarez",
+       "equipo": "Patriotas F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0009_PATRIOTAS-FC-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/8e157729-b906-48b5-8231-e5894d68d5da",
+       "goles": 7,
+       "pos": 5
+      },
+      {
+       "jugador": "Deyman Cortes",
+       "equipo": "Boca Juniors de Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/06e9b09e-5727-495d-b5f2-c9ac4c1f201a",
+       "goles": 7,
+       "pos": 5
+      },
+      {
+       "jugador": "Miguel Marulanda",
+       "equipo": "Envigado F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/aa5e6096-52dd-414d-99d0-162f6f5e0a2a",
+       "goles": 7,
+       "pos": 5
+      },
+      {
+       "jugador": "Janeth Aleman",
+       "equipo": "Real Cartagena",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/a654ae2c-e73a-45f0-bcde-c8ba27be937a",
+       "goles": 6,
+       "pos": 8
+      },
+      {
+       "jugador": "Ruyery Blanco",
+       "equipo": "Unión Magdalena",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/1246d134-3639-434c-b0e0-09b13c7aea9d",
+       "goles": 6,
+       "pos": 8
+      },
+      {
+       "jugador": "Michell Diaz",
+       "equipo": "Real Santander S.A.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0006_REAL-SANTANDER-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/a4863190-5b30-40dd-8716-607d1ef8ecc1",
+       "goles": 6,
+       "pos": 8
+      }
+     ],
+     "mas": 3
     }
    ]
   },
@@ -1126,7 +1665,7 @@
    "id": "femenina",
    "competicion": "Liga Femenina 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-24T20:06:31.179Z",
+   "actualizado": "2026-11-25T23:20:13.217Z",
    "bloques": [
     {
      "tipo": "cruce",
@@ -1174,6 +1713,92 @@
        "ganador": "b"
       }
      ]
+    },
+    {
+     "tipo": "goleadores",
+     "filas": [
+      {
+       "jugador": "Manuela Gonzalez",
+       "equipo": "Atlético Nacional",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/abd84586-b15e-4d25-be59-7d753d3646dc",
+       "goles": 15,
+       "pos": 1
+      },
+      {
+       "jugador": "Ingrid Guerra",
+       "equipo": "Deportivo Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/4ef72db8-e961-4aed-9e97-36056a2437bd",
+       "goles": 15,
+       "pos": 1
+      },
+      {
+       "jugador": "Kelly Restrepo",
+       "equipo": "Millonarios F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/b6aa7a8e-f233-4721-98fb-949302f9cf7f",
+       "goles": 14,
+       "pos": 3
+      },
+      {
+       "jugador": "Mariana Zamorano",
+       "equipo": "Independiente Santa Fe",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/45b78b65-0503-42a6-9061-1e53753e5fa1",
+       "goles": 14,
+       "pos": 3
+      },
+      {
+       "jugador": "Genesis Florez",
+       "equipo": "América de Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/e5bc9bf5-a2a8-4aa1-8097-765155ca27bb",
+       "goles": 10,
+       "pos": 5
+      },
+      {
+       "jugador": "Ysaura Viso",
+       "equipo": "Independiente Santa Fe",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/c7f8bb52-68c6-457c-9730-091234955686",
+       "goles": 10,
+       "pos": 5
+      },
+      {
+       "jugador": "Joemar Guarecuco",
+       "equipo": "Internacional de Bogotá",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/2a91eade-25b6-42f0-a119-07195d608176",
+       "goles": 9,
+       "pos": 7
+      },
+      {
+       "jugador": "Belkis Niño",
+       "equipo": "Atlético Bucaramanga",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/520e8041-37fa-4868-b829-b7190483fd32",
+       "goles": 8,
+       "pos": 8
+      },
+      {
+       "jugador": "Melanin Aponza",
+       "equipo": "Deportivo Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/02d6c9ca-e706-4398-8b36-ecb363a21bde",
+       "goles": 7,
+       "pos": 9
+      },
+      {
+       "jugador": "Luiza Montaño",
+       "equipo": "Internacional F.C. de Palmira",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2026/11/NUEVO-LOGO-INTERNACIONAL-PALMIRA-FINAL_1.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/dddc7822-186e-49e0-a23d-dd8d9260bdbc",
+       "goles": 7,
+       "pos": 9
+      }
+     ],
+     "mas": 0
     }
    ]
   },
@@ -1181,7 +1806,7 @@
    "id": "copa",
    "competicion": "Copa Betplay Dimayor 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-24T20:06:32.168Z",
+   "actualizado": "2026-11-25T23:20:17.204Z",
    "bloques": [
     {
      "tipo": "cruce",
@@ -1269,6 +1894,92 @@
        "ganador": "a"
       }
      ]
+    },
+    {
+     "tipo": "goleadores",
+     "filas": [
+      {
+       "jugador": "Tomas Angel",
+       "equipo": "América de Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/56acd804-9421-4b6c-8c40-ed16661f0656",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Jorge Cabezas",
+       "equipo": "Deportes Tolima",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0013_DEPORTES-TOLIMA-FONDO-OSCURO-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/08ac881a-5598-4f5f-a73a-67921d275f06",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Leonardo Castro",
+       "equipo": "Millonarios F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/cf762ceb-39a4-41c2-b8c6-9f13f8205639",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Jose Lloreda",
+       "equipo": "Deportes Quindío",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/eadc71fa-0979-445b-8fce-b088faa6139a",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Darwin Lopez",
+       "equipo": "Jaguares F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/e2bc2034-ac08-4593-bff8-37e50f390579",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Misael Martinez",
+       "equipo": "Alianza Valledupar F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/ac3f917a-01a1-4a2d-9e6f-2d93151f48f5",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Jairo Molina",
+       "equipo": "Boyacá Chicó F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/5ee9336d-7039-4563-ac69-4ef13ff44193",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Jonathan Perlaza",
+       "equipo": "Deportivo Pasto",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/IMG_7724.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/ee0e44e7-aed6-4d00-82cc-462561adf3d0",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Fabricio Sanguinetti",
+       "equipo": "Internacional de Bogotá",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/9d6fdc24-3af1-47b3-81fb-892d92704210",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Pablo Urrutia",
+       "equipo": "Boca Juniors de Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/77dc9178-e236-41ac-8f58-1ff05e067301",
+       "goles": 3,
+       "pos": 1
+      }
+     ],
+     "mas": 1
     }
    ]
   },
@@ -1276,7 +1987,7 @@
    "id": "superliga",
    "competicion": "Super LIga Betplay 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-24T20:06:33.146Z",
+   "actualizado": "2026-11-25T23:20:18.917Z",
    "bloques": [
     {
      "tipo": "cruce",
@@ -1324,6 +2035,44 @@
        "ganador": "b"
       }
      ]
+    },
+    {
+     "tipo": "goleadores",
+     "filas": [
+      {
+       "jugador": "Hugo Rodallega",
+       "equipo": "Independiente Santa Fe",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/a11eb3bd-8b0c-4e70-bed7-ceb9cf73fd39",
+       "goles": 2,
+       "pos": 1
+      },
+      {
+       "jugador": "Teofilo Gutierrez",
+       "equipo": "Junior F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/936f6631-c1f9-47b6-a0a5-8d844103a17b",
+       "goles": 1,
+       "pos": 2
+      },
+      {
+       "jugador": "Lautaro Bustos",
+       "equipo": "Independiente Santa Fe",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/fc731dba-069e-4108-82e0-5ee68cd727ae",
+       "goles": 1,
+       "pos": 2
+      },
+      {
+       "jugador": "Ewil Murillo",
+       "equipo": "Independiente Santa Fe",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/6c5c09fa-2482-4c93-9b21-f9c7c7e1287f",
+       "goles": 1,
+       "pos": 2
+      }
+     ],
+     "mas": 0
     }
    ]
   }
