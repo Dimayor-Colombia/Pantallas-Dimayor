@@ -79,19 +79,15 @@
   .tbl{ display:flex; flex-direction:column; min-height:0; overflow:hidden;
     background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.1); border-radius:18px; }
   /* Título de cada tabla: letras SIEMPRE blancas sobre el color de la competencia.
-     Encima del color: brillo arriba, sombra a la izquierda (detrás del texto, para que el blanco resalte
-     incluso en el amarillo) y franjas diagonales a la derecha · logo de la competencia en un círculo blanco */
-  .tblTitle{ position:relative; height:52px; flex:0 0 52px; display:flex; align-items:center; gap:12px; padding:0 18px 0 12px; overflow:hidden;
+     Encima del color: brillo arriba y sombra a la izquierda (detrás del texto, para que el blanco resalte incluso en el amarillo) */
+  .tblTitle{ position:relative; height:52px; flex:0 0 52px; display:flex; align-items:center; gap:12px; padding:0 18px 0 20px; overflow:hidden;
     background:
       linear-gradient(180deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,0) 46%, rgba(0,0,0,.14) 100%),
       linear-gradient(90deg, rgba(0,0,0,.24) 0%, rgba(0,0,0,.10) 40%, rgba(0,0,0,0) 68%),
-      repeating-linear-gradient(-58deg, rgba(255,255,255,.13) 0 9px, rgba(255,255,255,0) 9px 21px) right center / 34% 100% no-repeat,
       var(--comp-color);
     color:#fff; font-size:21px; font-weight:900; letter-spacing:.07em; text-transform:uppercase;
     text-shadow:0 2px 0 rgba(0,0,0,.30), 0 0 12px rgba(0,0,0,.35);
     box-shadow:inset 0 -3px 0 rgba(0,0,0,.18); }
-  .tblTitle::before{ content:""; flex:0 0 34px; height:34px; border-radius:50%;
-    background:#fff var(--comp-logo, none) center / 74% no-repeat; box-shadow:0 2px 6px rgba(0,0,0,.35), 0 0 0 2px rgba(255,255,255,.55); }
   .tblTitle .tag{ margin-left:auto; padding:6px 13px; border-radius:20px; background:rgba(0,0,0,.28); box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);
     font-size:13px; font-weight:800; letter-spacing:.07em; text-shadow:0 1px 2px rgba(0,0,0,.4); }
   .tblTitle .tag:empty{ display:none; }
@@ -268,8 +264,9 @@
   .grow .gl b{ font-size:32px; font-weight:800; line-height:1; } .grow .gl span{ font-size:13px; font-weight:800; letter-spacing:.1em; }
 
   /* ---------- Resultados de la fecha ---------- */
-  .resu{ flex:1; min-height:0; display:flex; flex-direction:column; gap:16px; }
-  .resumen{ flex:0 0 128px; display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; }
+  .resu{ flex:1; min-height:0; display:flex; flex-direction:column; gap:14px; }
+  .resu > .tblTitle{ border-radius:14px; }
+  .resumen{ flex:0 0 116px; display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; }
   .rbox{ border-radius:16px; padding:14px 22px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); display:flex; flex-direction:column; justify-content:center; gap:6px; position:relative; overflow:hidden; min-width:0; }
   .rbox::before{ content:""; position:absolute; left:0; top:0; bottom:0; width:6px; background:var(--comp-color); }
   .rbox .lbl{ font-size:14px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.6); }
@@ -790,7 +787,8 @@ function resultadosHTML(page) {
       <div class="mc">${centro}</div>
       ${crestHTML(nombre(p.visitante), p.logoV)}<div class="nm ${cl(p.gv, p.gl)}">${esc(nombre(p.visitante))}</div></div>`;
   };
-  return `<div class="resu"><div class="resumen">
+  return `<div class="resu"><div class="tblTitle">Resultados · Fecha ${esc(b.fecha)}${b.fase ? " · " + esc(nombreFase(b.fase)) : ""}<span class="tag">${jug.length} de ${n} jugados</span></div>
+    <div class="resumen">
       <div class="rbox"><div class="lbl">Goles de la fecha</div><div class="big">${goles}<small>${jug.length ? (goles / jug.length).toFixed(1) : "0"} por partido</small></div></div>
       <div class="rbox"><div class="lbl">La goleada</div>${gana ? `<div class="gol">${crestHTML(nombre(gana[0]), gana[1])}${esc(nombre(gana[0]))} ${Math.max(gol.gl, gol.gv)}-${Math.min(gol.gl, gol.gv)}</div>` : `<div class="gol">Todos empatados</div>`}</div>
       <div class="rbox"><div class="lbl">Ganó local · empate · visitante</div>
@@ -851,7 +849,6 @@ function render(instant) {
     el.innerHTML = html;
     el.style.setProperty("--comp-color", page.comp.color);
     el.style.setProperty("--on-comp", onColor(page.comp.color));
-    el.style.setProperty("--comp-logo", page.comp.logo ? `url("${page.comp.logo}")` : "none");
     requestAnimationFrame(() => requestAnimationFrame(() => el.classList.remove("out")));
     restartProgress();
   };
