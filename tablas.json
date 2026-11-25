@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-22T04:10:31.215Z",
+   "actualizado": "2026-11-25T02:07:45.147Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -73,21 +73,21 @@
        "filas": [
         {
          "pos": 1,
-         "equipo": "América de Cali",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
-         "pj": 1,
-         "g": 0,
+         "equipo": "Millonarios F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
+         "pj": 2,
+         "g": 1,
          "e": 1,
          "p": 0,
-         "gf": 2,
-         "gc": 2,
-         "dg": 0,
-         "pts": 1
+         "gf": 4,
+         "gc": 1,
+         "dg": 3,
+         "pts": 4
         },
         {
          "pos": 2,
-         "equipo": "Atlético Bucaramanga",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
+         "equipo": "América de Cali",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
          "pj": 1,
          "g": 0,
          "e": 1,
@@ -112,15 +112,15 @@
         },
         {
          "pos": 4,
-         "equipo": "Millonarios F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
-         "pj": 1,
+         "equipo": "Atlético Bucaramanga",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
+         "pj": 2,
          "g": 0,
          "e": 1,
-         "p": 0,
-         "gf": 0,
-         "gc": 0,
-         "dg": 0,
+         "p": 1,
+         "gf": 3,
+         "gc": 6,
+         "dg": -3,
          "pts": 1
         }
        ]
@@ -239,29 +239,29 @@
         },
         {
          "pos": 9,
-         "equipo": "Atlético Bucaramanga",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
-         "pj": 39,
-         "g": 14,
-         "e": 17,
-         "p": 8,
-         "gf": 59,
-         "gc": 39,
-         "dg": 20,
-         "pts": 59
+         "equipo": "Millonarios F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
+         "pj": 40,
+         "g": 15,
+         "e": 15,
+         "p": 10,
+         "gf": 62,
+         "gc": 40,
+         "dg": 22,
+         "pts": 60
         },
         {
          "pos": 10,
-         "equipo": "Millonarios F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
-         "pj": 39,
+         "equipo": "Atlético Bucaramanga",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
+         "pj": 40,
          "g": 14,
-         "e": 15,
-         "p": 10,
-         "gf": 58,
-         "gc": 39,
-         "dg": 19,
-         "pts": 57
+         "e": 17,
+         "p": 9,
+         "gf": 60,
+         "gc": 43,
+         "dg": 17,
+         "pts": 59
         },
         {
          "pos": 11,
