@@ -78,10 +78,23 @@
   /* Tabla */
   .tbl{ display:flex; flex-direction:column; min-height:0; overflow:hidden;
     background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.1); border-radius:18px; }
-  .tblTitle{ height:50px; flex:0 0 50px; display:flex; align-items:center; gap:12px; padding:0 20px;
-    background:var(--comp-color); color:#fff; font-size:20px; font-weight:800; letter-spacing:.06em; text-transform:uppercase;
-    text-shadow:0 1px 2px rgba(0,0,0,.45); }  /* títulos siempre en blanco (sombra suave para que se lea sobre colores claros) */
-  .tblTitle .tag{ margin-left:auto; font-size:13px; font-weight:700; letter-spacing:.05em; opacity:.8; }
+  /* Título de cada tabla: letras SIEMPRE blancas sobre el color de la competencia.
+     Encima del color: brillo arriba, sombra a la izquierda (detrás del texto, para que el blanco resalte
+     incluso en el amarillo) y franjas diagonales a la derecha · logo de la competencia en un círculo blanco */
+  .tblTitle{ position:relative; height:52px; flex:0 0 52px; display:flex; align-items:center; gap:12px; padding:0 18px 0 12px; overflow:hidden;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,0) 46%, rgba(0,0,0,.14) 100%),
+      linear-gradient(90deg, rgba(0,0,0,.24) 0%, rgba(0,0,0,.10) 40%, rgba(0,0,0,0) 68%),
+      repeating-linear-gradient(-58deg, rgba(255,255,255,.13) 0 9px, rgba(255,255,255,0) 9px 21px) right center / 34% 100% no-repeat,
+      var(--comp-color);
+    color:#fff; font-size:21px; font-weight:900; letter-spacing:.07em; text-transform:uppercase;
+    text-shadow:0 2px 0 rgba(0,0,0,.30), 0 0 12px rgba(0,0,0,.35);
+    box-shadow:inset 0 -3px 0 rgba(0,0,0,.18); }
+  .tblTitle::before{ content:""; flex:0 0 34px; height:34px; border-radius:50%;
+    background:#fff var(--comp-logo, none) center / 74% no-repeat; box-shadow:0 2px 6px rgba(0,0,0,.35), 0 0 0 2px rgba(255,255,255,.55); }
+  .tblTitle .tag{ margin-left:auto; padding:6px 13px; border-radius:20px; background:rgba(0,0,0,.28); box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);
+    font-size:13px; font-weight:800; letter-spacing:.07em; text-shadow:0 1px 2px rgba(0,0,0,.4); }
+  .tblTitle .tag:empty{ display:none; }
   .cols, .row{ display:grid; align-items:center; grid-template-columns:62px 52px 1fr repeat(7, 66px) 92px; padding:0 14px 0 10px; }
   /* con dos tablas lado a lado, columnas de números más angostas para que quepa el nombre completo */
   .tables.two .cols, .tables.two .row, .tables.many .cols, .tables.many .row{ grid-template-columns:52px 48px 1fr repeat(7, 50px) 70px; padding:0 8px 0 6px; }
@@ -138,6 +151,10 @@
   /* tablas cortas (ej. una final): centradas, sin estirarse */
   .tables.one.corta > .tbl{ align-self:center; height:auto; }
   .tables.grupos .cols, .tables.grupos .row{ grid-template-columns:52px 62px 1fr repeat(7, 50px) 70px; padding:0 8px 0 6px; }
+  /* con racha (últimos 5): una columna más antes de los puntos */
+  .tbl.conRacha .cols, .tbl.conRacha .row{ grid-template-columns:62px 52px 1fr repeat(7, 60px) 186px 92px; }
+  .tables.two .tbl.conRacha .cols, .tables.two .tbl.conRacha .row, .tables.many .tbl.conRacha .cols, .tables.many .tbl.conRacha .row{ grid-template-columns:48px 44px 1fr repeat(7, 44px) 150px 66px; }
+  .tables.grupos .tbl.conRacha .cols, .tables.grupos .tbl.conRacha .row{ grid-template-columns:48px 56px 1fr repeat(7, 44px) 150px 66px; }
   .pill{ display:inline-flex; align-items:center; height:40px; padding:0 18px; border-radius:22px; background:var(--comp-color); color:#fff; text-shadow:0 1px 2px rgba(0,0,0,.45);
     font-size:17px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
   .tbl.desc .cols2{ height:30px; flex:0 0 30px; border-bottom:none; }
@@ -193,6 +210,85 @@
   .statsRow .stat .who .crest{ --rowh:70px; }
   .statsRow .stat .team{ font-size:24px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .statsRow .stat .val b{ font-size:26px; }
+
+
+  /* ---------- Racha (últimos 5 partidos) ---------- */
+  .racha{ display:flex; justify-content:center; align-items:center; gap:5px; }
+  .racha i{ width:min(26px, calc(var(--rowh) * .52)); height:min(26px, calc(var(--rowh) * .52)); border-radius:50%; display:grid; place-items:center;
+    font-style:normal; font-size:min(13px, calc(var(--rowh) * .27)); font-weight:800; color:#fff; flex:0 0 auto; }
+  .racha i.g{ background:#16a34a; } .racha i.e{ background:#94a3b8; } .racha i.p{ background:#dc2626; }
+  .racha i.ult{ box-shadow:0 0 0 2px #fff; }
+  .cols .rh{ text-align:center; }
+
+  /* ---------- Goleadores ---------- */
+  .goles{ flex:1; min-height:0; display:grid; grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr); gap:22px; }
+  .podio{ display:grid; grid-template-rows:1.3fr 1fr; gap:18px; min-height:0; }
+  .podio .resto{ display:grid; grid-template-columns:1fr 1fr; gap:18px; min-height:0; }
+  .podio.solo1{ grid-template-rows:1fr; }
+  .gcard{ position:relative; overflow:hidden; border-radius:20px; padding:20px 24px; display:flex; flex-direction:column; justify-content:space-between; min-height:0;
+    background:linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.12);
+    animation:slideIn .5s cubic-bezier(.16,1,.3,1) both; }
+  .gcard::after{ content:""; position:absolute; right:-50px; bottom:-70px; width:280px; height:280px; border-radius:50%;
+    background:radial-gradient(circle, color-mix(in srgb, var(--comp-color) 38%, transparent), transparent 70%); pointer-events:none; }
+  .gcard.m1{ border:2px solid #facc15; background:linear-gradient(160deg, rgba(250,204,21,.18), rgba(255,255,255,.03)); }
+  .gcard.m2{ border-color:#cbd5e1; } .gcard.m3{ border-color:#d6a06b; }
+  .gcard .medal{ display:inline-flex; align-items:center; gap:10px; font-size:17px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; position:relative; z-index:1; }
+  .gcard .medal i{ font-style:normal; width:34px; height:34px; border-radius:50%; display:grid; place-items:center; color:#0f172a; font-size:18px; }
+  .gcard.m1 .medal{ color:#facc15; } .gcard.m1 .medal i{ background:#facc15; }
+  .gcard.m2 .medal{ color:#e2e8f0; } .gcard.m2 .medal i{ background:#e2e8f0; }
+  .gcard.m3 .medal{ color:#e3a86f; } .gcard.m3 .medal i{ background:#e3a86f; }
+  .gcard .who{ display:flex; align-items:center; gap:20px; position:relative; z-index:1; min-width:0; }
+  .gcard .jug{ font-size:46px; font-weight:800; line-height:1.05; }
+  .gcard.chica .jug{ font-size:29px; }
+  .gcard .club{ display:flex; align-items:center; gap:8px; font-size:22px; color:rgba(255,255,255,.75); margin-top:8px; font-weight:600; }
+  .gcard.chica .club{ font-size:17px; }
+  .gcard .club .crest{ --rowh:34px; } .gcard.chica .club .crest{ --rowh:26px; }
+  .gcard .num{ position:relative; z-index:1; display:flex; align-items:baseline; gap:12px; }
+  .gcard .num b{ font-size:100px; font-weight:800; line-height:.9; font-variant-numeric:tabular-nums; }
+  .gcard.chica .num b{ font-size:62px; }
+  .gcard .num span{ font-size:20px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.65); }
+  /* foto del jugador (si dimayor la tiene); si no, el escudo del club */
+  .foto > img{ width:100%; height:100%; border-radius:50%; object-fit:cover; object-position:center top; display:block; }
+  .foto{ position:relative; flex:0 0 auto; width:var(--fz); height:var(--fz); border-radius:50%; background:#fff;
+    box-shadow:0 0 0 3px rgba(255,255,255,.25), 0 6px 16px rgba(0,0,0,.4); }
+  .foto > .crest{ position:absolute; right:-6px; bottom:-4px; --rowh:calc(var(--fz) * .42); }
+  .foto.sin{ background:transparent; box-shadow:none; } .foto.sin > .crest{ position:static; --rowh:var(--fz); }
+  .gcard .foto{ --fz:150px; } .gcard.chica .foto{ --fz:92px; }
+  .glista{ display:flex; flex-direction:column; gap:10px; min-height:0; }
+  .grow{ flex:1; min-height:0; display:grid; grid-template-columns:52px 64px minmax(0,1fr) 116px; align-items:center; gap:16px;
+    padding:0 20px; border-radius:14px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08);
+    animation:slideIn .45s cubic-bezier(.16,1,.3,1) both; }
+  .grow .pos{ font-size:28px; font-weight:800; color:rgba(255,255,255,.55); text-align:center; }
+  .grow .foto{ --fz:58px; }
+  .grow .jug{ font-size:27px; font-weight:800; line-height:1.1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .grow .club{ display:flex; align-items:center; gap:7px; font-size:17px; color:rgba(255,255,255,.65); font-weight:600; white-space:nowrap; overflow:hidden; }
+  .grow .club .crest{ --rowh:22px; }
+  .grow .gl{ justify-self:end; display:flex; align-items:baseline; gap:6px; padding:8px 16px; border-radius:12px; background:var(--comp-color); color:#fff;
+    text-shadow:0 1px 2px rgba(0,0,0,.45); }
+  .grow .gl b{ font-size:32px; font-weight:800; line-height:1; } .grow .gl span{ font-size:13px; font-weight:800; letter-spacing:.1em; }
+
+  /* ---------- Resultados de la fecha ---------- */
+  .resu{ flex:1; min-height:0; display:flex; flex-direction:column; gap:16px; }
+  .resumen{ flex:0 0 128px; display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; }
+  .rbox{ border-radius:16px; padding:14px 22px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); display:flex; flex-direction:column; justify-content:center; gap:6px; position:relative; overflow:hidden; min-width:0; }
+  .rbox::before{ content:""; position:absolute; left:0; top:0; bottom:0; width:6px; background:var(--comp-color); }
+  .rbox .lbl{ font-size:14px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.6); }
+  .rbox .big{ font-size:44px; font-weight:800; line-height:1; } .rbox .big small{ font-size:18px; color:rgba(255,255,255,.65); font-weight:600; margin-left:8px; }
+  .rbox .bar{ display:flex; height:12px; border-radius:6px; overflow:hidden; margin-top:4px; background:rgba(255,255,255,.1); }
+  .rbox .bar b{ display:block; } .rbox .leg{ display:flex; gap:14px; font-size:15px; color:rgba(255,255,255,.8); font-weight:700; }
+  .rbox .gol{ display:flex; align-items:center; gap:10px; font-size:22px; font-weight:800; white-space:nowrap; overflow:hidden; } .rbox .gol .crest{ --rowh:46px; }
+  .partidos{ flex:1; min-height:0; display:grid; grid-auto-rows:1fr; gap:12px 20px; }
+  .res{ display:grid; grid-template-columns:minmax(0,1fr) 60px 168px 60px minmax(0,1fr); align-items:center; gap:14px; padding:0 20px; border-radius:14px; min-height:0;
+    background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); animation:slideIn .45s cubic-bezier(.16,1,.3,1) both; }
+  .res .crest{ --rowh:58px; } .res .nm{ font-size:25px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .res .nm.l{ text-align:right; } .res .nm.pierde{ opacity:.5; }
+  .res .mc{ text-align:center; } .res .mc b{ font-size:42px; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:.04em; }
+  .res .mc .vs{ font-size:30px; font-weight:800; color:rgba(255,255,255,.55); }
+  .res .mc div{ font-size:13px; color:rgba(255,255,255,.6); font-weight:700; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap; }
+  .res .mc .vivo{ color:#f87171; }
+  .res.goleada{ border-color:var(--comp-color); background:color-mix(in srgb, var(--comp-color) 14%, transparent); }
+  .partidos.grande .res{ grid-template-columns:minmax(0,1fr) 84px 220px 84px minmax(0,1fr); } .partidos.grande .res .crest{ --rowh:80px; }
+  .partidos.grande .res .nm{ font-size:34px; } .partidos.grande .res .mc b{ font-size:58px; }
 
   .progress{ position:absolute; left:24px; right:24px; bottom:6px; height:4px; border-radius:2px; background:rgba(255,255,255,.06); overflow:hidden; }
   .progress i{ display:block; height:100%; width:0; background:var(--sky); }
@@ -272,7 +368,7 @@ const CONFIG = {
    PARA OCULTAR (cada competencia ocupa UNA sola línea):
      - una competencia completa: ponerle "//" al inicio de su línea; para mostrarla, quitar el "//"
      - una sola tabla de una competencia: escribirla en "ocultar", ej. ocultar: ["descenso"]
-       (opciones: "posiciones" = la fase en curso, sea tabla o cruce · "reclasificacion" · "descenso")
+       (opciones: "posiciones" = la fase en curso, sea tabla o cruce · "resultados" · "reclasificacion" · "descenso" · "goleadores")
    Qué fases salen como TABLA y cuáles como CRUCE se configura en scripts/tablas.mjs ("cruces").
    "zonas": barras de color en las tablas (AJUSTAR según el reglamento del semestre):
      - clasifican: en la tabla de posiciones de las fases cuyo nombre coincide, los N primeros
@@ -308,6 +404,8 @@ function nombreFase(n) {
 function tituloBloque(b) {
   if (b.tipo === "reclasificacion") return "Reclasificación";
   if (b.tipo === "descenso") return "Descenso · Promedios";
+  if (b.tipo === "goleadores") return "Goleadores";
+  if (b.tipo === "resultados") return `Resultados · Fecha ${b.fecha}`;
   if (b.tipo === "cruce") {
     const nf = nombreFase(b.fase), n = (b.llaves || []).length;
     if (n === 1) return /final/i.test(nf) ? nf : "Final · " + nf;
@@ -491,6 +589,8 @@ function medidas(altoTabla, filas, cabeceras) {
 
 function tableHTML(titulo, filas, opts) {
   const o = opts || {};
+  // racha: últimos 5 partidos (G ganó · E empató · P perdió), del más viejo al más reciente (borde blanco)
+  const conRacha = filas.some((f) => f.racha && f.racha.length);
   const rows = filas.map((f, i) => {
     const eq = nombre(f.equipo);
     const cls = [o.clasifican && f.pos <= o.clasifican ? "zona" : "", f.pos === 1 && !o.sinLider ? "lider" : ""].join(" ");
@@ -499,11 +599,12 @@ function tableHTML(titulo, filas, opts) {
       <span class="pos">${f.pos}</span>${crestHTML(eq, f.logo)}<span class="tn">${esc(eq)}</span>
       <span class="st">${f.pj}</span><span class="st">${f.g}</span><span class="st">${f.e}</span><span class="st">${f.p}</span>
       <span class="st">${f.gf}</span><span class="st">${f.gc}</span><span class="st dg ${f.dg > 0 ? "pos-dg" : f.dg < 0 ? "neg-dg" : ""}">${dg}</span>
+      ${conRacha ? `<span class="racha">${(f.racha || []).map((r, k, a) => `<i class="${r} ${k === a.length - 1 ? "ult" : ""}">${r.toUpperCase()}</i>`).join("")}</span>` : ""}
       <span class="pts">${f.pts}</span></div>`;
   }).join("");
-  return `<section class="tbl" style="${o.medidas}">
+  return `<section class="tbl ${conRacha ? "conRacha" : ""}" style="${o.medidas}">
     <div class="tblTitle">${esc(titulo)}${o.rango ? ` <span style="opacity:.75">· ${o.rango}</span>` : ""}<span class="tag">${o.total || filas.length} equipos</span></div>
-    <div class="cols"><span>#</span><span></span><span class="tn">Equipo</span><span>PJ</span><span>G</span><span>E</span><span>P</span><span>GF</span><span>GC</span><span>DG</span><span class="pts">PTS</span></div>
+    <div class="cols"><span>#</span><span></span><span class="tn">Equipo</span><span>PJ</span><span>G</span><span>E</span><span>P</span><span>GF</span><span>GC</span><span>DG</span>${conRacha ? '<span class="rh">Últimos 5</span>' : ""}<span class="pts">PTS</span></div>
     <div class="rows">${rows}</div></section>`;
 }
 
@@ -626,10 +727,85 @@ function cruceHTML(page) {
     <div class="llaves" style="grid-template-columns:${ancho}">${llaves.map(card).join("")}</div></div>`;
 }
 
+
+/* ---------- Goleadores: podio (1.º, 2.º, 3.º) + lista hasta el 10.º ---------- */
+function fotoHTML(r) {
+  const eq = nombre(r.equipo);
+  // si la foto no carga, queda solo el escudo
+  return r.foto
+    ? `<span class="foto"><img src="${esc(r.foto)}" alt="" onerror="this.parentNode.classList.add('sin');this.remove()">${crestHTML(eq, r.logo)}</span>`
+    : `<span class="foto sin">${crestHTML(eq, r.logo)}</span>`;
+}
+function goleadoresHTML(page) {
+  const b = page.bloque, f = b.filas || [];
+  if (!f.length) return `<div class="empty"><span class="ico">⚽</span>Sin goleadores todavía</div>`;
+  const medalla = (r) => r.pos === 1 ? "Líder de goleo" : r.pos === 2 ? "Segundo" : r.pos === 3 ? "Tercero" : r.pos + ".º";
+  const card = (r, i, chica) => {
+    const eq = nombre(r.equipo);
+    return `<div class="gcard m${Math.min(r.pos, 3)} ${chica ? "chica" : ""}" style="animation-delay:${(i * .08).toFixed(2)}s">
+      <div class="medal"><i>${r.pos}</i>${medalla(r)}</div>
+      <div class="who">${fotoHTML(r)}<div style="min-width:0"><div class="jug">${esc(r.jugador)}</div>
+        <div class="club">${crestHTML(eq, r.logo)}${esc(eq)}</div></div></div>
+      <div class="num"><b>${r.goles}</b><span>${r.goles === 1 ? "gol" : "goles"}</span></div></div>`;
+  };
+  const podio = f.length >= 3
+    ? `<div class="podio">${card(f[0], 0)}<div class="resto">${card(f[1], 1, true)}${card(f[2], 2, true)}</div></div>`
+    : `<div class="podio solo1">${card(f[0], 0)}</div>`;
+  const resto = f.length >= 3 ? f.slice(3) : f.slice(1);
+  const nota = b.mas ? `+${b.mas} más con ${f[f.length - 1].goles} ${f[f.length - 1].goles === 1 ? "gol" : "goles"}` : "";
+  return `<div class="goles">${podio}
+    <div class="glista"><div class="tblTitle">Tabla de goleadores<span class="tag">${esc(nota || "Toda la temporada")}</span></div>
+      ${resto.map((r, i) => `<div class="grow" style="animation-delay:${(.2 + i * .05).toFixed(2)}s"><div class="pos">${r.pos}</div>${fotoHTML(r)}
+        <div style="min-width:0"><div class="jug">${esc(r.jugador)}</div><div class="club">${crestHTML(nombre(r.equipo), r.logo)}${esc(nombre(r.equipo))}</div></div>
+        <div class="gl"><b>${r.goles}</b><span>${r.goles === 1 ? "GOL" : "GOLES"}</span></div></div>`).join("")}
+      ${resto.length < 7 ? `<div style="flex:${7 - resto.length}"></div>` : ""}
+    </div></div>`;
+}
+
+/* ---------- Resultados de la última fecha: resumen + marcadores ---------- */
+function horaCorta(h) {
+  const m = String(h || "").match(/^(\d{1,2}):(\d{2})/);
+  if (!m) return h || "";
+  const n = +m[1];
+  return (n % 12 === 0 ? 12 : n % 12) + ":" + m[2] + (n < 12 ? " AM" : " PM");
+}
+function resultadosHTML(page) {
+  const b = page.bloque, ps = b.partidos || [];
+  const jug = ps.filter((p) => p.estado !== "prog" && p.gl != null);
+  const goles = jug.reduce((a, p) => a + p.gl + p.gv, 0);
+  const loc = jug.filter((p) => p.gl > p.gv).length, emp = jug.filter((p) => p.gl === p.gv).length, vis = jug.length - loc - emp;
+  const pct = (n) => jug.length ? Math.round(n * 100 / jug.length) : 0;
+  // la goleada: mayor diferencia (y si empatan, más goles); solo si alguien ganó
+  const gol = jug.filter((p) => p.gl !== p.gv).sort((x, y) => Math.abs(y.gl - y.gv) - Math.abs(x.gl - x.gv) || (y.gl + y.gv) - (x.gl + x.gv))[0];
+  const gana = gol ? (gol.gl > gol.gv ? [gol.local, gol.logoL] : [gol.visitante, gol.logoV]) : null;
+  const n = ps.length, cols = n <= 4 ? 1 : 2;
+  const card = (p, i) => {
+    const fin = p.estado !== "prog" && p.gl != null;
+    const centro = fin
+      ? `<b>${p.gl} - ${p.gv}</b><div class="${p.estado === "vivo" ? "vivo" : ""}">${p.estado === "vivo" ? "● En vivo" : esc(p.dia)}</div>`
+      : `<span class="vs">VS</span><div>${esc(p.dia)} · ${esc(horaCorta(p.hora))}</div>`;
+    const cl = (a, c) => fin && p.estado === "fin" && a < c ? "pierde" : "";
+    return `<div class="res ${p === gol ? "goleada" : ""}" style="animation-delay:${(i * .04).toFixed(2)}s">
+      <div class="nm l ${cl(p.gl, p.gv)}">${esc(nombre(p.local))}</div>${crestHTML(nombre(p.local), p.logoL)}
+      <div class="mc">${centro}</div>
+      ${crestHTML(nombre(p.visitante), p.logoV)}<div class="nm ${cl(p.gv, p.gl)}">${esc(nombre(p.visitante))}</div></div>`;
+  };
+  return `<div class="resu"><div class="resumen">
+      <div class="rbox"><div class="lbl">Goles de la fecha</div><div class="big">${goles}<small>${jug.length ? (goles / jug.length).toFixed(1) : "0"} por partido</small></div></div>
+      <div class="rbox"><div class="lbl">La goleada</div>${gana ? `<div class="gol">${crestHTML(nombre(gana[0]), gana[1])}${esc(nombre(gana[0]))} ${Math.max(gol.gl, gol.gv)}-${Math.min(gol.gl, gol.gv)}</div>` : `<div class="gol">Todos empatados</div>`}</div>
+      <div class="rbox"><div class="lbl">Ganó local · empate · visitante</div>
+        <div class="bar"><b style="width:${pct(loc)}%;background:#16a34a"></b><b style="width:${pct(emp)}%;background:#94a3b8"></b><b style="width:${pct(vis)}%;background:#3b82f6"></b></div>
+        <div class="leg"><span>🏠 ${pct(loc)}%</span><span>🤝 ${pct(emp)}%</span><span>✈️ ${pct(vis)}%</span></div></div>
+      <div class="rbox"><div class="lbl">Partidos jugados</div><div class="big">${jug.length}<small>de ${n} · Fecha ${esc(b.fecha)}</small></div></div>
+    </div>
+    <div class="partidos ${n <= 4 ? "grande" : ""}" style="grid-template-columns:repeat(${cols}, minmax(0,1fr))">${ps.map(card).join("")}</div></div>`;
+}
 function bodyHTML(page) {
   const b = page.bloque;
   if (b.tipo === "descenso") return descensoHTML(page);
   if (b.tipo === "cruce") return cruceHTML(page);
+  if (b.tipo === "goleadores") return goleadoresHTML(page);
+  if (b.tipo === "resultados") return resultadosHTML(page);
   const n = clasificanEn(page.comp, b);
   const grupos = b.grupos || [];
   // Fase de grupos: todos los grupos en la misma página
@@ -675,6 +851,7 @@ function render(instant) {
     el.innerHTML = html;
     el.style.setProperty("--comp-color", page.comp.color);
     el.style.setProperty("--on-comp", onColor(page.comp.color));
+    el.style.setProperty("--comp-logo", page.comp.logo ? `url("${page.comp.logo}")` : "none");
     requestAnimationFrame(() => requestAnimationFrame(() => el.classList.remove("out")));
     restartProgress();
   };
