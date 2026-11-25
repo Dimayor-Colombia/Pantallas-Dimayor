@@ -171,18 +171,7 @@
   .badge.live{ background:var(--live-soft); color:var(--live); }
   .badge.live .dot{ width:8px; height:8px; border-radius:50%; background:var(--live); animation:blink 1s infinite; }
   .badge.done{ background:var(--done-soft); color:var(--done); }
-  /* Franja del día en que se juega (mañana, mediodía, tarde, noche) */
   .topRight{ flex:0 0 auto; display:flex; align-items:center; gap:6px; }
-  .franja{ flex:0 0 auto; display:inline-flex; align-items:center; gap:5px; padding:3px 9px 3px 6px; border-radius:20px;
-    font-size:11px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; white-space:nowrap; line-height:1;
-    box-shadow:0 0 0 1px rgba(15,23,42,.08); }
-  .franja svg{ width:16px; height:16px; flex:0 0 auto; }
-  .franja.solo{ padding:3px; }
-  .franja.manana{ background:#fff1d6; color:#b45309; }
-  .franja.mediodia{ background:#fef9c3; color:#a16207; }
-  .franja.tarde{ background:#ffe4d0; color:#c2410c; }
-  .franja.madrugada{ background:#2e1065; color:#ede9fe; box-shadow:0 0 0 1px rgba(255,255,255,.15); }
-  .franja.noche{ background:#1e1b4b; color:#e0e7ff; box-shadow:0 0 0 1px rgba(255,255,255,.15); }
 
   .title{
     font-size:20px; font-weight:800; line-height:1.18; letter-spacing:-.005em;
@@ -1265,12 +1254,11 @@ function cardHTML(ev) {
   return `<div class="match ${versus ? "versus" : ""} ${cc.cls} ${state === "en_vivo" ? "vivo" : ""} ${state === "finalizado" ? "finalizado" : ""}" style="${cc.style}">
     <div class="top">
       <div class="comp"><img src="${ev.cal.logo}" alt="" onerror="this.style.display='none'"><span>${esc(ev.cal.label)}</span></div>
-      <div class="topRight">${franjaHTML(ev, !!badge)}${badge}</div>
+      <div class="topRight">${climaHTML(ev, !!badge)}${badge}</div>
     </div>
     ${teamBlock}
     <div class="venueRow">
       <div class="venue">${ev.location ? "📍 " + esc(ev.location.replace(/^\s*estadio\s+/i, "")) : ""}</div>
-      ${climaHTML(ev)}
       ${right}
     </div>
     ${progress}
@@ -1429,7 +1417,8 @@ function climaIcono(code, dia) {
   return "nube";
 }
 // clima en la hora del partido (la hora más cercana al inicio)
-function climaHTML(ev) {
+// arriba a la derecha de cada partido · con "En vivo" o "Final" al lado sale solo el ícono y la temperatura para que quepa
+function climaHTML(ev, compacto) {
   if (!CONFIG.CLIMA || ev.allDay) return "";
   const p = climaLugar(ev.location);
   if (!p) return "";
@@ -1442,35 +1431,10 @@ function climaHTML(ev) {
   const lluvia = h.precipitation_probability[i];
   const tipo = climaIcono(h.weather_code[i], h.is_day[i] === 1);
   // la probabilidad de lluvia (☂) solo sale cuando vale la pena: desde CLIMA_LLUVIA_MIN %
-  const conLluvia = lluvia != null && lluvia >= CONFIG.CLIMA_LLUVIA_MIN;
-  return `<span class="clima">${CLIMA_ICONOS[tipo]}<span class="est">${CLIMA_NOMBRES[tipo]}</span><b>${Math.round(h.temperature_2m[i])}°C</b>${conLluvia ? `<span class="lluvia">${CLIMA_ICONOS.paraguas}${lluvia}%</span>` : ""}</span>`;
+  const conLluvia = !compacto && lluvia != null && lluvia >= CONFIG.CLIMA_LLUVIA_MIN;
+  return `<span class="clima">${CLIMA_ICONOS[tipo]}${compacto ? "" : `<span class="est">${CLIMA_NOMBRES[tipo]}</span>`}<b>${Math.round(h.temperature_2m[i])}°C</b>${conLluvia ? `<span class="lluvia">${CLIMA_ICONOS.paraguas}${lluvia}%</span>` : ""}</span>`;
 }
 
-/* ---------- Franja del día del partido (hora de Colombia) ----------
-   Madrugada 0:00–4:59 · Mañana 5:00–11:29 · Mediodía 11:30–13:59 · Tarde 14:00–17:59 · Noche 18:00–23:59 */
-const FRANJAS = {
-  madrugada: { txt: "Madrugada", svg: '<svg viewBox="0 0 24 24"><path d="M16.5 12.8A6 6 0 0 1 9.2 5.5a6 6 0 1 0 7.3 7.3z" fill="#c4b5fd"/><path d="M2.5 18.5h19" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/><path d="M18 3.5l.5 1.2 1.2.5-1.2.5-.5 1.2-.5-1.2-1.2-.5 1.2-.5zM20.5 9l.35.8.8.35-.8.35-.35.8-.35-.8-.8-.35.8-.35zM4.5 21.2h15" stroke="#fff" stroke-width=".01" fill="#fff"/></svg>' },
-  manana: { txt: "Mañana", svg: '<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M6 17a6 6 0 0 1 12 0z" fill="#fbbf24"/><path d="M12 4.5v3M4.6 9.6l2 1.6M19.4 9.6l-2 1.6M2.5 17h19M7 20.5h10" stroke="#d97706" stroke-width="2"/></svg>' },
-  mediodia: { txt: "Mediodía", svg: '<svg viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5" fill="#facc15"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>' },
-  tarde: { txt: "Tarde", svg: '<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><circle cx="9.5" cy="10" r="4" fill="#fb923c"/><path d="M9.5 3v1.6M3 10h1.6M4.9 5.4l1.1 1.1M14.1 5.4l-1.1 1.1" stroke="#ea580c" stroke-width="2"/><path d="M9 20h9a3.4 3.4 0 0 0 .3-6.8 4.6 4.6 0 0 0-8.6 1.4A2.8 2.8 0 0 0 9 20z" fill="#fff" stroke="#ea580c" stroke-width="1.5"/></svg>' },
-  noche: { txt: "Noche", svg: '<svg viewBox="0 0 24 24"><path d="M19.5 14.8A8 8 0 0 1 9.2 4.5a8 8 0 1 0 10.3 10.3z" fill="#fde68a"/><path d="M17 3.5l.6 1.4 1.4.6-1.4.6-.6 1.4-.6-1.4-1.4-.6 1.4-.6zM21 8.5l.4.9.9.4-.9.4-.4.9-.4-.9-.9-.4.9-.4z" fill="#fff"/></svg>' }
-};
-function franjaDe(ev) {
-  if (ev.allDay) return null;
-  const p = new Intl.DateTimeFormat("en-GB", { timeZone: CONFIG.TIMEZONE, hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date(ev.startISO));
-  const m = +p.find((x) => x.type === "hour").value * 60 + +p.find((x) => x.type === "minute").value;
-  if (m < 300) return "madrugada";
-  if (m >= 300 && m < 690) return "manana";
-  if (m >= 690 && m < 840) return "mediodia";
-  if (m >= 840 && m < 1080) return "tarde";
-  return "noche";
-}
-// con "En vivo" o "Final" al lado, la franja sale solo con el ícono para que quepa
-function franjaHTML(ev, conBadge) {
-  const f = franjaDe(ev);
-  if (!f) return "";
-  return `<span class="franja ${f} ${conBadge ? "solo" : ""}" title="${FRANJAS[f].txt}">${FRANJAS[f].svg}${conBadge ? "" : FRANJAS[f].txt}</span>`;
-}
 let lastTableHTML = "";
 function renderTable() {
   const days = buildDays();
