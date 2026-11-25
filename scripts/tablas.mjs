@@ -32,15 +32,18 @@ console.log(new Date().toLocaleString("es-CO", { timeZone: "America/Bogota" }) +
 //   "posiciones"      = la fase en curso: como TABLA o como CRUCE (llaves) según "cruces"
 //   "reclasificacion" = tabla de reclasificación (siempre)
 //   "descenso"        = tabla de descenso / promedios (siempre)
+//   "resultados"      = marcadores de la última fecha de la fase en curso + resumen (solo si la fase es TABLA)
+//   "goleadores"      = top 10 de goleadores de la competencia (toda la temporada)
+// Además, las tablas de posiciones y reclasificación llevan la RACHA de cada equipo (últimos 5 partidos).
 // "cruces": fases que se muestran como CRUCE (llaves armadas con los partidos de esa fase).
 //   Se escribe el número de la fase como aparece en dimayor.com.co ("FASE III", "FASE 1B" -> "III", "1B").
 //   Las demás fases se muestran como TABLA. "todas" = todas las fases como cruce.
 const COMPETENCIAS = [
-  { id: "liga",      tipo: "Liga BetPlay",   tablas: ["posiciones", "reclasificacion", "descenso"], cruces: ["III", "IV", "V"] },
-  { id: "torneo",    tipo: "Torneo BetPlay", tablas: ["posiciones", "reclasificacion"],             cruces: ["III", "IV", "V"] },
-  { id: "femenina",  tipo: "Liga Femenina",  tablas: ["posiciones"],                                cruces: ["III", "IV"] },
-  { id: "copa",      tipo: "Copa BetPlay",   tablas: ["posiciones"],                                cruces: ["1B", "II", "III", "IV", "V"] },
-  { id: "superliga", tipo: "Superliga",      tablas: ["posiciones"],                                cruces: "todas" }
+  { id: "liga",      tipo: "Liga BetPlay",   tablas: ["posiciones", "resultados", "reclasificacion", "descenso", "goleadores"], cruces: ["III", "IV", "V"] },
+  { id: "torneo",    tipo: "Torneo BetPlay", tablas: ["posiciones", "resultados", "reclasificacion", "goleadores"],             cruces: ["III", "IV", "V"] },
+  { id: "femenina",  tipo: "Liga Femenina",  tablas: ["posiciones", "resultados", "goleadores"],                                cruces: ["III", "IV"] },
+  { id: "copa",      tipo: "Copa BetPlay",   tablas: ["posiciones", "resultados", "goleadores"],                                cruces: ["1B", "II", "III", "IV", "V"] },
+  { id: "superliga", tipo: "Superliga",      tablas: ["posiciones", "goleadores"],                                              cruces: "todas" }
 ];
 // "actual" = solo la fase EN CURSO (la misma que dimayor.com.co muestra por defecto), aunque tenga 2 equipos
 //            (una final). Si esa fase todavía no tiene ningún partido jugado (todo en 0), se muestra la anterior.
@@ -49,6 +52,8 @@ const FASES = "actual";
 // Un cruce que todavía no se ha jugado pero ya tiene los equipos definidos (ej. la final ya sorteada):
 //   true = se muestra con las fechas de los partidos · false = se muestra la fase anterior hasta que se juegue
 const CRUCE_SIN_JUGAR = true;
+const RACHA = 5;          // partidos de la racha (últimos N)
+const TOP_GOLEADORES = 10;
 const MIN_EQUIPOS = 4;   // mínimo de equipos con partidos para la reclasificación, el descenso y el modo "todas"
 // ==========================================================
 
@@ -215,6 +220,62 @@ function armarLlaves(partidos) {
 }
 // partidos>>
 
+// <<goleadores
+// Nombre del jugador: dimayor lo publica "APELLIDO NOMBRE" en mayúsculas -> "Nombre Apellido"
+function nombreJugador(s) {
+  const minus = ["DE", "DEL", "LA", "LAS", "LOS", "Y"];
+  const t = limpio(s).split(" ").filter(Boolean);
+  const orden = t.length > 1 ? [t[t.length - 1], ...t.slice(0, -1)] : t;
+  return orden.map((w, i) => i && minus.includes(w.toUpperCase()) ? w.toLowerCase() : w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(" ");
+}
+// Equipo del goleador ("ATL. NACIONAL", "IND SANTA FE", "BOCA JRS.") -> nombre completo y escudo de los partidos
+const ABREV = { ATL: "ATLETICO", IND: "INDEPENDIENTE", JRS: "JUNIORS", JR: "JUNIOR", DEP: "DEP", DVO: "DEPORTIVO", INTER: "INTERNACIONAL", R: "REAL" };
+const RELLENO = new Set(["FC", "F", "C", "CF", "SA", "DAF", "CLUB", "DE", "S"]);
+const fichas = (s) => sinTildes(s).replace(/[^A-Z0-9 ]+/g, " ").split(" ").filter((w) => w && !RELLENO.has(w)).map((w) => ABREV[w] || w);
+function buscarEquipo(nombre, equipos) {
+  const q = fichas(nombre);
+  let mejor = null, sobra = 99;
+  for (const e of equipos) {
+    const c = fichas(e.nombre);
+    if (!q.every((w) => c.some((x) => x.startsWith(w)))) continue;
+    const extra = c.length - q.length;
+    if (extra < sobra) { mejor = e; sobra = extra; }
+  }
+  return mejor;
+}
+function leerGoleadores(html, equipos) {
+  const filas = [];
+  for (const m of html.matchAll(/<tr class="[^"]*dimayor-player-clickable[^"]*"[\s\S]*?<\/tr>/g)) {
+    const tr = m[0];
+    const equiposTd = [...tr.matchAll(/<td class="col-team">([\s\S]*?)<\/td>/g)].map((x) => x[1]);
+    const jugador = limpio((tr.match(/team-name-small">([\s\S]*?)</) || [])[1]);
+    const club = limpio(equiposTd[1] || "");
+    const goles = num((tr.match(/col-pts">([\s\S]*?)<\/td>/) || [])[1]);
+    if (!jugador || !goles) continue;
+    const e = buscarEquipo(club, equipos);
+    filas.push({ jugador: nombreJugador(jugador), equipo: e ? e.nombre : club.toLowerCase().replace(/(^|\s)\S/g, (x) => x.toUpperCase()),
+                 logo: e ? e.logo : "", foto: logoDe(equiposTd[0] || ""), goles });
+  }
+  filas.sort((a, b) => b.goles - a.goles);
+  // puesto compartido cuando empatan en goles (1, 2, 2, 4...)
+  filas.forEach((f, i) => { f.pos = i && f.goles === filas[i - 1].goles ? filas[i - 1].pos : i + 1; });
+  const top = filas.slice(0, TOP_GOLEADORES);
+  // jugadores que quedaron por fuera del top con los mismos goles que el último (ej. "y 12 más con 3 goles")
+  const ult = top[top.length - 1];
+  return { filas: top, mas: ult ? filas.slice(TOP_GOLEADORES).filter((f) => f.goles === ult.goles).length : 0 };
+}
+// Racha: últimos N partidos terminados de cada equipo ("g" ganó, "e" empató, "p" perdió), del más viejo al más reciente
+function rachas(partidos) {
+  const r = new Map();
+  partidos.filter((p) => p.estado === "fin" && p.gl != null).sort((a, b) => a.fecha.localeCompare(b.fecha)).forEach((p) => {
+    const add = (eq, a, b) => { const k = sinTildes(eq); if (!r.has(k)) r.set(k, []); r.get(k).push(a > b ? "g" : a < b ? "p" : "e"); };
+    add(p.local, p.gl, p.gv); add(p.visitante, p.gv, p.gl);
+  });
+  for (const [k, v] of r) r.set(k, v.slice(-RACHA));
+  return r;
+}
+// goleadores>>
+
 // 1) Página de inicio: clave de seguridad (nonce) y temporada actual
 const inicio = await pedir(BASE + "/");
 const nonce = (inicio.match(/nonce\s*=\s*"([^"]+)"/) || [])[1];
@@ -240,6 +301,14 @@ for (const T of COMPETENCIAS) {
 
     const contenido = (type, fase, md) => ajax({ action: "get_dynamic_content_v5", nonce, type, competition_id, competition_type: T.tipo,
                                                  phase_id: fase, matchday: md ?? "", is_live: "0", live_provider: "comet" });
+    // partidos de cada fase (se piden una sola vez): sirven para los cruces, la racha, los resultados y los escudos de los goleadores
+    const cachePartidos = new Map();
+    const partidosDe = async (faseId, md = "0") => {
+      const k = faseId + "|" + md;
+      if (!cachePartidos.has(k)) cachePartidos.set(k, leerPartidos((await contenido("partidos", faseId, md)).data?.html || ""));
+      return cachePartidos.get(k);
+    };
+    let faseTabla = null;   // fase que se mostró como TABLA (para los resultados de la última fecha)
     const bloques = [];
     for (const tab of T.tablas) {
       if (tab === "posiciones") {
@@ -253,7 +322,7 @@ for (const T of COMPETENCIAS) {
           let bloque, valido, total, n;
           if (esCruce(T, f)) {
             // CRUCE: llaves armadas con los partidos de la fase (jornada 0 = todos los partidos)
-            const llaves = armarLlaves(leerPartidos((await contenido("partidos", f.id, "0")).data?.html || ""));
+            const llaves = armarLlaves(await partidosDe(f.id));
             n = llaves.reduce((a, l) => a + l.partidos.filter((p) => p.estado !== "prog").length, 0);
             const definidas = llaves.filter((l) => l.a !== "Por definir" && l.b !== "Por definir").length;
             total = llaves.length;
@@ -270,7 +339,7 @@ for (const T of COMPETENCIAS) {
             console.log(`  ${T.id} · tabla · ${f.name}: ${grupos.length} grupo(s), ${total} equipos, ${n} con partidos`);
           }
           if (FASES === "actual") {
-            if (valido) { bloques.push(bloque); respaldo = null; break; }
+            if (valido) { bloques.push(bloque); respaldo = null; if (bloque.tipo === "posiciones") faseTabla = { f, md: esActual ? matchday : f.matchdays }; break; }
             if (!respaldo && total > 0) respaldo = bloque;
             console.log(`    sin partidos jugados: se busca la fase anterior`);
           } else if (esActual ? total > 0 : (bloque.tipo === "cruce" ? n > 0 : n >= MIN_EQUIPOS)) {
@@ -279,6 +348,29 @@ for (const T of COMPETENCIAS) {
         }
         // si ninguna fase tiene partidos (ej. inicio de temporada), se muestra la fase en curso en 0
         if (respaldo) bloques.push(respaldo);
+      } else if (tab === "resultados") {
+        // marcadores de la última fecha de la fase que salió como TABLA (si la fase en curso es un cruce, el cruce ya los muestra)
+        if (!faseTabla) continue;
+        let md = parseInt(faseTabla.md, 10) || 0, ps = [];
+        while (md > 0) {
+          ps = await partidosDe(faseTabla.f.id, String(md));
+          if (ps.some((p) => p.estado !== "prog")) break;   // la fecha en curso todavía no empieza: se muestra la anterior
+          md--;
+        }
+        const n = ps.filter((p) => p.estado !== "prog").length;
+        console.log(`  ${T.id} · resultados · fecha ${md}: ${ps.length} partido(s), ${n} jugado(s)`);
+        if (md > 0 && n) bloques.push({ tipo: "resultados", fase: faseTabla.f.name, fecha: md,
+          partidos: ps.map(({ local, visitante, logoL, logoV, dia, hora, fecha, estado, texto, gl, gv }) => ({ local, visitante, logoL, logoV, dia, hora, fecha, estado, texto, gl, gv })) });
+      } else if (tab === "goleadores") {
+        // escudos: se buscan en los partidos de todas las fases de la competencia
+        const equipos = new Map();
+        for (const f of fases) for (const p of await partidosDe(f.id)) {
+          if (p.local !== "Por definir") equipos.set(p.local, { nombre: p.local, logo: p.logoL });
+          if (p.visitante !== "Por definir") equipos.set(p.visitante, { nombre: p.visitante, logo: p.logoV });
+        }
+        const { filas, mas } = leerGoleadores((await contenido("goleadores", phase_id, matchday)).data?.html || "", [...equipos.values()]);
+        console.log(`  ${T.id} · goleadores: ${filas.length}` + (filas[0] ? ` (líder ${filas[0].jugador}, ${filas[0].goles})` : ""));
+        if (filas.length) bloques.push({ tipo: "goleadores", filas, mas });
       } else if (tab === "reclasificacion") {
         const grupos = leerGrupos((await contenido("reclasificacion", phase_id, matchday)).data?.html || "")
           .map((g) => ({ ...g, filas: g.filas.filter((f) => f.pj > 0) }));
@@ -292,6 +384,12 @@ for (const T of COMPETENCIAS) {
       }
     }
     if (!bloques.length) { console.log(`${T.id}: sin tablas para mostrar`); continue; }
+    // RACHA en las tablas de posiciones y reclasificación (partidos de todas las fases de la competencia)
+    const todos = [];
+    for (const f of fases) todos.push(...await partidosDe(f.id));
+    const R = rachas(todos);
+    for (const b of bloques) if (b.tipo === "posiciones" || b.tipo === "reclasificacion")
+      for (const g of b.grupos) for (const fila of g.filas) { const r = R.get(sinTildes(fila.equipo)); if (r && r.length) fila.racha = r; }
     // la fecha solo cambia si cambiaron los datos (así no se guarda cada hora sin motivo)
     const igual = prev && JSON.stringify(prev.bloques) === JSON.stringify(bloques) && prev.competicion === nombreComp;
     salida.push({ id: T.id, competicion: nombreComp, fuente: "dimayor.com.co",
