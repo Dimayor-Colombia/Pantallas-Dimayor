@@ -171,6 +171,18 @@
   .badge.live{ background:var(--live-soft); color:var(--live); }
   .badge.live .dot{ width:8px; height:8px; border-radius:50%; background:var(--live); animation:blink 1s infinite; }
   .badge.done{ background:var(--done-soft); color:var(--done); }
+  /* Franja del día en que se juega (mañana, mediodía, tarde, noche) */
+  .topRight{ flex:0 0 auto; display:flex; align-items:center; gap:6px; }
+  .franja{ flex:0 0 auto; display:inline-flex; align-items:center; gap:5px; padding:3px 9px 3px 6px; border-radius:20px;
+    font-size:11px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; white-space:nowrap; line-height:1;
+    box-shadow:0 0 0 1px rgba(15,23,42,.08); }
+  .franja svg{ width:16px; height:16px; flex:0 0 auto; }
+  .franja.solo{ padding:3px; }
+  .franja.manana{ background:#fff1d6; color:#b45309; }
+  .franja.mediodia{ background:#fef9c3; color:#a16207; }
+  .franja.tarde{ background:#ffe4d0; color:#c2410c; }
+  .franja.madrugada{ background:#2e1065; color:#ede9fe; box-shadow:0 0 0 1px rgba(255,255,255,.15); }
+  .franja.noche{ background:#1e1b4b; color:#e0e7ff; box-shadow:0 0 0 1px rgba(255,255,255,.15); }
 
   .title{
     font-size:20px; font-weight:800; line-height:1.18; letter-spacing:-.005em;
@@ -210,6 +222,17 @@
   .match.finalizado .goal.lose{ color:#94a3b8; }
   .venueRow{ display:flex; align-items:center; justify-content:space-between; gap:10px; height:16px; }
   .venueRow .venue{ padding-bottom:0; }
+  /* Clima a la hora del partido */
+  .clima{ display:inline-flex; align-items:center; gap:4px; flex:0 0 auto; white-space:nowrap;
+    padding:2px 8px 2px 4px; border-radius:20px; background:rgba(255,255,255,.85); box-shadow:0 0 0 1px rgba(15,23,42,.12);
+    font-size:12px; font-weight:800; color:#0f172a; line-height:1; }
+  .clima svg{ width:18px; height:18px; flex:0 0 auto; }
+  .clima .est{ font-weight:700; }
+  .clima b{ font-weight:800; }
+  .clima .lluvia{ display:inline-flex; align-items:center; gap:2px; margin-left:2px; padding-left:6px; border-left:1px solid rgba(15,23,42,.18); color:#1d4ed8; }
+  .clima .lluvia svg{ width:15px; height:15px; }
+  .match .clima, .match.on-dark .clima, .match.on-light .clima{ color:#0f172a; }
+  .match.versus .venueRow{ gap:14px; }
   .side .kickoff{ font-size:22px; display:flex; align-items:baseline; gap:4px; }
   .side .kickoff small{ font-family:'DM Sans', sans-serif; font-size:12px; font-weight:800; letter-spacing:.04em; }
   .round{ font-size:12px; font-weight:700; color:var(--muted); white-space:nowrap; max-width:45%; overflow:hidden; text-overflow:ellipsis; flex:0 0 auto; }
@@ -375,6 +398,9 @@ const CONFIG = {
   REFRESH_EVENTS_MS: 3 * 60 * 1e3,
   TICK_MS: 20 * 1e3,
   MATCH_DURATION_MIN: 130,
+  CLIMA: true,                     // clima a la hora del partido en el estadio (Open-Meteo, gratis y sin clave) · false = ocultar
+  CLIMA_REFRESH_MS: 60 * 60 * 1e3, // el pronóstico se actualiza cada hora
+  CLIMA_LLUVIA_MIN: 30,            // la probabilidad de lluvia (☂ %) solo se muestra desde este porcentaje
   RELOAD_AT_MIDNIGHT: true,
   TABLE_SECONDS: 60,               // tiempo de la tabla antes de pasar a las imágenes de Drive (si hay)
 
@@ -1239,15 +1265,211 @@ function cardHTML(ev) {
   return `<div class="match ${versus ? "versus" : ""} ${cc.cls} ${state === "en_vivo" ? "vivo" : ""} ${state === "finalizado" ? "finalizado" : ""}" style="${cc.style}">
     <div class="top">
       <div class="comp"><img src="${ev.cal.logo}" alt="" onerror="this.style.display='none'"><span>${esc(ev.cal.label)}</span></div>
-      ${badge}
+      <div class="topRight">${franjaHTML(ev, !!badge)}${badge}</div>
     </div>
     ${teamBlock}
     <div class="venueRow">
-      <div class="venue">${ev.location ? "📍 " + esc(ev.location) : ""}</div>
+      <div class="venue">${ev.location ? "📍 " + esc(ev.location.replace(/^\s*estadio\s+/i, "")) : ""}</div>
+      ${climaHTML(ev)}
       ${right}
     </div>
     ${progress}
   </div>`;
+}
+
+/* =====================================================================
+   CLIMA a la hora de cada partido (hoy = pronóstico por horas · próximos días = pronóstico)
+   Fuente: Open-Meteo (https://open-meteo.com) — gratis, sin registro y sin clave.
+   El lugar sale del estadio del partido (📍). Estadios de Colombia: tabla de abajo.
+   Para estadios que no estén en la tabla se busca la ciudad escrita después de una coma
+   (ej. "Estadio Monumental, Buenos Aires"). Si no se encuentra el lugar, el partido sale sin clima.
+   ===================================================================== */
+const ESTADIOS_COORD = [
+  // [parte del nombre del estadio, latitud, longitud]   (ciudad)
+  ["NEMESIO CAMACHO", 4.6459, -74.0775],      // Bogotá
+  ["EL CAMPIN", 4.6459, -74.0775],            // Bogotá
+  ["METROPOLITANO DE TECHO", 4.6276, -74.1465], // Bogotá
+  ["TECHO", 4.6276, -74.1465],                // Bogotá
+  ["OLAYA HERRERA", 4.5850, -74.1110],        // Bogotá
+  ["MUNICIPAL DE MOSQUERA", 4.7060, -74.2320], // Mosquera
+  ["EL ZIPA", 5.0230, -74.0050],              // Zipaquirá
+  ["LA INDEPENDENCIA", 5.5370, -73.3580],     // Tunja
+  ["ATANASIO GIRARDOT", 6.2567, -75.5903],    // Medellín
+  ["CINCUENTENARIO", 6.2560, -75.5880],       // Medellín
+  ["CANCHA MARTE", 6.2580, -75.5890],         // Medellín
+  ["METROPOLITANO ITAGUI", 6.1700, -75.6110], // Itagüí
+  ["DITAIRES", 6.1700, -75.6110],             // Itagüí
+  ["POLIDEPORTIVO SUR", 6.1660, -75.5840],    // Envigado
+  ["PASCUAL GUERRERO", 3.4300, -76.5410],     // Cali
+  ["DEPORTIVO CALI", 3.5350, -76.3160],       // Palmira
+  ["FRANCISCO RIVERA ESCOBAR", 3.5280, -76.3010], // Palmira
+  ["RAUL MIRANDA", 3.5850, -76.4950],         // Yumbo
+  ["ROBERTO MELENDEZ", 10.9270, -74.8000],    // Barranquilla
+  ["ROMELIO MARTINEZ", 11.0030, -74.8100],    // Barranquilla
+  ["JAIME MORON", 10.3920, -75.4880],         // Cartagena
+  ["SIERRA NEVADA", 11.2060, -74.1880],       // Santa Marta
+  ["ARMANDO MAESTRE", 10.4630, -73.2530],     // Valledupar
+  ["JARAGUAY", 8.7570, -75.8850],             // Montería
+  ["AMERICO MONTANINI", 7.1190, -73.1260],    // Bucaramanga
+  ["ALFONSO LOPEZ", 7.1370, -73.1190],        // Bucaramanga
+  ["ALVARO GOMEZ HURTADO", 7.0640, -73.0860], // Floridablanca
+  ["VILLA CONCHA", 6.9870, -73.0500],         // Piedecuesta
+  ["DANIEL VILLA ZAPATA", 7.0650, -73.8550],  // Barrancabermeja
+  ["GENERAL SANTANDER", 7.8940, -72.5060],    // Cúcuta
+  ["BELLO HORIZONTE", 4.1330, -73.6370],      // Villavicencio
+  ["LA ESPERANZA", 4.1400, -73.6300],         // Villavicencio
+  ["SANTIAGO DE LAS ATALAYAS", 5.3370, -72.3950], // Yopal
+  ["MANUEL MURILLO TORO", 4.4300, -75.2120],  // Ibagué
+  ["CENTENARIO DE ARMENIA", 4.5340, -75.6800], // Armenia
+  ["HERNAN RAMIREZ VILLEGAS", 4.8060, -75.7360], // Pereira
+  ["PALOGRANDE", 5.0570, -75.4890],           // Manizales
+  ["DEPARTAMENTAL LIBERTAD", 1.1980, -77.2780], // Pasto
+  ["MUNICIPAL DE IPIALES", 0.8300, -77.6400], // Ipiales
+  ["MUNICIPAL IPIALES", 0.8300, -77.6400],    // Ipiales
+  ["GUILLERMO PLAZAS ALCID", 2.9360, -75.2810], // Neiva
+  ["CENTENARIO ARMENIA", 4.5340, -75.6800],   // Armenia
+  // estadios de otros países que aparecen sin ciudad en el calendario
+  ["GIO STADIUM", -35.2500, 149.1030]         // Canberra (Australia)
+];
+// Si el estadio no está en la lista, se busca el nombre de la ciudad dentro del texto (ej. "Estadio Centenario – Armenia")
+const CIUDADES_COORD = [
+  ["BOGOTA", 4.65, -74.08], ["MEDELLIN", 6.25, -75.58], ["CALI", 3.44, -76.52], ["BARRANQUILLA", 10.97, -74.80],
+  ["CARTAGENA", 10.39, -75.49], ["SANTA MARTA", 11.24, -74.20], ["VALLEDUPAR", 10.46, -73.25], ["MONTERIA", 8.75, -75.88],
+  ["SINCELEJO", 9.30, -75.40], ["RIOHACHA", 11.54, -72.91], ["BUCARAMANGA", 7.12, -73.12], ["FLORIDABLANCA", 7.06, -73.09],
+  ["PIEDECUESTA", 6.99, -73.05], ["BARRANCABERMEJA", 7.07, -73.85], ["CUCUTA", 7.89, -72.50], ["VILLAVICENCIO", 4.14, -73.63],
+  ["YOPAL", 5.34, -72.39], ["IBAGUE", 4.44, -75.23], ["ARMENIA", 4.53, -75.68], ["PEREIRA", 4.81, -75.69],
+  ["MANIZALES", 5.07, -75.52], ["PASTO", 1.21, -77.28], ["IPIALES", 0.83, -77.64], ["NEIVA", 2.93, -75.28],
+  ["TUNJA", 5.54, -73.36], ["PALMIRA", 3.53, -76.30], ["YUMBO", 3.58, -76.49], ["ITAGUI", 6.17, -75.61],
+  ["ENVIGADO", 6.17, -75.58], ["RIONEGRO", 6.15, -75.37], ["ZIPAQUIRA", 5.02, -74.00], ["MOSQUERA", 4.71, -74.23],
+  ["SOACHA", 4.58, -74.22], ["POPAYAN", 2.44, -76.61], ["FLORENCIA", 1.61, -75.61], ["QUIBDO", 5.69, -76.66]
+];
+const CLIMA = { lugares: {}, datos: {}, buscando: {} };
+const climaNorm = (s) => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toUpperCase().replace(/[^A-Z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
+const ESTADIOS_NORM = ESTADIOS_COORD.map(([n, la, lo]) => [climaNorm(n), la, lo]).sort((a, b) => b[0].length - a[0].length);
+// lugar del partido -> {la, lo} (null = desconocido, undefined = buscando)
+function climaLugar(location) {
+  if (!location) return null;
+  if (location in CLIMA.lugares) return CLIMA.lugares[location];
+  const n = climaNorm(location);
+  const e = ESTADIOS_NORM.find(([k]) => n.includes(k));
+  if (e) return (CLIMA.lugares[location] = { la: e[1], lo: e[2] });
+  const c = CIUDADES_COORD.find(([k]) => new RegExp("\\b" + k + "\\b").test(n));
+  if (c) return (CLIMA.lugares[location] = { la: c[1], lo: c[2] });
+  return undefined;
+}
+// estadios que no están en la tabla: se busca la ciudad escrita después de la coma (Open-Meteo geocoding)
+async function climaBuscarLugar(location) {
+  if (CLIMA.buscando[location] || location in CLIMA.lugares) return;
+  CLIMA.buscando[location] = true;
+  // se prueban las partes después del nombre del estadio: "Cancha 8, Aspire Zone (Doha / Al Rayyan, Catar)" -> Aspire Zone, Doha, Al Rayyan, Catar
+  const partes = location.split(/[,–—\-\/()|]+/).slice(1).map((x) => x.trim()).filter((x) => x.length > 2);
+  let lugar = null;
+  for (const nombre of partes) {
+    try {
+      const r = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(nombre)}&count=1&language=es`);
+      const j = await r.json();
+      if (j.results && j.results.length) { lugar = { la: j.results[0].latitude, lo: j.results[0].longitude }; break; }
+    } catch (e) {}
+  }
+  CLIMA.lugares[location] = lugar;
+}
+// pronóstico por horas de todos los estadios en UNA sola consulta
+async function fetchClima() {
+  if (!CONFIG.CLIMA || CLIMA.corriendo) return;
+  CLIMA.corriendo = true;
+  try { await fetchClimaAhora(); } finally { CLIMA.corriendo = false; }
+}
+async function fetchClimaAhora() {
+  const pendientes = [...new Set(EVENTS.map((e) => e.location).filter((l) => l && climaLugar(l) === undefined))];
+  await Promise.all(pendientes.map(climaBuscarLugar));
+  const claves = [...new Set(EVENTS.map((e) => climaLugar(e.location)).filter(Boolean).map((p) => p.la.toFixed(2) + "," + p.lo.toFixed(2)))];
+  if (!claves.length) return;
+  CLIMA.listo = true;
+  // una consulta por estadio: si una falla, las demás igual se muestran; las que fallen se reintentan en 2 minutos
+  let fallas = 0;
+  await Promise.all(claves.map(async (k) => {
+    const [la, lo] = k.split(",");
+    try {
+      const r = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${la}&longitude=${lo}&hourly=temperature_2m,precipitation_probability,weather_code,is_day&timezone=GMT&past_days=1&forecast_days=7`);
+      if (!r.ok) throw new Error("HTTP " + r.status + " " + (await r.text()).slice(0, 120));
+      const d = await r.json();
+      if (d && d.hourly) CLIMA.datos[k] = d.hourly;
+    } catch (e) { fallas++; console.warn("Clima " + k + ":", e.message); }
+  }));
+  console.log(`Clima: ${claves.length - fallas} de ${claves.length} estadio(s) con pronóstico`);
+  renderTable();
+  if (fallas) setTimeout(fetchClima, 2 * 60 * 1e3);
+}
+// íconos (dibujados, no dependen de los emojis del equipo)
+const CLIMA_ICONOS = {
+  sol: '<svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2" fill="#fbbf24"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>',
+  luna: '<svg viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="#fde68a" stroke="#ca8a04" stroke-width="1.4"/></svg>',
+  solNube: '<svg viewBox="0 0 24 24"><circle cx="8.5" cy="8.5" r="3.6" fill="#fbbf24"/><path d="M8.5 2.6v1.4M2.6 8.5h1.4M4.3 4.3l1 1M12.7 4.3l-1 1" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><path d="M8 19.5h9.5a3.8 3.8 0 0 0 .3-7.6 5 5 0 0 0-9.4 1.3A3.2 3.2 0 0 0 8 19.5z" fill="#e2e8f0" stroke="#64748b" stroke-width="1.4"/></svg>',
+  lunaNube: '<svg viewBox="0 0 24 24"><path d="M13 6.5A5 5 0 0 1 6.5 13 5 5 0 1 0 13 6.5z" fill="#fde68a" stroke="#ca8a04" stroke-width="1.2"/><path d="M8 19.5h9.5a3.8 3.8 0 0 0 .3-7.6 5 5 0 0 0-9.4 1.3A3.2 3.2 0 0 0 8 19.5z" fill="#e2e8f0" stroke="#64748b" stroke-width="1.4"/></svg>',
+  nube: '<svg viewBox="0 0 24 24"><path d="M6.5 19h11a4.3 4.3 0 0 0 .4-8.6A6 6 0 0 0 6.6 12 3.5 3.5 0 0 0 6.5 19z" fill="#cbd5e1" stroke="#64748b" stroke-width="1.4"/></svg>',
+  niebla: '<svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M3 12h18M5 16h14M8 20h8"/></svg>',
+  llovizna: '<svg viewBox="0 0 24 24"><path d="M6.5 14h11a4 4 0 0 0 .4-8A5.6 5.6 0 0 0 7 7.5 3.3 3.3 0 0 0 6.5 14z" fill="#cbd5e1" stroke="#64748b" stroke-width="1.4"/><path d="M9 17l-.8 2M13 17l-.8 2M17 17l-.8 2" stroke="#3b82f6" stroke-width="1.8" stroke-linecap="round"/></svg>',
+  lluvia: '<svg viewBox="0 0 24 24"><path d="M6.5 13h11a4 4 0 0 0 .4-8A5.6 5.6 0 0 0 7 6.5 3.3 3.3 0 0 0 6.5 13z" fill="#94a3b8" stroke="#64748b" stroke-width="1.2"/><path d="M8 15.5l-1.4 4M12 15.5l-1.4 4M16 15.5l-1.4 4" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/></svg>',
+  tormenta: '<svg viewBox="0 0 24 24"><path d="M6.5 12.5h11a4 4 0 0 0 .4-8A5.6 5.6 0 0 0 7 6 3.3 3.3 0 0 0 6.5 12.5z" fill="#64748b" stroke="#475569" stroke-width="1.2"/><path d="M12.5 13l-3 4.5h3l-2 4.5 5-6h-3l2-3z" fill="#facc15"/></svg>',
+  nieve: '<svg viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9"/></svg>',
+  paraguas: '<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M3 12a9 9 0 0 1 18 0z" fill="#3b82f6"/><path d="M12 3v1M12 12v6.5a2 2 0 0 1-4 0" stroke="#1d4ed8" stroke-width="2"/></svg>',
+  gota: '<svg viewBox="0 0 24 24"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z" fill="#3b82f6"/></svg>'
+};
+const CLIMA_NOMBRES = { sol: "Soleado", luna: "Despejado", solNube: "Parcial", lunaNube: "Parcial", nube: "Nublado", niebla: "Niebla",
+  llovizna: "Llovizna", lluvia: "Lluvia", tormenta: "Tormenta", nieve: "Nieve" };
+function climaIcono(code, dia) {
+  if (code === 0) return dia ? "sol" : "luna";
+  if (code === 1 || code === 2) return dia ? "solNube" : "lunaNube";
+  if (code === 3) return "nube";
+  if (code === 45 || code === 48) return "niebla";
+  if (code >= 51 && code <= 57) return "llovizna";
+  if ((code >= 61 && code <= 67) || (code >= 80 && code <= 82)) return "lluvia";
+  if (code >= 71 && code <= 77 || code === 85 || code === 86) return "nieve";
+  if (code >= 95) return "tormenta";
+  return "nube";
+}
+// clima en la hora del partido (la hora más cercana al inicio)
+function climaHTML(ev) {
+  if (!CONFIG.CLIMA || ev.allDay) return "";
+  const p = climaLugar(ev.location);
+  if (!p) return "";
+  const h = CLIMA.datos[p.la.toFixed(2) + "," + p.lo.toFixed(2)];
+  if (!h) return "";
+  const t = new Date(new Date(ev.startISO).getTime() + 30 * 60 * 1e3);   // hora del medio del primer tiempo
+  const clave = t.toISOString().slice(0, 13) + ":00";
+  const i = h.time.indexOf(clave);
+  if (i < 0 || h.temperature_2m[i] == null) return "";
+  const lluvia = h.precipitation_probability[i];
+  const tipo = climaIcono(h.weather_code[i], h.is_day[i] === 1);
+  // la probabilidad de lluvia (☂) solo sale cuando vale la pena: desde CLIMA_LLUVIA_MIN %
+  const conLluvia = lluvia != null && lluvia >= CONFIG.CLIMA_LLUVIA_MIN;
+  return `<span class="clima">${CLIMA_ICONOS[tipo]}<span class="est">${CLIMA_NOMBRES[tipo]}</span><b>${Math.round(h.temperature_2m[i])}°C</b>${conLluvia ? `<span class="lluvia">${CLIMA_ICONOS.paraguas}${lluvia}%</span>` : ""}</span>`;
+}
+
+/* ---------- Franja del día del partido (hora de Colombia) ----------
+   Madrugada 0:00–4:59 · Mañana 5:00–11:29 · Mediodía 11:30–13:59 · Tarde 14:00–17:59 · Noche 18:00–23:59 */
+const FRANJAS = {
+  madrugada: { txt: "Madrugada", svg: '<svg viewBox="0 0 24 24"><path d="M16.5 12.8A6 6 0 0 1 9.2 5.5a6 6 0 1 0 7.3 7.3z" fill="#c4b5fd"/><path d="M2.5 18.5h19" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/><path d="M18 3.5l.5 1.2 1.2.5-1.2.5-.5 1.2-.5-1.2-1.2-.5 1.2-.5zM20.5 9l.35.8.8.35-.8.35-.35.8-.35-.8-.8-.35.8-.35zM4.5 21.2h15" stroke="#fff" stroke-width=".01" fill="#fff"/></svg>' },
+  manana: { txt: "Mañana", svg: '<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M6 17a6 6 0 0 1 12 0z" fill="#fbbf24"/><path d="M12 4.5v3M4.6 9.6l2 1.6M19.4 9.6l-2 1.6M2.5 17h19M7 20.5h10" stroke="#d97706" stroke-width="2"/></svg>' },
+  mediodia: { txt: "Mediodía", svg: '<svg viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5" fill="#facc15"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>' },
+  tarde: { txt: "Tarde", svg: '<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><circle cx="9.5" cy="10" r="4" fill="#fb923c"/><path d="M9.5 3v1.6M3 10h1.6M4.9 5.4l1.1 1.1M14.1 5.4l-1.1 1.1" stroke="#ea580c" stroke-width="2"/><path d="M9 20h9a3.4 3.4 0 0 0 .3-6.8 4.6 4.6 0 0 0-8.6 1.4A2.8 2.8 0 0 0 9 20z" fill="#fff" stroke="#ea580c" stroke-width="1.5"/></svg>' },
+  noche: { txt: "Noche", svg: '<svg viewBox="0 0 24 24"><path d="M19.5 14.8A8 8 0 0 1 9.2 4.5a8 8 0 1 0 10.3 10.3z" fill="#fde68a"/><path d="M17 3.5l.6 1.4 1.4.6-1.4.6-.6 1.4-.6-1.4-1.4-.6 1.4-.6zM21 8.5l.4.9.9.4-.9.4-.4.9-.4-.9-.9-.4.9-.4z" fill="#fff"/></svg>' }
+};
+function franjaDe(ev) {
+  if (ev.allDay) return null;
+  const p = new Intl.DateTimeFormat("en-GB", { timeZone: CONFIG.TIMEZONE, hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date(ev.startISO));
+  const m = +p.find((x) => x.type === "hour").value * 60 + +p.find((x) => x.type === "minute").value;
+  if (m < 300) return "madrugada";
+  if (m >= 300 && m < 690) return "manana";
+  if (m >= 690 && m < 840) return "mediodia";
+  if (m >= 840 && m < 1080) return "tarde";
+  return "noche";
+}
+// con "En vivo" o "Final" al lado, la franja sale solo con el ícono para que quepa
+function franjaHTML(ev, conBadge) {
+  const f = franjaDe(ev);
+  if (!f) return "";
+  return `<span class="franja ${f} ${conBadge ? "solo" : ""}" title="${FRANJAS[f].txt}">${FRANJAS[f].svg}${conBadge ? "" : FRANJAS[f].txt}</span>`;
 }
 let lastTableHTML = "";
 function renderTable() {
@@ -1388,6 +1610,7 @@ async function loadEvents() {
     const { events, errors } = await fetchAllEvents();
     EVENTS = events;
     renderTable();
+    if (CONFIG.CLIMA && !CLIMA.listo) fetchClima();   // hasta conseguir el primer pronóstico; después cada hora
     const stamp = fmtTime(/* @__PURE__ */ new Date());
     statusLine.textContent = errors.length ? `Actualizado ${stamp} · ${errors.length} calendario(s) con error` : `Actualizado ${stamp} · ${EVENTS.length} partidos en ${CONFIG.DAYS} días`;
     if (errors.length) console.warn("Errores de calendario:", errors);
@@ -1429,6 +1652,7 @@ fetchEspnLogos();
 setInterval(fetchEspnLogos, CONFIG.ESPN_LOGOS_REFRESH_MS);
 setInterval(tick, CONFIG.TICK_MS);
 setInterval(loadEvents, CONFIG.REFRESH_EVENTS_MS);
+setInterval(fetchClima, CONFIG.CLIMA_REFRESH_MS);
 
 /* Modo combinado (dentro de pantalla.html): sin imágenes de Drive y las páginas
    de cada día arrancan desde la primera cada vez que el calendario vuelve a pantalla. */
