@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-25T04:08:11.824Z",
+   "actualizado": "2026-11-25T14:14:52.802Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -73,19 +73,6 @@
        "filas": [
         {
          "pos": 1,
-         "equipo": "Millonarios F.C.",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
-         "pj": 2,
-         "g": 1,
-         "e": 1,
-         "p": 0,
-         "gf": 4,
-         "gc": 1,
-         "dg": 3,
-         "pts": 4
-        },
-        {
-         "pos": 2,
          "equipo": "América de Cali",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
          "pj": 2,
@@ -95,6 +82,19 @@
          "gf": 4,
          "gc": 3,
          "dg": 1,
+         "pts": 4
+        },
+        {
+         "pos": 2,
+         "equipo": "Millonarios F.C.",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
+         "pj": 2,
+         "g": 1,
+         "e": 1,
+         "p": 0,
+         "gf": 4,
+         "gc": 1,
+         "dg": 3,
          "pts": 4
         },
         {
