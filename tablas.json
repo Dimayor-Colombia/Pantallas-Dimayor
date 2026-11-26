@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-26T02:21:20.001Z",
+   "actualizado": "2026-11-26T04:22:08.738Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -16,6 +16,26 @@
        "filas": [
         {
          "pos": 1,
+         "equipo": "Atlético Nacional",
+         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
+         "pj": 2,
+         "g": 1,
+         "e": 1,
+         "p": 0,
+         "gf": 3,
+         "gc": 1,
+         "dg": 2,
+         "pts": 4,
+         "racha": [
+          "e",
+          "g",
+          "e",
+          "e",
+          "g"
+         ]
+        },
+        {
+         "pos": 2,
          "equipo": "Independiente Santa Fe",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
          "pj": 2,
@@ -35,43 +55,23 @@
          ]
         },
         {
-         "pos": 2,
+         "pos": 3,
          "equipo": "Independiente Medellín",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
-         "pj": 1,
+         "pj": 2,
          "g": 1,
          "e": 0,
-         "p": 0,
-         "gf": 1,
-         "gc": 0,
-         "dg": 1,
+         "p": 1,
+         "gf": 2,
+         "gc": 3,
+         "dg": -1,
          "pts": 3,
          "racha": [
-          "p",
           "g",
           "g",
           "g",
-          "g"
-         ]
-        },
-        {
-         "pos": 3,
-         "equipo": "Atlético Nacional",
-         "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
-         "pj": 1,
-         "g": 0,
-         "e": 1,
-         "p": 0,
-         "gf": 0,
-         "gc": 0,
-         "dg": 0,
-         "pts": 1,
-         "racha": [
           "g",
-          "e",
-          "g",
-          "e",
-          "e"
+          "p"
          ]
         },
         {
@@ -202,6 +202,19 @@
        "gv": 0
       },
       {
+       "local": "Atlético Nacional",
+       "visitante": "Independiente Medellín",
+       "logoL": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
+       "logoV": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
+       "dia": "MIÉ 25 NOV",
+       "hora": "20:30",
+       "fecha": "2026-11-25 20:30",
+       "estado": "fin",
+       "texto": "",
+       "gl": 3,
+       "gv": 1
+      },
+      {
        "local": "Millonarios F.C.",
        "visitante": "Atlético Bucaramanga",
        "logoL": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0002_MILLONARIOS-FC-5.png",
@@ -239,20 +252,20 @@
          "pos": 1,
          "equipo": "Atlético Nacional",
          "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
-         "pj": 45,
-         "g": 30,
+         "pj": 46,
+         "g": 31,
          "e": 6,
          "p": 9,
-         "gf": 87,
-         "gc": 39,
-         "dg": 48,
-         "pts": 96,
+         "gf": 90,
+         "gc": 40,
+         "dg": 50,
+         "pts": 99,
          "racha": [
-          "g",
           "e",
           "g",
           "e",
-          "e"
+          "e",
+          "g"
          ]
         },
         {
@@ -379,20 +392,20 @@
          "pos": 8,
          "equipo": "Independiente Medellín",
          "logo": "https://dimayor.com.co/wp-content/uploads/2026/06/dim-nuevop.png",
-         "pj": 39,
+         "pj": 40,
          "g": 18,
          "e": 7,
-         "p": 14,
-         "gf": 56,
-         "gc": 49,
-         "dg": 7,
+         "p": 15,
+         "gf": 57,
+         "gc": 52,
+         "dg": 5,
          "pts": 61,
          "racha": [
-          "p",
           "g",
           "g",
           "g",
-          "g"
+          "g",
+          "p"
          ]
         },
         {
@@ -1109,6 +1122,14 @@
        "pos": 1
       },
       {
+       "jugador": "Franco Fagundez",
+       "equipo": "Independiente Santa Fe",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/f60a772e-8049-4d77-a982-33c0ed69bf60",
+       "goles": 8,
+       "pos": 3
+      },
+      {
        "jugador": "Emerson Batalla",
        "equipo": "Atlético Bucaramanga",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0016_ATLETICO-BUCARAMANGA-5.png",
@@ -1122,7 +1143,7 @@
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
        "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/fc731dba-069e-4108-82e0-5ee68cd727ae",
        "goles": 7,
-       "pos": 4
+       "pos": 5
       },
       {
        "jugador": "Andres Sarmiento",
@@ -1130,7 +1151,7 @@
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0015_ATLETICO-NACIONAL-5.png",
        "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/7dd219a6-e002-4121-85f9-6abd2507879e",
        "goles": 7,
-       "pos": 4
+       "pos": 5
       },
       {
        "jugador": "Dayro Moreno",
@@ -1138,15 +1159,7 @@
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
        "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/5148ef72-d00b-48c2-aa5b-4741b25cc7c7",
        "goles": 7,
-       "pos": 4
-      },
-      {
-       "jugador": "Franco Fagundez",
-       "equipo": "Independiente Santa Fe",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/f60a772e-8049-4d77-a982-33c0ed69bf60",
-       "goles": 7,
-       "pos": 4
+       "pos": 5
       },
       {
        "jugador": "Andres Renteria",
@@ -1173,7 +1186,7 @@
        "pos": 8
       }
      ],
-     "mas": 4
+     "mas": 5
     }
    ]
   },
