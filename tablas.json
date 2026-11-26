@@ -1747,7 +1747,7 @@
    "id": "copa",
    "competicion": "Copa Betplay Dimayor 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-26T17:32:08.320Z",
+   "actualizado": "2026-11-26T18:59:40.308Z",
    "bloques": [
     {
      "tipo": "cruce",
@@ -1840,10 +1840,18 @@
      "tipo": "goleadores",
      "filas": [
       {
-       "jugador": "Tomas Angel",
-       "equipo": "América de Cali",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/56acd804-9421-4b6c-8c40-ed16661f0656",
+       "jugador": "Jose Lloreda",
+       "equipo": "Deportes Quindío",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/eadc71fa-0979-445b-8fce-b088faa6139a",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Jonathan Perlaza",
+       "equipo": "Deportivo Pasto",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/IMG_7724.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/ee0e44e7-aed6-4d00-82cc-462561adf3d0",
        "goles": 3,
        "pos": 1
       },
@@ -1864,26 +1872,10 @@
        "pos": 1
       },
       {
-       "jugador": "Jose Lloreda",
-       "equipo": "Deportes Quindío",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/eadc71fa-0979-445b-8fce-b088faa6139a",
-       "goles": 3,
-       "pos": 1
-      },
-      {
        "jugador": "Darwin Lopez",
        "equipo": "Jaguares F.C.",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
        "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/e2bc2034-ac08-4593-bff8-37e50f390579",
-       "goles": 3,
-       "pos": 1
-      },
-      {
-       "jugador": "Misael Martinez",
-       "equipo": "Alianza Valledupar F.C.",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/ac3f917a-01a1-4a2d-9e6f-2d93151f48f5",
        "goles": 3,
        "pos": 1
       },
@@ -1896,26 +1888,34 @@
        "pos": 1
       },
       {
-       "jugador": "Jonathan Perlaza",
-       "equipo": "Deportivo Pasto",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/IMG_7724.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/ee0e44e7-aed6-4d00-82cc-462561adf3d0",
-       "goles": 3,
-       "pos": 1
-      },
-      {
-       "jugador": "Fabricio Sanguinetti",
-       "equipo": "Internacional de Bogotá",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/9d6fdc24-3af1-47b3-81fb-892d92704210",
-       "goles": 3,
-       "pos": 1
-      },
-      {
        "jugador": "Pablo Urrutia",
        "equipo": "Boca Juniors de Cali",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
        "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/77dc9178-e236-41ac-8f58-1ff05e067301",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Jhon Vasquez",
+       "equipo": "Llaneros F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/a5fcd1c5-38b8-42c5-b0af-868fbcfb2565",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Misael Martinez",
+       "equipo": "Alianza Valledupar F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Alianza-fx-4.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/ac3f917a-01a1-4a2d-9e6f-2d93151f48f5",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Tomas Angel",
+       "equipo": "América de Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/56acd804-9421-4b6c-8c40-ed16661f0656",
        "goles": 3,
        "pos": 1
       }
