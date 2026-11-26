@@ -742,7 +742,8 @@ function fotoHTML(r) {
 function goleadoresHTML(page) {
   const b = page.bloque, f = b.filas || [];
   if (!f.length) return `<div class="empty"><span class="ico">⚽</span>Sin goleadores todavía</div>`;
-  const medalla = (r) => r.pos === 1 ? "Líder de goleo" : r.pos === 2 ? "Segundo" : r.pos === 3 ? "Tercero" : r.pos + ".º";
+  // el 1.º: "Goleador" (o "Goleadora" en la Liga Femenina)
+  const medalla = (r) => r.pos === 1 ? (page.comp.id === "femenina" ? "Goleadora" : "Goleador") : r.pos === 2 ? "Segundo" : r.pos === 3 ? "Tercero" : r.pos + ".º";
   const card = (r, i, chica) => {
     const eq = nombre(r.equipo);
     return `<div class="gcard m${Math.min(r.pos, 3)} ${chica ? "chica" : ""}" style="animation-delay:${(i * .08).toFixed(2)}s">
