@@ -1987,7 +1987,7 @@
    "id": "superliga",
    "competicion": "Super LIga Betplay 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-26T05:22:45.940Z",
+   "actualizado": "2026-11-26T09:24:31.186Z",
    "bloques": [
     {
      "tipo": "cruce",
@@ -2048,18 +2048,18 @@
        "pos": 1
       },
       {
-       "jugador": "Teofilo Gutierrez",
-       "equipo": "Junior F.C.",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/936f6631-c1f9-47b6-a0a5-8d844103a17b",
-       "goles": 1,
-       "pos": 2
-      },
-      {
        "jugador": "Lautaro Bustos",
        "equipo": "Independiente Santa Fe",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
        "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/fc731dba-069e-4108-82e0-5ee68cd727ae",
+       "goles": 1,
+       "pos": 2
+      },
+      {
+       "jugador": "Teofilo Gutierrez",
+       "equipo": "Junior F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/936f6631-c1f9-47b6-a0a5-8d844103a17b",
        "goles": 1,
        "pos": 2
       },
