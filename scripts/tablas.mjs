@@ -32,17 +32,17 @@ console.log(new Date().toLocaleString("es-CO", { timeZone: "America/Bogota" }) +
 //   "posiciones"      = la fase en curso: como TABLA o como CRUCE (llaves) según "cruces"
 //   "reclasificacion" = tabla de reclasificación (siempre)
 //   "descenso"        = tabla de descenso / promedios (siempre)
-//   "resultados"      = marcadores de la última fecha de la fase en curso + resumen (solo si la fase es TABLA)
+//   "resultados"      = marcadores de la última fecha + resumen (solo si la fase es TABLA) · no se usa por ahora (lo pidió el Área Deportiva)
 //   "goleadores"      = top 10 de goleadores de la competencia (toda la temporada)
 // Además, las tablas de posiciones y reclasificación llevan la RACHA de cada equipo (últimos 5 partidos).
 // "cruces": fases que se muestran como CRUCE (llaves armadas con los partidos de esa fase).
 //   Se escribe el número de la fase como aparece en dimayor.com.co ("FASE III", "FASE 1B" -> "III", "1B").
 //   Las demás fases se muestran como TABLA. "todas" = todas las fases como cruce.
 const COMPETENCIAS = [
-  { id: "liga",      tipo: "Liga BetPlay",   tablas: ["posiciones", "resultados", "reclasificacion", "descenso", "goleadores"], cruces: ["III", "IV", "V"] },
-  { id: "torneo",    tipo: "Torneo BetPlay", tablas: ["posiciones", "resultados", "reclasificacion", "goleadores"],             cruces: ["III", "IV", "V"] },
-  { id: "femenina",  tipo: "Liga Femenina",  tablas: ["posiciones", "resultados", "goleadores"],                                cruces: ["III", "IV"] },
-  { id: "copa",      tipo: "Copa BetPlay",   tablas: ["posiciones", "resultados", "goleadores"],                                cruces: ["1B", "II", "III", "IV", "V"] },
+  { id: "liga",      tipo: "Liga BetPlay",   tablas: ["posiciones", "reclasificacion", "descenso", "goleadores"], cruces: ["III", "IV", "V"] },
+  { id: "torneo",    tipo: "Torneo BetPlay", tablas: ["posiciones", "reclasificacion", "goleadores"],             cruces: ["III", "IV", "V"] },
+  { id: "femenina",  tipo: "Liga Femenina",  tablas: ["posiciones", "goleadores"],                                cruces: ["III", "IV"] },
+  { id: "copa",      tipo: "Copa BetPlay",   tablas: ["posiciones", "goleadores"],                                cruces: ["1B", "II", "III", "IV", "V"] },
   { id: "superliga", tipo: "Superliga",      tablas: ["posiciones", "goleadores"],                                              cruces: "todas" }
 ];
 // "actual" = solo la fase EN CURSO (la misma que dimayor.com.co muestra por defecto), aunque tenga 2 equipos
