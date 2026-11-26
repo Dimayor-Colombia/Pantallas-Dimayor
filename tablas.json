@@ -4,7 +4,7 @@
    "id": "liga",
    "competicion": "LIGA BETPLAY DIMAYOR II 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-25T23:20:04.104Z",
+   "actualizado": "2026-11-26T00:20:30.319Z",
    "bloques": [
     {
      "tipo": "posiciones",
@@ -188,19 +188,6 @@
      "fase": "FASE II CUADRANGULARES",
      "fecha": 2,
      "partidos": [
-      {
-       "local": "Independiente Santa Fe",
-       "visitante": "Once Caldas DAF",
-       "logoL": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-       "logoV": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0001_ONCE-CALDAS-DAF-5.png",
-       "dia": "MIÉ 25 NOV",
-       "hora": "18:20",
-       "fecha": "2026-11-25 18:20",
-       "estado": "prog",
-       "texto": "vs",
-       "gl": null,
-       "gv": null
-      },
       {
        "local": "Atlético Nacional",
        "visitante": "Independiente Medellín",
