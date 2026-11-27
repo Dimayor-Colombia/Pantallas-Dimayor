@@ -1135,7 +1135,7 @@
    "id": "torneo",
    "competicion": "Torneo Betplay 2026 Clausura",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-27T21:12:29.982Z",
+   "actualizado": "2026-11-27T22:12:54.452Z",
    "bloques": [
     {
      "tipo": "cruce",
@@ -1558,14 +1558,6 @@
        "pos": 5
       },
       {
-       "jugador": "Deyman Cortes",
-       "equipo": "Boca Juniors de Cali",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/06e9b09e-5727-495d-b5f2-c9ac4c1f201a",
-       "goles": 7,
-       "pos": 5
-      },
-      {
        "jugador": "Miguel Marulanda",
        "equipo": "Envigado F.C.",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0010_ENVIGADO-FC-5.png",
@@ -1574,18 +1566,18 @@
        "pos": 5
       },
       {
-       "jugador": "Janeth Aleman",
-       "equipo": "Real Cartagena",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0008_REAL-CARTAGENA-5.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/a654ae2c-e73a-45f0-bcde-c8ba27be937a",
-       "goles": 6,
-       "pos": 8
+       "jugador": "Deyman Cortes",
+       "equipo": "Boca Juniors de Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/06e9b09e-5727-495d-b5f2-c9ac4c1f201a",
+       "goles": 7,
+       "pos": 5
       },
       {
-       "jugador": "Ruyery Blanco",
-       "equipo": "Unión Magdalena",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/1246d134-3639-434c-b0e0-09b13c7aea9d",
+       "jugador": "Cristian Rodriguez",
+       "equipo": "Leones F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0011_LEONES-FC-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/ebb11c21-17ad-4a02-a62f-f6daa964f88a",
        "goles": 6,
        "pos": 8
       },
@@ -1594,6 +1586,14 @@
        "equipo": "Real Santander S.A.",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0006_REAL-SANTANDER-5.png",
        "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/a4863190-5b30-40dd-8716-607d1ef8ecc1",
+       "goles": 6,
+       "pos": 8
+      },
+      {
+       "jugador": "Ruyery Blanco",
+       "equipo": "Unión Magdalena",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0000_UNION-MAGADALENA-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/1246d134-3639-434c-b0e0-09b13c7aea9d",
        "goles": 6,
        "pos": 8
       }
@@ -1606,7 +1606,7 @@
    "id": "femenina",
    "competicion": "Liga Femenina 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-27T18:11:15.048Z",
+   "actualizado": "2026-11-27T22:13:00.044Z",
    "bloques": [
     {
      "tipo": "cruce",
@@ -1691,18 +1691,18 @@
        "pos": 3
       },
       {
-       "jugador": "Ysaura Viso",
-       "equipo": "Independiente Santa Fe",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/c7f8bb52-68c6-457c-9730-091234955686",
-       "goles": 10,
-       "pos": 5
-      },
-      {
        "jugador": "Genesis Florez",
        "equipo": "América de Cali",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
        "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/e5bc9bf5-a2a8-4aa1-8097-765155ca27bb",
+       "goles": 10,
+       "pos": 5
+      },
+      {
+       "jugador": "Ysaura Viso",
+       "equipo": "Independiente Santa Fe",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/c7f8bb52-68c6-457c-9730-091234955686",
        "goles": 10,
        "pos": 5
       },
@@ -1723,18 +1723,18 @@
        "pos": 8
       },
       {
-       "jugador": "Luiza Montaño",
-       "equipo": "Internacional F.C. de Palmira",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2026/11/NUEVO-LOGO-INTERNACIONAL-PALMIRA-FINAL_1.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/dddc7822-186e-49e0-a23d-dd8d9260bdbc",
-       "goles": 7,
-       "pos": 9
-      },
-      {
        "jugador": "Melanin Aponza",
        "equipo": "Deportivo Cali",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0012_DEPORTIVO-CALI-5.png",
        "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/02d6c9ca-e706-4398-8b36-ecb363a21bde",
+       "goles": 7,
+       "pos": 9
+      },
+      {
+       "jugador": "Luiza Montaño",
+       "equipo": "Internacional F.C. de Palmira",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2026/11/NUEVO-LOGO-INTERNACIONAL-PALMIRA-FINAL_1.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/dddc7822-186e-49e0-a23d-dd8d9260bdbc",
        "goles": 7,
        "pos": 9
       }
@@ -1747,7 +1747,7 @@
    "id": "copa",
    "competicion": "Copa Betplay Dimayor 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-27T18:11:17.415Z",
+   "actualizado": "2026-11-27T22:13:03.742Z",
    "bloques": [
     {
      "tipo": "cruce",
@@ -1840,18 +1840,10 @@
      "tipo": "goleadores",
      "filas": [
       {
-       "jugador": "Jose Lloreda",
-       "equipo": "Deportes Quindío",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/eadc71fa-0979-445b-8fce-b088faa6139a",
-       "goles": 3,
-       "pos": 1
-      },
-      {
-       "jugador": "Jonathan Perlaza",
-       "equipo": "Deportivo Pasto",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/IMG_7724.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/ee0e44e7-aed6-4d00-82cc-462561adf3d0",
+       "jugador": "Tomas Angel",
+       "equipo": "América de Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/56acd804-9421-4b6c-8c40-ed16661f0656",
        "goles": 3,
        "pos": 1
       },
@@ -1872,34 +1864,18 @@
        "pos": 1
       },
       {
+       "jugador": "Jose Lloreda",
+       "equipo": "Deportes Quindío",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0014_DEPORTES-QUINDIO-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/eadc71fa-0979-445b-8fce-b088faa6139a",
+       "goles": 3,
+       "pos": 1
+      },
+      {
        "jugador": "Darwin Lopez",
        "equipo": "Jaguares F.C.",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0012_JAGUARES-FC-5.png",
        "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/e2bc2034-ac08-4593-bff8-37e50f390579",
-       "goles": 3,
-       "pos": 1
-      },
-      {
-       "jugador": "Jairo Molina",
-       "equipo": "Boyacá Chicó F.C.",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/5ee9336d-7039-4563-ac69-4ef13ff44193",
-       "goles": 3,
-       "pos": 1
-      },
-      {
-       "jugador": "Pablo Urrutia",
-       "equipo": "Boca Juniors de Cali",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/77dc9178-e236-41ac-8f58-1ff05e067301",
-       "goles": 3,
-       "pos": 1
-      },
-      {
-       "jugador": "Jhon Vasquez",
-       "equipo": "Llaneros F.C.",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0003_LLANEROS-FC-5.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/a5fcd1c5-38b8-42c5-b0af-868fbcfb2565",
        "goles": 3,
        "pos": 1
       },
@@ -1912,10 +1888,34 @@
        "pos": 1
       },
       {
-       "jugador": "Tomas Angel",
-       "equipo": "América de Cali",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0017_Objeto-inteligente-vectorial-5.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/56acd804-9421-4b6c-8c40-ed16661f0656",
+       "jugador": "Jairo Molina",
+       "equipo": "Boyacá Chicó F.C.",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0014_BOYACA-CHICO-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/5ee9336d-7039-4563-ac69-4ef13ff44193",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Jonathan Perlaza",
+       "equipo": "Deportivo Pasto",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/IMG_7724.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/ee0e44e7-aed6-4d00-82cc-462561adf3d0",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Fabricio Sanguinetti",
+       "equipo": "Internacional de Bogotá",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2026/01/Escudo-Internacional-de-Bogota.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/9d6fdc24-3af1-47b3-81fb-892d92704210",
+       "goles": 3,
+       "pos": 1
+      },
+      {
+       "jugador": "Pablo Urrutia",
+       "equipo": "Boca Juniors de Cali",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p-copia_0001_BOCA-JUNIORS-DE-CALI-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/77dc9178-e236-41ac-8f58-1ff05e067301",
        "goles": 3,
        "pos": 1
       }
@@ -1928,7 +1928,7 @@
    "id": "superliga",
    "competicion": "Super LIga Betplay 2026",
    "fuente": "dimayor.com.co",
-   "actualizado": "2026-11-27T21:12:37.093Z",
+   "actualizado": "2026-11-27T22:13:05.229Z",
    "bloques": [
     {
      "tipo": "cruce",
@@ -1989,18 +1989,18 @@
        "pos": 1
       },
       {
-       "jugador": "Lautaro Bustos",
-       "equipo": "Independiente Santa Fe",
-       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
-       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/fc731dba-069e-4108-82e0-5ee68cd727ae",
-       "goles": 1,
-       "pos": 2
-      },
-      {
        "jugador": "Teofilo Gutierrez",
        "equipo": "Junior F.C.",
        "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/ESCUDO-JUNIOR-SIN-ESTRELLAS-5.png",
        "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/936f6631-c1f9-47b6-a0a5-8d844103a17b",
+       "goles": 1,
+       "pos": 2
+      },
+      {
+       "jugador": "Lautaro Bustos",
+       "equipo": "Independiente Santa Fe",
+       "logo": "https://dimayor.com.co/wp-content/uploads/2025/11/escudos-1080p_0007_INDEPENDIENTE-SANTA-FE-5.png",
+       "foto": "https://dimayor.com.co/wp-json/dimayor/v1/image/fc731dba-069e-4108-82e0-5ee68cd727ae",
        "goles": 1,
        "pos": 2
       },
